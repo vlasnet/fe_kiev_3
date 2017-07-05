@@ -37,7 +37,7 @@ Repository for homeworks "GoFrontend#3: Offline". Mentor: Dmitriy Lisunov
 - 9.3. После этого жмёте ` Create pull request`
 ![Правильные настройки pull request](https://github.com/lisunovdv/fe_kiev_3/blob/master/Pull-Request-proccess.jpg)
 
-10. Заполняете `Title` реквеста в таком формате: 
+10. **Заполняете `Title` реквеста в таком формате:** 
 
 `dz_4:ivanov_i:`*Префикс*`:Необязательное короткое сообщение для ментора`
 
