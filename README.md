@@ -1,2 +1,2 @@
-## Homework_8
-https://app.schoology.com/assignment/1123255910/info
+## Other. Ветка для других Ваших заданий и того, что не относится к основным ДЗ
+![](http://cs5.pikabu.ru/images/previews_comm/2015-11_6/1448561221140587175.jpg)
