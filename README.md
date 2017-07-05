@@ -1,6 +1,8 @@
 # Домашние задания (Homeworks). GoFrontend#3: Offline
 Repository for homeworks "GoFrontend#3: Offline". Mentor: Dmitriy Lisunov
 
+![](http://aws-cf.imdoc.fr/prod/photos/6/4/2/3820642/2844403/img-2844403d28.jpg)
+
 Начиная с **домашнего задания №4** все работы я теперь буду принимать только через `pull requests`.
 Общая схема работы изложена здесь: https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project
 
