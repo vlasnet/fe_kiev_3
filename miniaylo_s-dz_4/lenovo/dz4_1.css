@@ -1,0 +1,78 @@
+
+@font-face {
+    font-family: 'Tahoma';
+    src: url('fonts/Tahoma-Bold.woff2') format('woff2'),
+         url('fonts/Tahoma-Bold.woff') format('woff'),
+         url('fonts/Tahoma-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.background {
+	background-color: #FFF;
+	height: 550px;
+    padding: 10px;
+	width: 400px;
+}
+
+.button_buy {
+    background-color: #f00;
+    border-bottom: 4px solid #000;
+    color: #fff;
+    font-size: 28px;
+    height: 37px;
+    margin: 21px 0 0 62px;
+    padding: 9px 0 0 15px;
+    text-shadow: -1px 1px #000;
+    width: 214px;
+}
+
+.button_leasing {
+	background-color: #8bc144;
+    box-shadow: -3px 3px #9c9c9c;
+    color: #FFF;
+    height: 31px;
+    margin-top: 2px;
+    width: 190px;
+
+}
+
+.conteiner {
+	border: 2px solid #000;
+    height: 526px;
+	font-family: 'Tahoma';
+    font-size: 22px;
+    letter-spacing: 1px;
+	line-height: 26px;
+    margin: 20px;
+    text-align: center;
+    width: 376px;
+}
+
+.lenovo_model {
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: auto;
+	padding: 10px 0 24px 2px;
+	width: 300px;
+}
+
+.lenovo_img {
+    height: 285px;
+    margin-left: 2px;
+}
+
+.leasing {
+padding: 1px 6px 0 0;
+}
+
+img {
+    height: 285px;
+    width: 250px;
+}
+
+.price {
+    font-size: 31px;
+    margin: 21px 0 0 57px;
+    width: 285px;
+}
