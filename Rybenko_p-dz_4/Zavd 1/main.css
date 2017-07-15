@@ -4,11 +4,12 @@
 }
 body {
 	font-family: "Tahoma", sans-serif;
+	letter-spacing: 1px;
 }
 .main {
-	width: 380px;
+	width: 377px;
 	margin: 10px;
-	border: 1px solid #000;
+	border: 2px solid #000;
 }
 .main--position-center {
 	display: flex;
@@ -19,7 +20,8 @@ body {
 
 .main__text-logo {
 	font-size: 22px;
-	margin: 16px 42px 16px 46px;
+	margin: 10px 38px 20px 42px;
+	text-align: center;
 }
 .main__img {
 	width: 250px;
@@ -32,26 +34,26 @@ body {
 	color: #fff;
 	font-size: 22px;
 	text-align: center;
-	padding-top: 5px;
-  	box-shadow: -5px 5px #9c9c9c;
-  	margin-top: 5px;
-}
+  	box-shadow: -2px 3px #9c9c9c;
+  	margin-top: 4px;
+  }
 
 .main__price {
 	font-size: 31px;
-	margin: 20px 0;
+	margin: 14px 0 16px 21px;
 }
 .main__button-buy {
 	font-size: 28px;
-	background-color: #ff0000;
+	background-color: #e63e3e;
 	color: #fff;
 	text-align: center;
-	height: 46px;
-	width: 229px;
-	padding-top: 8px;
+	height: 41px;
+	width: 217px;
 	box-shadow: 0 5px #850000;
 	margin-bottom: 10px;
-	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.004);
+	margin-left: 62px;
+	padding-top: 5px;
+	padding-left: 13px;
 }
 
   
