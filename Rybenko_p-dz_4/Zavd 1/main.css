@@ -1,0 +1,65 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: "Tahoma", sans-serif;
+	letter-spacing: 1px;
+}
+.main {
+	width: 377px;
+	margin: 10px;
+	border: 2px solid #000;
+}
+.main--position-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.main__text-logo {
+	font-size: 22px;
+	margin: 10px 38px 20px 42px;
+	text-align: center;
+}
+.main__img {
+	width: 250px;
+	height: 285px;
+}
+.main__button-rastrochka {
+	width: 190px;
+	height: 31px;
+	background-color: #8bc144;
+	color: #fff;
+	font-size: 22px;
+	text-align: center;
+  	box-shadow: -2px 3px #9c9c9c;
+  	margin-top: 4px;
+  }
+
+.main__price {
+	font-size: 31px;
+	margin: 14px 0 16px 21px;
+}
+.main__button-buy {
+	font-size: 28px;
+	background-color: #e63e3e;
+	color: #fff;
+	text-align: center;
+	height: 41px;
+	width: 217px;
+	box-shadow: 0 5px #850000;
+	margin-bottom: 10px;
+	margin-left: 62px;
+	padding-top: 5px;
+	padding-left: 13px;
+}
+
+  
+  
+
+
+
+
+
