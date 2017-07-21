@@ -1,0 +1,47 @@
+/*Styles for target_4.html*/
+
+.fullwrap {
+	background: #888;
+	height: 1400px;
+	margin: 0 auto;
+	padding: 10px 0;
+	width: 1200px;
+}
+
+.header {
+	background: #850000;
+	height: 200px;
+	margin: 10px auto 20px;
+	width: 1150px;
+}
+
+.wrap {
+	background: #333;
+	box-sizing: border-box;
+	height: 930px;
+	margin: 10px auto 20px;
+	padding: 10px;
+	width: 1150px;
+
+}
+
+.main {
+	background: #fff;
+	float: left;
+	height: 910px;
+	width: 650px;
+}
+
+.sidebar {
+	background: #734;
+	float: right;
+	height: 910px;
+	width: 400px;
+} 
+
+.footer {
+	background: #850000;
+	height: 200px;
+	margin: 10px auto 20px;
+	width: 1150px;
+}

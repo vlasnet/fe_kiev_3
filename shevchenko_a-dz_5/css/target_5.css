@@ -1,0 +1,162 @@
+* {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font: 16px Arial, sans-serif;
+}
+
+span {
+	font-weight: bold;
+}
+
+.wrapper {
+	background: #d1d1d1;
+	box-sizing: border-box;
+	height: 100%;
+	padding: 57px 58px;
+	width: 760px;
+
+}
+
+.header {
+	background: url(../i/target_5/header_bg.gif);
+	background-size: cover;
+	box-sizing: border-box;
+	height: 150px;
+	width: 640px;
+}
+
+.content-wrapper {
+	background: #fff;
+	box-sizing: border-box;
+	padding: 55px 50px;
+	width: 640px;
+
+}
+
+.preview,
+.postview {
+	box-sizing: border-box;
+	letter-spacing: .03px;
+	width: 540px;
+}
+
+.center {
+	text-align: center;
+}
+
+.mt_25 {
+	margin-top: 25px;
+}
+
+.mt_34 {
+	margin-top: 34px;
+}
+
+.italic {
+	font-style: italic;
+}
+
+ .preview p,
+ .postview p {
+	line-height: 22px;
+	margin-bottom: 12px;
+}
+
+.content-list {
+	padding: 19px 0;
+}
+
+.content-list__item {
+float: left;
+}
+
+.item_2 {
+	margin-left: 30px;
+}
+
+.item_3 {
+	margin-left: 0;
+	width: 160px;
+}
+.item_4,
+.item_5 {
+	margin-left: 30px;
+	width: 160px;
+}
+
+.item_3 p.item-description,
+.item_4 p.item-description,
+.item_5 p.item-description,
+.content-list__item img.sm,
+.item_3 .btn,
+.item_4 .btn,
+.item_5 .btn {
+	width: 160px;
+}
+
+.item_3 .btn,
+.item_4 .btn,
+.item_5 .btn {
+	margin-top: 18px;
+	margin-bottom: 31px;
+}
+
+.item_3 .btn {
+	margin-top: 40px;
+}
+
+.content-list__item img,
+.content-list__item a,
+.content-list__item p {
+	box-sizing: border-box;
+	width: 255px;
+}
+
+.content-list__item p {
+	line-height: 22px;
+	margin-top: 12px;
+}
+
+.btn {
+	background-color: #cf5b4e;
+	border-radius: 6px;
+	box-sizing: border-box;
+	color: #fff;
+	display: block;
+	font-size: 15px;
+	font-weight: bold;
+	margin: 39px 0 20px;
+	padding: 11px 0 13px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.clearfix {
+	content: "";
+	clear: both;
+}
+
+.content-list__item img.sm {
+	margin-top: 10px;
+
+}
+
+.postview .btn {
+	margin-top: 54px;
+	margin-bottom: -25px;
+}
+
+.footer {
+	font-weight: bold;
+	text-align: center;
+	padding: 47px 0 15px;
+}
+
+.footer p,
+.footer a {
+	color: #fff;
+	font-size: 11px;
+	line-height: 15px;
+}
+
