@@ -1,12 +1,22 @@
 * {
-	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+
+ul {
+
+	list-style: none;
+}
+
+a {
 	text-decoration: none;
 }
+
 @font-face {
 	font-family: specialTahoma;
-	src: url(../fonts/Tahoma.ttf);
+	src: url(../fonts/Tahoma.woff);
+	font-weight: normal;
+	font-style: normal;
 } 
 
 
@@ -46,8 +56,9 @@
 
 .item_name {
 	display: block;
-    font: 22px Tahoma, sans-serif;
-    letter-spacing: 0.9px;
+	font-family: specialTahoma, Tahoma, Arial, sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
     line-height: 26px;
     margin: 10px auto 23px;
     text-align: center;
@@ -66,7 +77,7 @@
 	box-shadow: -3px 3px 0 0 #9c9c9c;
 	color: #fff;
 	display: block;
-	font-family: specialTahoma;
+	font-family: specialTahoma, Tahoma, Arial, sans-serif;
 	font-size: 22px;
 	height: 31px;
 	letter-spacing: 1px;
@@ -78,9 +89,9 @@
 
 .price {
 	display: inline-block;
-	font-family: specialTahoma;
+	font-family:specialTahoma, Tahoma, Arial, sans-serif;
 	font-size: 32px;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.02em;
     margin-bottom: 15px;
     margin-left: 22px;
 }
@@ -90,7 +101,7 @@
 	box-shadow: 0px 4px 0px 0px #850000;
 	color: #fff;
 	display: block;
-    font-family: specialTahoma;
+    font-family: specialTahoma, Tahoma, Arial, sans-serif;
 	font-size: 28px;
     height: 41px;
     letter-spacing: 1px;
@@ -122,7 +133,6 @@
 .bord__element {
 	background-color: #850000;
 	display: block;
-
 	height: 200px;
 	width: 200px;
 }
@@ -130,6 +140,7 @@
 .bord__element:nth-child(2n) {
 	background-color: #fff;
 }
+
 .black_bishop {
 	background: url(../img/black_bishop-512.png) no-repeat 50%;
 	background-size: 180px;
@@ -144,4 +155,3 @@
 	background: url(../img/white_rook-512.png) no-repeat 55% 43%;
 	background-size: 180px;
 }
-
