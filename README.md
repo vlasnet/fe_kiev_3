@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Домашние задания (Homeworks). GoFrontend#3: Offline
 Repository for homeworks "GoFrontend#3: Offline". Mentor: Dmitriy Lisunov
 
@@ -68,3 +69,7 @@ Repository for homeworks "GoFrontend#3: Offline". Mentor: Dmitriy Lisunov
 6. Мёрджите ветку из Вашего старого репозитория `git merge my_old_repo/my_homework_2_old_branch` в текущую `dz_2`
 7. Правильно создаёте папку и перемещаете туда файлы Вашего ДЗ ( То есть создаёте **ПАПКУ** с названием `ivanov_i-dz_2` и в неё вставляете своё домашнее задание. Название папки должно соответствовать такому *Name Convention* (всё на английском): **`Ваша фамилия _ (нижнее подчёркивание) первая буква Вашего имени - (дефис) dz_ номер домашнего задания`**, т.е. как было показано в примере выше, например, вот так `ivanov_i-dz_2`
 8. После этого можете продолжать с [пункта 6](#commit--push) в начале этого документа
+=======
+## Homework_5
+https://app.schoology.com/assignment/1107029914/info
+>>>>>>> 9839f3d530bbbd547d0e7078541374a9ba58cd21
