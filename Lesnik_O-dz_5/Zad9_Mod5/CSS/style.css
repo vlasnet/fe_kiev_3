@@ -1,0 +1,40 @@
+body{
+margin: 0px 50px;
+padding: 0;
+}
+
+.wrapper{
+	width: 560px;
+	height: 447px;
+	background-color: #80cdc6;
+	position: relative;
+}
+
+.clouds{
+	width: 346px;
+	position: absolute;
+	top: -6px;
+	left: 214px;
+}
+
+.water{
+	width: 560px;
+	position: absolute;
+	top: 400px;
+	left: 0;
+}
+
+.ship{
+	width: 115px;
+	position: absolute;
+	top: 295px;
+	left: 18px;
+}
+
+.world{
+	width: 560px;
+	position: absolute;
+	top: 105px;
+	left: 0;
+
+}
