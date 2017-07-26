@@ -1,0 +1,70 @@
+@font-face {
+    font-family: Georgia, sans-serif;
+    src: url("fonts/georgia.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.first_letter {
+    p::first-letter {
+        color: #F00;
+        font-family: Georgia, sans-serif;
+        font-size: 2em;
+    }
+    p::after {
+        content: "*";
+    }
+
+}
+.block {
+    margin: 20px;
+    background: #000;
+    position: relative;
+    width: 100px; height: 50px;
+   }
+   .block::after {
+    content: '';
+    position: absolute;
+    left: -30px; top: 15px;
+    border: 10px solid transparent;
+    border-right: 20px solid #000;
+   }
+
+.violet {
+    a {
+      color: #C71585;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #FFD700;
+    }
+
+    a:active  {
+      color: #8B4513;
+    }
+ }
+ .child {
+     p:nth-child(even) {
+         background: #666;
+     }
+     p::before {
+         content: "\002602";
+     }
+ }
+.green {
+  a {
+    color: #008000;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #F00;
+  }
+  a:active {
+    color: #FF0;
+  }
+}
+
+input:focus {
+  border: 1px solid #008000;
+  font-size: 30px;
+}
