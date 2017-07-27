@@ -1,0 +1,60 @@
+.p1 {
+	color: green;
+}
+
+.p2 {
+	color: violet;
+}
+
+.p1::selection {
+	color: red;
+}
+
+.p2::selection {
+	color: gold;
+}
+
+.p1:hover {
+	color: yellow;
+}
+
+.p2:hover {
+	color: brown;
+}
+
+input:focus {
+	border: 2px solid green;
+}
+
+p:nth-child(2n){	
+	background-color: grey;
+}
+p:first-letter {
+	font-size: 2em;
+	color: red;
+	font-family: Geogia;
+}
+p:after {
+	content: '*';
+}
+p:before {
+	content: '\2602';
+}
+
+.figure {
+	width: 200px;
+	height: 100px;
+	background-color: black;
+	position: relative;
+	left: 100px;
+
+}
+
+.figure:after {
+	content: '';
+	position: absolute;
+    left: -60px; 
+    bottom: 20px;
+	border: 30px solid transparent;
+	border-right: 50px solid black;
+
