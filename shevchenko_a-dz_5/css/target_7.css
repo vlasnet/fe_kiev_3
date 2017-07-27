@@ -16,21 +16,21 @@
 }
 
 .red {
-  background: red;
+  background: #f00;
   left: 112px;
   top: 121px;
   z-index: 1;
 }
 
 .blue {
-  background: blue;
+  background: #00f;
   left: 162px;
   top: 161px;
   z-index: 2;
 }
 
 .yellow {
-  background: yellow;
+  background: #ff0;
   left: 210px;
   top: 204px;
   z-index: 3;

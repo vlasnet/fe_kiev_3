@@ -16,17 +16,17 @@
 }
 
 .blue {
-  background: blue;
+  background: #00f;
 }
 
 .red {
-  background: red;
+  background: #f00;
   left: 100px;
   top: 100px;
 }
 
 .yellow {
-  background: yellow;
+  background: #ff0;
   left: 200px;
   top: 200px;
 }

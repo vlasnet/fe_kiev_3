@@ -3,7 +3,7 @@
 .parent {
   width: 340px;
   min-height: 20px;
-  background: #FF6600;
+  background: #F60;
 }
 
 .rows {
@@ -14,7 +14,8 @@
   float: left;
 }
 
-.clearfix {
+.parent::after {
 	content: "";
 	clear: both;
+  display: table;
 }
