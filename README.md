@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Домашние задания (Homeworks). GoFrontend#3: Offline
 Repository for homeworks "GoFrontend#3: Offline". Mentor: Dmitriy Lisunov
 
@@ -73,3 +74,8 @@ Repository for homeworks "GoFrontend#3: Offline". Mentor: Dmitriy Lisunov
 ## Homework_5
 https://app.schoology.com/assignment/1107029914/info
 >>>>>>> 9839f3d530bbbd547d0e7078541374a9ba58cd21
+=======
+## Homework_6
+https://app.schoology.com/assignment/1121642390/info
+https://app.schoology.com/assignment/1121642392/info
+>>>>>>> fe566cbbc32690e6695e0a210493ede1b2830abc
