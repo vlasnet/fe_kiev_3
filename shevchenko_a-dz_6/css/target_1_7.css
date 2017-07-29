@@ -1,0 +1,19 @@
+.black-box {
+	background-color: #000;
+	height: 50px;
+	left: 48%;
+	position: relative;
+	top: 100px;
+	width: 100px;
+}
+
+.black-box::before {
+	border: 15px solid;
+	border-color: transparent #000 transparent transparent;
+	border-right: 25px solid;
+	content: "";
+	left: -40px;
+	line-height: 0;
+	position: absolute;
+	top: 10px;
+}
