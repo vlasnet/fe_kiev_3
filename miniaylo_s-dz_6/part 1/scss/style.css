@@ -18,21 +18,26 @@
   border: 10px solid transparent;
   border-right: 20px solid #000; }
 
+.child p:first-letter {
+  color: #F00;
+  font-family: Georgia, sans-serif;
+  font-size: 2em; }
 .child p:nth-child(even) {
   background: #666; }
 .child p::before {
   content: "\002602"; }
+.child p::after {
+  content: "*"; }
 
 input:focus {
-  border: 1px solid #008000;
-  font-size: 30px; }
+  border: 3px solid #008000;
+  font-size: 30px;
+  outline: none; }
 
 .first_letter p::first-letter {
   color: #F00;
   font-family: Georgia, sans-serif;
   font-size: 2em; }
-.first_letter p::after {
-  content: "*"; }
 
 .green a {
   color: #008000;

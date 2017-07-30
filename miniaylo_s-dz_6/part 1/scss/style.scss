@@ -21,17 +21,30 @@
    }
 
  .child {
+     p:first-letter {
+         color: #F00;
+         font-family: Georgia, sans-serif;
+         font-size: 2em;
+     }
      p:nth-child(even) {
          background: #666;
      }
+
      p::before {
          content: "\002602";
      }
+
+     p::after {
+         content: "*";
+     }
+
+
  }
 
  input:focus {
-   border: 1px solid #008000;
+   border: 3px solid #008000;
    font-size: 30px;
+   outline: none;
  }
 
  .first_letter {
@@ -40,9 +53,7 @@
          font-family: Georgia, sans-serif;
          font-size: 2em;
      }
-     p::after {
-         content: "*";
-     }
+
  }
 
 .green {

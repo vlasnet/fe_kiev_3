@@ -1,5 +1,4 @@
 .liters {
-  border: 1;
   border-collapse: collapse;
   text-align: center;
   width: 600px;
@@ -27,5 +26,41 @@
   text-align: center; }
   .confection2 tr:nth-child(n+1) {
     border-bottom: 2px solid #C0C0C0; }
+
+.cart {
+  height: 200px;
+  width: 550px;
+  text-align: center;
+  border-collapse: collapse;
+  margin: auto; }
+  .cart .border_top {
+    border-top: 1px solid #C0C0C0; }
+  .cart td:nth-child(1) {
+    text-align: left; }
+
+.round {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #000;
+  border-radius: 100%;
+  border: 5px solid #FFF;
+  color: #FFF; }
+
+.btn_add, .btn_delete {
+  background-color: #F00;
+  border-color: #F00;
+  color: #FFF; }
+
+.btn_delete {
+  padding: 1px; }
+
+.wraper {
+  border: 1px solid #DDD;
+  border-radius: 10px;
+  box-shadow: 0 0 8px 2px #808080;
+  width: 600px;
+  margin: 20px auto;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
