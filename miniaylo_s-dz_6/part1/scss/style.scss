@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Georgia';
+    src: url("../../fonts/georgia.woff") format("woff"),
+    url("../../fonts/Georgia.woff2") format("woff2");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.a-green {
+    margin-bottom: 20px;
+
+    a {
+    color: #008000;
+    text-decoration: none;
+    }
+
+    a:hover {
+    color: #F00;
+    }
+
+    a:active {
+    color: #FF0;
+    }
+}
+
+.a-violet {
+    margin: 20px 0;
+    a {
+        color: #C71585;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #FFD700;
+    }
+
+    a:active  {
+        color: #8B4513;
+    }
+ }
+
+.comment-window {
+    margin: 20px;
+    background: #000;
+    position: relative;
+    width: 100px; height: 50px;
+   }
+
+ .comment-window::after {
+    content: '';
+    position: absolute;
+    left: -30px; top: 15px;
+    border: 10px solid transparent;
+    border-right: 20px solid #000;
+ }
+
+
+p:first-letter {
+    color: #F00;
+    font-family: Georgia, sans-serif;
+    font-size: 2em;
+}
+p:nth-child(even) {
+    background: #666;
+}
+
+p::before {
+    font-size: 25px;
+    float: left;
+    content: "\002602";
+}
+
+p::after {
+    content: "*";
+}
+
+input:focus {
+   border: 3px solid #008000;
+   font-size: 20px;
+   outline-color: #0f0;
+ }
