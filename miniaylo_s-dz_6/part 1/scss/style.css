@@ -25,6 +25,8 @@
 .child p:nth-child(even) {
   background: #666; }
 .child p::before {
+  font-size: 25px;
+  float: left;
   content: "\002602"; }
 .child p::after {
   content: "*"; }
