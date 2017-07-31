@@ -8,6 +8,7 @@
     clear: both;
     display: block;
 }
+
 footer {
     @include border;
     height: 104px;
@@ -41,7 +42,7 @@ main {
     @include border;
     float: right;
     height: 456px;
-    width: 30%;
+    width: 35%;
     margin: 20px;
 }
 

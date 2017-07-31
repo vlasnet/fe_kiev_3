@@ -50,16 +50,17 @@ span {
   .cardiousg p, .gynecologistusg p, .neurologist p {
     height: 108px; }
 
-.clearfix {
+.clearfix:after {
   content: "";
-  clear: both; }
+  clear: both;
+  display: block; }
 
 .expirience {
   width: 550px; }
 
-.fixed-price {
+.fixedprice {
   margin: 23px 0 0; }
-  .fixed-price a {
+  .fixedprice a {
     text-decoration: underline; }
 
 .float_wrap {
@@ -71,7 +72,7 @@ footer {
   font-family: Arial, sans-serif;
   font-weight: bold;
   font-size: 0.64em;
-  height: 67px;
+  min-height: 67px;
   line-height: 2.1em;
   margin: auto;
   padding-top: 42px;
@@ -109,10 +110,11 @@ footer {
 .gynecologistusg {
   margin-left: 30px; }
 
-header img {
-  width: 641px; }
+.header-image {
+  max-width: 100%;
+  height: auto; }
 
-.like-on-facebook {
+.facebook {
   border: none;
   border-radius: 5px;
   background-color: #f00;
@@ -125,12 +127,12 @@ header img {
   font-weight: bold;
   margin-top: 54px;
   width: 540px; }
-  .like-on-facebook a {
+  .facebook a {
     color: #fff;
     text-decoration: none; }
-  .like-on-facebook a {
+  .facebook a {
     text-decoration: none; }
-  .like-on-facebook span {
+  .facebook span {
     font-family: Arial, sans-serif;
     font-style: italic; }
 
@@ -182,7 +184,7 @@ main {
   text-align: center;
   width: 641px; }
 
-.xdays-left {
+.xdaysleft {
   margin: 33px 0 23px; }
 
 /*# sourceMappingURL=style.css.map */

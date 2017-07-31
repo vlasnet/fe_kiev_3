@@ -79,16 +79,17 @@ span {
 	}
 }
 
-.clearfix {
-	content: "";
-	clear: both;
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
 }
 
 .expirience {
 	width: 550px;
 }
 
-.fixed-price {
+.fixedprice {
 	margin: 23px 0 0;
 
 	a {
@@ -112,7 +113,7 @@ footer {
 		font-family: Arial, sans-serif;
 		font-weight: bold;
 		font-size: 0.64em;
-		height: 67px;
+		min-height: 67px;
 		line-height: 2.1em;
 		margin: auto;
 		padding-top: 42px;
@@ -134,13 +135,12 @@ footer {
 	margin-left: 30px;
 }
 
-header {
-	img {
-		width: 641px;
-	}
+.header-image {
+	max-width: 100%;
+    height: auto;
 }
 
-.like-on-facebook {
+.facebook {
     @include btn-reception;
 	margin-top: 54px;
 	width: 540px;
@@ -200,6 +200,6 @@ main {
 
 }
 
-.xdays-left {
+.xdaysleft {
 	margin: 33px 0 23px;
 }
