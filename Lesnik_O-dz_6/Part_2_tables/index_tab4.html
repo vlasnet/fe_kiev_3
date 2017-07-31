@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Tab4 </title>
-	<link rel="stylesheet" href="css/style3.css">
+	<link rel="stylesheet" href="css/style4.css">
 </head>
 <body>
 <table>
@@ -13,10 +13,10 @@
 <tr>
 		
 		<th> Название </th>
-		<th> Кол-во </th>
+		<th class="column2"> Кол-во </th>
 		<th> Цена </th>
 		<th> Скидка </th>
-		<th>  </th>
+		<th> <button class="close">&times;</button> </th>
 		<th> Итого </th>
 
 </tr>
@@ -27,9 +27,12 @@
 		<td> 300р. </td>
 		<td> 50% </td>
 		<td> 
-	<button class="increase">+</button>
-	<button class="decrease">-</button>
-	<button class="delete">УДАЛИТЬ</button> 
+	<form action="" method="get">
+	<button class="btn btn-increase" name="increase_value">+</button>
+	<button class="btn btn-decrease" name="decrease_value">-</button>
+	<button class="btn-delete" name="delete_value">УДАЛИТЬ</button>
+	</form>
+	
 	</td>
 	    		<td> 300р. </td>
 </tr>
@@ -40,10 +43,12 @@
 		<td> 100р.</td>
 		<td> &#8212; </td>
 		<td> 
-     <button class="increase">+</button>
-	 <button class="decrease">-</button>
-	 <button class="delete">УДАЛИТЬ</button>
-   
+	<form action="" method="get">
+	<button class="btn btn-increase" name="increase_value">+</button>
+	<button class="btn btn-decrease" name="decrease_value">-</button>
+	<button class="btn-delete" name="delete_value">УДАЛИТЬ</button>
+	</form>
+	
 		</td>
 		<td> 100р.</td>
 </tr>
@@ -54,11 +59,15 @@
 		<td> 10 000р.</td>
 		<td> &#8212; </td>
 		<td>
-	<button class="increase">+</button>
-	<button class="decrease">-</button>
-	<button class="delete">УДАЛИТЬ</button>
 
-		 </td>
+	<form action="" method="get">
+	<button class="btn btn-increase" name="increase_value">+</button>
+	<button class="btn btn-decrease" name="decrease_value">-</button>
+	<button class="btn-delete" name="delete_value">УДАЛИТЬ</button>
+	</form>
+	
+
+	 </td>
 		<td> 10 000р. </td>
 </tr>
 
@@ -69,9 +78,11 @@
 		<td class="noborder"> &#8212; </td>
 		<td class="noborder">
 
-	<button class="increase">+</button>
-	<button class="decrease">-</button>
-	<button class="delete">УДАЛИТЬ</button>
+	<form action="" method="get">
+	<button class="btn btn-increase" name="increase_value">+</button>
+	<button class="btn btn-decrease" name="decrease_value">-</button>
+	<button class="btn-delete" name="delete_value">УДАЛИТЬ</button>
+	</form>
 
 		</td>
 		<td class="noborder"> 300р. </td>
@@ -80,7 +91,7 @@
 <tr>
 		<td colspan="6" class="rightcell noborder"> 
 		 <strong>4 шт. на сумму: 10 700р.</strong>
-		<p>Сумма без скидки: 11 000р.&#8212;</p>
+		<div class="sum">Сумма без скидки: 11 000р.&#8212;</div>
 		</td>
 		
 </tr>

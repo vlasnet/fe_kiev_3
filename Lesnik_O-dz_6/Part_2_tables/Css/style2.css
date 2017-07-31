@@ -20,13 +20,13 @@ td, th {
 
 th {
 	border-bottom: 1px solid lightgrey;
-	vertical-align: center
+	vertical-align: middle;
 }
 
 .colname {
 	width: 150px;
 }
 
-td.tdborder {
+.tdborder {
 	border-bottom: 1px solid lightgrey;
 }

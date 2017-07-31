@@ -11,7 +11,7 @@ table{
 
 td, th {
 	border: 2px solid grey;
-	padding: 8px;
+		padding: 8px;
 	font-weight: bold;
 }
 
