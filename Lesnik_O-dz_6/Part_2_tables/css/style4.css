@@ -1,0 +1,120 @@
+
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+      font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+
+
+caption {
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+table {
+	margin-left: 20px;
+	border-radius: 10px;
+	border-collapse: collapse;
+	text-align: left;
+	font-family: Arial;
+	background: -webkit-box-shadow: 2px -1px 21px 0px rgba(173,168,173,1);
+-moz-box-shadow: 2px -1px 21px 0px rgba(173,168,173,1);
+box-shadow: 2px -1px 21px 0px rgba(173,168,173,1);
+}
+
+
+td, th {
+	border-bottom: 1px solid lightgrey;
+	padding: 10px;
+}
+
+th {
+	font-size: 12px;
+	padding-top: 12px;
+}
+
+
+
+.prodname {
+	color: red;
+	font-size: 12px;
+	padding-right: 35px;
+    padding-left: 20px; 
+}
+
+
+
+.cart {
+	color: red;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+
+.noborder {
+	border-bottom: 0;
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  font-size: 10px;
+  font-family: Arial, sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-increase {
+		margin-left: 20px;
+
+}
+
+.btn-delete {
+	width: 60px;
+	height: 30px;
+	background-color: red;
+	font-size: 10px;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	color: white;
+	margin-right: 40px;
+}
+
+.rightcell {
+	text-align: right;
+	font-size: 16px;
+}
+
+.sum {
+	color: grey;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 50px;
+}
+
+.close{
+	position: relative;
+	width: 26px;
+	height: 26px;
+	border-radius: 13px;
+	background-color: black;
+	border: 2px solid white;
+	box-shadow: 0 0 10px 1px gray;
+	color: white;
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	left: 260px;
+	top: -25px;
+}
