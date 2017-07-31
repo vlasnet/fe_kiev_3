@@ -49,3 +49,8 @@
 ## 8.Семантика тегов. В HTML есть много интересных тегов, таких как aside, strong, button, main, menu и прочие. 
 https://habrahabr.ru/post/124993/
 http://www.wisdomweb.ru/HTML5/semantic.php
+
+## 9.`::before` и `::after` пишется с 2-мя двоеточиями `::`, так как мы используем CSS стандарта 3.0, а не CSS 2.0
+http://htmlbook.ru/css3/after - 3.0
+http://htmlbook.ru/css/after - 2.0
+В чём разница: http://css-live.ru/articles-css/impossible-pseudos.html
