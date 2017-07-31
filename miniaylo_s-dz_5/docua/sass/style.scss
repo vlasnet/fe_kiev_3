@@ -1,17 +1,17 @@
 @font-face {
-	font-family: "ArialRegular";
+	font-family: 'Arial';
 	src: url("../fonts/ArialRegular/ArialRegular.woff") format("woff"), url("../fonts/ArialRegular/ArialRegular.ttf") format("truetype");
 		font-style: normal;
 		font-weight: normal;
 }
 @font-face {
-    font-family: "ArialBold";
+    font-family: 'Arial';
     src: url("../fonts/ArialBold/ArialBold.woff") format("woff"), url("../fonts/ArialBold/ArialBold.ttf") format("truetype");
     	font-style: normal;
-	    font-weight: normal;
+	    font-weight: bold;
 }
 @font-face {
-	font-family: "ArialItalic";
+	font-family: 'Arial';
 	src: url("../fonts/ArialItalic/ArialItalic.woff") format("woff"), url("../fonts/ArialItalic/ArialItalic.ttf") format("truetype");
 	    font-style: italic;
 	    font-weight: normal;
@@ -21,7 +21,8 @@
 
 	@mixin font-bold {
 		font-size: 15px;
-		font-family: ArialBold, sans-serif;
+		font-family: Arial, sans-serif;
+		font-weight: bold;
 	}
 
 @mixin btn-reception {
@@ -54,19 +55,21 @@
 }
 
 span {
-	font-family: ArialBold, sans-serif;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
 }
 
 .background {
 	background-color: #d1d1d1;
-	font-family: ArialRegular, sans-serif;
+	font-family: Arial, sans-serif;
+	font-weight: normal;
 	margin: auto;
 	padding: 57px 6px 0 3px;
 	text-align: center;
 	width: 750px;
 }
 
-.cardio_usg {
+.cardiousg {
 	@include promo-offers;
 		margin-bottom: 23px;
 		width: 160px;
@@ -85,7 +88,7 @@ span {
 	width: 550px;
 }
 
-.fixed_price {
+.fixed-price {
 	margin: 23px 0 0;
 
 	a {
@@ -101,12 +104,14 @@ span {
 footer {
 	a {
 		color: $btn_a-color;
-	    font-family: ArialBold, sans-serif;
+	    font-family: Arial, sans-serif;
+		font-weight: bold;
 		text-decoration: underline;
 	}
 		color: #fff;
-		font-family: ArialBold, sans-serif;
-		font-size: 10px;
+		font-family: Arial, sans-serif;
+		font-weight: bold;
+		font-size: 0.64em;
 		height: 67px;
 		line-height: 2.1em;
 		margin: auto;
@@ -124,8 +129,8 @@ footer {
 	}
 }
 
-.gynecologist_usg {
-	@extend .cardio_usg;
+.gynecologistusg {
+	@extend .cardiousg;
 	margin-left: 30px;
 }
 
@@ -135,7 +140,7 @@ header {
 	}
 }
 
-.like_on_facebook {
+.like-on-facebook {
     @include btn-reception;
 	margin-top: 54px;
 	width: 540px;
@@ -144,7 +149,8 @@ header {
 		text-decoration: none;
 	}
 	span {
-		font-family: ArialItalic, sans-serif;
+		font-family: Arial, sans-serif;
+		font-style: italic;
 	}
 }
 
@@ -159,11 +165,11 @@ main {
 }
 
 .neurologist {
-	@extend .cardio_usg;
+	@extend .cardiousg;
 	margin-left: 30px;
 }
 
-.right_choice {
+.rightchoice {
 
 	p {
 		margin-bottom: 10px;
@@ -174,10 +180,11 @@ main {
 	}
 
 	span {
-		font-family: ArialItalic, sans-serif;
+		font-family: Arial, sans-serif;
+		font-style: italic;
 	}
 }
-.teeth_clean {
+.teethclean {
 	@include promo-offers;
 	@extend .gynecologist;
 	margin-left: 30px;
@@ -193,6 +200,6 @@ main {
 
 }
 
-.xdays_left {
+.xdays-left {
 	margin: 33px 0 23px;
 }

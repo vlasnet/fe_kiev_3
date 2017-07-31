@@ -1,34 +1,36 @@
 @font-face {
-  font-family: "ArialRegular";
+  font-family: 'Arial';
   src: url("../fonts/ArialRegular/ArialRegular.woff") format("woff"), url("../fonts/ArialRegular/ArialRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
 @font-face {
-  font-family: "ArialBold";
+  font-family: 'Arial';
   src: url("../fonts/ArialBold/ArialBold.woff") format("woff"), url("../fonts/ArialBold/ArialBold.ttf") format("truetype");
   font-style: normal;
-  font-weight: normal; }
+  font-weight: bold; }
 @font-face {
-  font-family: "ArialItalic";
+  font-family: 'Arial';
   src: url("../fonts/ArialItalic/ArialItalic.woff") format("woff"), url("../fonts/ArialItalic/ArialItalic.ttf") format("truetype");
   font-style: italic;
   font-weight: normal; }
 span {
-  font-family: ArialBold, sans-serif; }
+  font-family: Arial, sans-serif;
+  font-weight: bold; }
 
 .background {
   background-color: #d1d1d1;
-  font-family: ArialRegular, sans-serif;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
   margin: auto;
   padding: 57px 6px 0 3px;
   text-align: center;
   width: 750px; }
 
-.cardio_usg, .gynecologist_usg, .neurologist {
+.cardiousg, .gynecologistusg, .neurologist {
   float: left;
   margin-bottom: 23px;
   width: 160px; }
-  .cardio_usg div, .gynecologist_usg div, .neurologist div {
+  .cardiousg div, .gynecologistusg div, .neurologist div {
     border: none;
     border-radius: 5px;
     background-color: #f00;
@@ -37,14 +39,15 @@ span {
     text-align: center;
     width: inherit;
     font-size: 15px;
-    font-family: ArialBold, sans-serif; }
-    .cardio_usg div a, .gynecologist_usg div a, .neurologist div a {
+    font-family: Arial, sans-serif;
+    font-weight: bold; }
+    .cardiousg div a, .gynecologistusg div a, .neurologist div a {
       color: #fff;
       text-decoration: none; }
-  .cardio_usg img, .gynecologist_usg img, .neurologist img {
+  .cardiousg img, .gynecologistusg img, .neurologist img {
     height: 213px;
     margin-bottom: 8px; }
-  .cardio_usg p, .gynecologist_usg p, .neurologist p {
+  .cardiousg p, .gynecologistusg p, .neurologist p {
     height: 108px; }
 
 .clearfix {
@@ -54,9 +57,9 @@ span {
 .expirience {
   width: 550px; }
 
-.fixed_price {
+.fixed-price {
   margin: 23px 0 0; }
-  .fixed_price a {
+  .fixed-price a {
     text-decoration: underline; }
 
 .float_wrap {
@@ -65,8 +68,9 @@ span {
 
 footer {
   color: #fff;
-  font-family: ArialBold, sans-serif;
-  font-size: 10px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.64em;
   height: 67px;
   line-height: 2.1em;
   margin: auto;
@@ -74,14 +78,15 @@ footer {
   width: 370px; }
   footer a {
     color: #fff;
-    font-family: ArialBold, sans-serif;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
     text-decoration: underline; }
 
-.gynecologist, .teeth_clean {
+.gynecologist, .teethclean {
   float: left;
   margin-bottom: 30px;
   width: 255px; }
-  .gynecologist div, .teeth_clean div {
+  .gynecologist div, .teethclean div {
     border: none;
     border-radius: 5px;
     background-color: #f00;
@@ -90,23 +95,24 @@ footer {
     text-align: center;
     width: inherit;
     font-size: 15px;
-    font-family: ArialBold, sans-serif; }
-    .gynecologist div a, .teeth_clean div a {
+    font-family: Arial, sans-serif;
+    font-weight: bold; }
+    .gynecologist div a, .teethclean div a {
       color: #fff;
       text-decoration: none; }
-  .gynecologist img, .teeth_clean img {
+  .gynecologist img, .teethclean img {
     height: 213px;
     margin-bottom: 8px; }
-  .gynecologist p, .teeth_clean p {
+  .gynecologist p, .teethclean p {
     height: 85px; }
 
-.gynecologist_usg {
+.gynecologistusg {
   margin-left: 30px; }
 
 header img {
   width: 641px; }
 
-.like_on_facebook {
+.like-on-facebook {
   border: none;
   border-radius: 5px;
   background-color: #f00;
@@ -115,16 +121,18 @@ header img {
   text-align: center;
   width: inherit;
   font-size: 15px;
-  font-family: ArialBold, sans-serif;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
   margin-top: 54px;
   width: 540px; }
-  .like_on_facebook a {
+  .like-on-facebook a {
     color: #fff;
     text-decoration: none; }
-  .like_on_facebook a {
+  .like-on-facebook a {
     text-decoration: none; }
-  .like_on_facebook span {
-    font-family: ArialItalic, sans-serif; }
+  .like-on-facebook span {
+    font-family: Arial, sans-serif;
+    font-style: italic; }
 
 main {
   line-height: 1.45em;
@@ -137,17 +145,18 @@ main {
 .neurologist {
   margin-left: 30px; }
 
-.right_choice p {
+.rightchoice p {
   margin-bottom: 10px; }
-.right_choice a {
+.rightchoice a {
   text-decoration: underline; }
-.right_choice span {
-  font-family: ArialItalic, sans-serif; }
+.rightchoice span {
+  font-family: Arial, sans-serif;
+  font-style: italic; }
 
-.teeth_clean {
+.teethclean {
   float: left;
   margin-left: 30px; }
-  .teeth_clean div {
+  .teethclean div {
     border: none;
     border-radius: 5px;
     background-color: #f00;
@@ -156,11 +165,12 @@ main {
     text-align: center;
     width: inherit;
     font-size: 15px;
-    font-family: ArialBold, sans-serif; }
-    .teeth_clean div a {
+    font-family: Arial, sans-serif;
+    font-weight: bold; }
+    .teethclean div a {
       color: #fff;
       text-decoration: none; }
-  .teeth_clean img {
+  .teethclean img {
     height: 213px;
     margin-bottom: 8px; }
 
@@ -172,7 +182,7 @@ main {
   text-align: center;
   width: 641px; }
 
-.xdays_left {
+.xdays-left {
   margin: 33px 0 23px; }
 
 /*# sourceMappingURL=style.css.map */
