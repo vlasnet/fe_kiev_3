@@ -5,8 +5,6 @@ body {
 
 * {
 	box-sizing: inherit;
-	padding: 0;
-	margin: 0;
 }
 
 table {
@@ -33,7 +31,8 @@ th {
 
 td {
 	text-align: left;
-	padding: 11px 8px 24px;
+	padding: 11px 8px 24px 8px;
+	letter-spacing: 0.001em;
 }
 
 .wrapper {
@@ -68,6 +67,7 @@ td {
 
 .adjustment-btn {
 	position: absolute;
+	border: none;
 	display: block;
 	background-color: #f00;
 	width: 32px;
@@ -87,9 +87,10 @@ td {
 .delete-btn {
 	left: 78px;
 	width: 59px;
-	padding: 6px 8px;
-	font-size: 13px;
+	padding: 11px 8px;
+	font-size: 9px;
 	font-stretch: extra-condensed;
+	text-transform: uppercase;
 }
 
 .btn-buy {
@@ -118,11 +119,12 @@ td {
 
 .btn-buy {
 	display: block;
-	margin: 34px auto 14px;
+	margin: 34px auto 15px;
 	width: 200px;
 	text-align: center;
 	font-size: 16px;
-	font-family: 'Roboto', arial, sans-serif;
+	letter-spacing: 0.001em;
+	font-family: 'Open sans', arial, sans-serif;
 }
 
 .btn-buy:hover {
