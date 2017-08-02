@@ -10,7 +10,7 @@
 
 Они НЕ являются истинной в последней инстанции (то есть там НЕ ВСЁ правильно), но общие принципы именования они должны помочь тебе понять.
 
-За именование классов типа `footer-1, footer-2`, `.fdgfdfgsg, .kkk`, `.shapka-sayta, .podval` - буду лЯщи (и много)!
+За именование классов типа `footer-1, footer-2`, `.fdgfdfgsg, .kkk`, `.shapka-sayta, .podval` - будут лЯщи (и много)!
 
 
 
@@ -35,7 +35,8 @@
 
 
 
-## 6. Не нужно задавать жёстко высоту (типа такого `height: 700px`). Chrome умный - и он автоматически подстраивает ВЫСОТУ блоков под размер текста и картинок внутри. Если текста не будет совсем, но нужно сохранить структуру вёрстки, то есть интересное CSS-свойство для высоты min-height http://htmlbook.ru/css/min-height
+## 6. Не нужно задавать жёстко высоту (типа такого `height: 700px`).
+Chrome умный - и он автоматически подстраивает ВЫСОТУ блоков под размер текста и картинок внутри. Если текста не будет совсем, но нужно сохранить структуру вёрстки, то есть интересное CSS-свойство для высоты min-height http://htmlbook.ru/css/min-height
 
 
 
@@ -46,11 +47,62 @@
 
 
 
-## 8.Семантика тегов. В HTML есть много интересных тегов, таких как aside, strong, button, main, menu и прочие. 
+## 8.Семантика тегов. 
+В HTML есть много интересных тегов, таких как aside, strong, button, main, menu и прочие. 
 https://habrahabr.ru/post/124993/
 http://www.wisdomweb.ru/HTML5/semantic.php
+
 
 ## 9.`::before` и `::after` пишется с 2-мя двоеточиями `::`, так как мы используем CSS стандарта 3.0, а не CSS 2.0
 http://htmlbook.ru/css3/after - 3.0
 http://htmlbook.ru/css/after - 2.0
 В чём разница: http://css-live.ru/articles-css/impossible-pseudos.html
+
+## 10. НЕ НУЖНО использовать вендорные префиксы в ИСХОДНЫХ КОДАХ
+Сравним 2 кусочка кода:
+### Кусочек № 1
+<pre>
+.example {
+    display: flex;
+    transition: all .5s;
+    user-select: none;
+    background: linear-gradient(to bottom, white, black);
+    border-radius: 0;
+}
+</pre>
+### Кусочек № 2
+<pre>
+.example {
+    display: box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -webkit-linear-gradient(top, white, black);
+    background: -moz-linear-gradient(top, white, black);
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+</pre>
+Из этих 2-х примеров очевидно, что легче проверять и исправлять ошибки в **кусочке № 1**
+Если вы хотите использовать вендорные префиксы, то я разрешаю делать это ТОЛЬКО 2-мя вариантами, которые описаны ниже:
+1. Использовать миксины SASS в исходном коде (например, такой для flexbox: https://github.com/mastastealth/sass-flex-mixin/blob/master/_flex.scss)
+2. Или готовый CSS-файл прогонять через Autoptrefixer и в названии НОВОГО получившегося файла добавлять `prefixed`, например, вот так `style.prefixed.css`. При этом в папке у Вас должен остаться и файл `style.css` (или `style.scss`). Теперь сами способы в порядке увеличения сложности:
+ - можно онлайн CTRL+C и CTRL+V: https://autoprefixer.github.io/ru/
+ - использовать плагин Autoptrefixer для вашего любимого редактора кода (для Sublime Text - https://github.com/sindresorhus/sublime-autoprefixer, для Atom - https://github.com/sindresorhus/atom-autoprefixer_)
+ - использовать его через терминал: https://github.com/postcss/autoprefixer#cli
+ - использовать как Gulp-плагин https://github.com/postcss/autoprefixer#gulp
+  - использовать как Webpack-плагин https://github.com/postcss/autoprefixer#webpack
