@@ -106,4 +106,8 @@ http://htmlbook.ru/css/after - 2.0
  - использовать плагин Autoptrefixer для вашего любимого редактора кода (для Sublime Text - https://github.com/sindresorhus/sublime-autoprefixer, для Atom - https://github.com/sindresorhus/atom-autoprefixer_)
  - использовать его через терминал: https://github.com/postcss/autoprefixer#cli
  - использовать как Gulp-плагин https://github.com/postcss/autoprefixer#gulp
-  - использовать как Webpack-плагин https://github.com/postcss/autoprefixer#webpack
+ - использовать как Webpack-плагин https://github.com/postcss/autoprefixer#webpack
+
+
+## 11. Форматирование и отступы в HTML / CSS / SASS / JS файлах.
+Правильное форматирвание кода упрощает разработку. Инструменты для автоматического форматирвания в Sublime Text: https://packagecontrol.io/packages/HTML-CSS-JS%20Prettify и https://packagecontrol.io/packages/CSS%20Format. Для других редакторов существуют аналогичные решения.
