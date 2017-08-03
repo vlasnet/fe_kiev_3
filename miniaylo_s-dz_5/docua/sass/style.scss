@@ -69,7 +69,7 @@ span {
 	width: 750px;
 }
 
-.cardiousg {
+.cardio-usg {
 	@include promo-offers;
 		margin-bottom: 23px;
 		width: 160px;
@@ -89,7 +89,7 @@ span {
 	width: 550px;
 }
 
-.fixedprice {
+.fixed-price {
 	margin: 23px 0 0;
 
 	a {
@@ -130,8 +130,8 @@ footer {
 	}
 }
 
-.gynecologistusg {
-	@extend .cardiousg;
+.gynecologist-usg {
+	@extend .cardio-usg;
 	margin-left: 30px;
 }
 
@@ -165,11 +165,11 @@ main {
 }
 
 .neurologist {
-	@extend .cardiousg;
+	@extend .cardio-usg;
 	margin-left: 30px;
 }
 
-.rightchoice {
+.right-choice {
 
 	p {
 		margin-bottom: 10px;
@@ -184,7 +184,7 @@ main {
 		font-style: italic;
 	}
 }
-.teethclean {
+.teeth-clean {
 	@include promo-offers;
 	@extend .gynecologist;
 	margin-left: 30px;
@@ -200,6 +200,6 @@ main {
 
 }
 
-.xdaysleft {
+.xdays-left {
 	margin: 33px 0 23px;
 }

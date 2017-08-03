@@ -26,11 +26,11 @@ span {
   text-align: center;
   width: 750px; }
 
-.cardiousg, .gynecologistusg, .neurologist {
+.cardio-usg, .gynecologist-usg, .neurologist {
   float: left;
   margin-bottom: 23px;
   width: 160px; }
-  .cardiousg div, .gynecologistusg div, .neurologist div {
+  .cardio-usg div, .gynecologist-usg div, .neurologist div {
     border: none;
     border-radius: 5px;
     background-color: #f00;
@@ -41,13 +41,13 @@ span {
     font-size: 15px;
     font-family: Arial, sans-serif;
     font-weight: bold; }
-    .cardiousg div a, .gynecologistusg div a, .neurologist div a {
+    .cardio-usg div a, .gynecologist-usg div a, .neurologist div a {
       color: #fff;
       text-decoration: none; }
-  .cardiousg img, .gynecologistusg img, .neurologist img {
+  .cardio-usg img, .gynecologist-usg img, .neurologist img {
     height: 213px;
     margin-bottom: 8px; }
-  .cardiousg p, .gynecologistusg p, .neurologist p {
+  .cardio-usg p, .gynecologist-usg p, .neurologist p {
     height: 108px; }
 
 .clearfix:after {
@@ -58,9 +58,9 @@ span {
 .expirience {
   width: 550px; }
 
-.fixedprice {
+.fixed-price {
   margin: 23px 0 0; }
-  .fixedprice a {
+  .fixed-price a {
     text-decoration: underline; }
 
 .float_wrap {
@@ -83,11 +83,11 @@ footer {
     font-weight: bold;
     text-decoration: underline; }
 
-.gynecologist, .teethclean {
+.gynecologist, .teeth-clean {
   float: left;
   margin-bottom: 30px;
   width: 255px; }
-  .gynecologist div, .teethclean div {
+  .gynecologist div, .teeth-clean div {
     border: none;
     border-radius: 5px;
     background-color: #f00;
@@ -98,16 +98,16 @@ footer {
     font-size: 15px;
     font-family: Arial, sans-serif;
     font-weight: bold; }
-    .gynecologist div a, .teethclean div a {
+    .gynecologist div a, .teeth-clean div a {
       color: #fff;
       text-decoration: none; }
-  .gynecologist img, .teethclean img {
+  .gynecologist img, .teeth-clean img {
     height: 213px;
     margin-bottom: 8px; }
-  .gynecologist p, .teethclean p {
+  .gynecologist p, .teeth-clean p {
     height: 85px; }
 
-.gynecologistusg {
+.gynecologist-usg {
   margin-left: 30px; }
 
 .header-image {
@@ -147,18 +147,18 @@ main {
 .neurologist {
   margin-left: 30px; }
 
-.rightchoice p {
+.right-choice p {
   margin-bottom: 10px; }
-.rightchoice a {
+.right-choice a {
   text-decoration: underline; }
-.rightchoice span {
+.right-choice span {
   font-family: Arial, sans-serif;
   font-style: italic; }
 
-.teethclean {
+.teeth-clean {
   float: left;
   margin-left: 30px; }
-  .teethclean div {
+  .teeth-clean div {
     border: none;
     border-radius: 5px;
     background-color: #f00;
@@ -169,10 +169,10 @@ main {
     font-size: 15px;
     font-family: Arial, sans-serif;
     font-weight: bold; }
-    .teethclean div a {
+    .teeth-clean div a {
       color: #fff;
       text-decoration: none; }
-  .teethclean img {
+  .teeth-clean img {
     height: 213px;
     margin-bottom: 8px; }
 
@@ -184,7 +184,7 @@ main {
   text-align: center;
   width: 641px; }
 
-.xdaysleft {
+.xdays-left {
   margin: 33px 0 23px; }
 
 /*# sourceMappingURL=style.css.map */
