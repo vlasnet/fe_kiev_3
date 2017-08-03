@@ -111,3 +111,6 @@ http://htmlbook.ru/css/after - 2.0
 
 ## 11. Форматирование и отступы в HTML / CSS / SASS / JS файлах.
 Правильное форматирвание кода упрощает разработку. Инструменты для автоматического форматирвания в Sublime Text: https://packagecontrol.io/packages/HTML-CSS-JS%20Prettify и https://packagecontrol.io/packages/CSS%20Format. Для других редакторов существуют аналогичные решения.
+
+## 12. Используйте адекватные названия коммитов:
+https://habrahabr.ru/company/Voximplant/blog/276695/
