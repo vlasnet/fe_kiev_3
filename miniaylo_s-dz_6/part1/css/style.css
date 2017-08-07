@@ -3,25 +3,25 @@
   src: url("../../fonts/georgia.woff") format("woff"), url("../../fonts/Georgia.woff2") format("woff2");
   font-style: normal;
   font-weight: normal; }
-.a-green {
-  margin-bottom: 20px; }
-  .a-green a {
-    color: #008000;
-    text-decoration: none; }
-  .a-green a:hover {
-    color: #F00; }
-  .a-green a:active {
-    color: #FF0; }
+.green {
+  margin-bottom: 20px;
+  color: #008000; }
 
-.a-violet {
-  margin: 20px 0; }
-  .a-violet a {
-    color: #C71585;
-    text-decoration: none; }
-  .a-violet a:hover {
-    color: #FFD700; }
-  .a-violet a:active {
-    color: #8B4513; }
+.green:hover {
+  color: #ff0; }
+
+.green:active {
+  color: #f00; }
+
+.violet {
+  margin: 20px 0;
+  color: #EE82EE; }
+
+.violet:hover {
+  color: #A52A2A; }
+
+.violet:active {
+  color: #FFD700; }
 
 .comment-window {
   margin: 20px;
@@ -38,20 +38,17 @@
   border: 10px solid transparent;
   border-right: 20px solid #000; }
 
-p:first-letter {
+.stylized p:first-letter {
   color: #F00;
   font-family: Georgia, sans-serif;
   font-size: 2em; }
-
-p:nth-child(even) {
-  background: #666; }
-
-p::before {
+.stylized p:nth-child(even) {
+  background-color: #666; }
+.stylized p::before {
   font-size: 25px;
   float: left;
   content: "\002602"; }
-
-p::after {
+.stylized p::after {
   content: "*"; }
 
 input:focus {
