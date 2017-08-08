@@ -41,7 +41,8 @@ table {
   width: 100%;
   height: 100%;
   background: url(../images/strip.png) no-repeat, #fff;
-  background-size: 100% 100%;
+  background-size: 100% 100vh;
+  background-attachment: fixed;
   border: 0;
   padding: 25px 0;
   text-align: left; }
@@ -77,9 +78,125 @@ header {
     header .contacts .contacts__adress-phones {
       float: left;
       width: 200px; }
-    header .contacts .contacts__adress-phones:after {
+      header .contacts .contacts__email-skype a,
+      header .contacts .contacts__adress-phones a {
+        color: #000;
+        text-decoration: none; }
+        header .contacts .contacts__email-skype a:hover, header .contacts .contacts__email-skype a:active,
+        header .contacts .contacts__adress-phones a:hover,
+        header .contacts .contacts__adress-phones a:active {
+          color: #000;
+          text-decoration: underline; }
+        header .contacts .contacts__email-skype a:visited,
+        header .contacts .contacts__adress-phones a:visited {
+          color: #000;
+          text-decoration: none; }
+        header .contacts .contacts__email-skype a[href^="mailto:"],
+        header .contacts .contacts__adress-phones a[href^="mailto:"] {
+          color: #00e;
+          text-decoration: underline; }
+      header .contacts .contacts__email-skype .main-phone,
+      header .contacts .contacts__adress-phones .main-phone {
+        font-weight: bold; }
+  header .contacts__adress-phones:first-child {
+    font-weight: bold; }
+  header .contacts__adress-phones:after {
+    content: '';
+    display: block;
+    clear: both; }
+
+.main {
+  overflow: auto; }
+  .main aside {
+    width: 200px;
+    float: left;
+    padding: 15px 10px 15px 20px; }
+    .main aside h3 {
+      font: bold 1.17em "Open Sans", sans-serif;
+      line-height: 18px;
+      margin: 1em 0; }
+    .main aside ul {
+      list-style-type: disc;
+      margin-left: 20px; }
+      .main aside ul li {
+        margin: 10px 0; }
+        .main aside ul li:first-child a {
+          color: #f00; }
+        .main aside ul li:last-child a {
+          font: normal 13px "Open Sans", sans-serif;
+          line-height: 100%; }
+      .main aside ul a {
+        color: #000;
+        text-decoration: none;
+        font: bold 13px "Open Sans", sans-serif;
+        line-height: 100%; }
+        .main aside ul a:hover, .main aside ul a:active {
+          color: #000;
+          text-decoration: underline; }
+        .main aside ul a:visited {
+          color: #000;
+          text-decoration: none; }
+    .main aside nav {
+      margin-bottom: 40px; }
+      .main aside nav a {
+        color: #000;
+        text-decoration: none;
+        font: normal 13px "Open Sans", sans-serif;
+        line-height: 100%; }
+        .main aside nav a:hover, .main aside nav a:active {
+          color: #000;
+          text-decoration: underline; }
+        .main aside nav a:visited {
+          color: #000;
+          text-decoration: none; }
+      .main aside nav li:first-child a {
+        color: #000; }
+  .main .main-content {
+    width: 680px;
+    float: right;
+    padding: 0 20px; }
+    .main .main-content:after {
       content: '';
       display: block;
       clear: both; }
+    .main .main-content .notification p {
+      font: bold 2em "Open Sans", sans-serif;
+      line-height: 150%;
+      margin: .67em 0; }
+    .main .main-content h1 {
+      font: bold 2em "Open Sans", sans-serif;
+      line-height: 150%;
+      margin: .67em 0; }
+    .main .main-content p {
+      font: normal 12px "Open Sans", sans-serif;
+      line-height: 150%;
+      margin: 1em 0; }
+    .main .main-content span {
+      font-weight: bold; }
+    .main .main-content a {
+      font-weight: bold; }
+    .main .main-content .main-content__img-wrapper {
+      text-align: center; }
+      .main .main-content .main-content__img-wrapper a {
+        font: normal 12px "Open Sans", sans-serif;
+        line-height: 150%; }
+    .main .main-content .img-width300 {
+      width: 300px;
+      margin: 15px;
+      border-radius: 10px;
+      border: 5px solid #00698c; }
+    .main .main-content .img-width600 {
+      width: 600px;
+      margin: 15px;
+      border-radius: 10px;
+      border: 5px solid #00698c; }
+
+footer {
+  background: #ddd;
+  height: 80px;
+  padding: 10px 10px 0 20px; }
+  footer p {
+    font: bold 12px "Open Sans", sans-serif;
+    line-height: 150%; }
 
 /*# sourceMappingURL=styles.css.map */
