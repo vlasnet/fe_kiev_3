@@ -4,14 +4,12 @@
     font-style: normal;
     font-weight: normal;
 }
-
 @font-face {
     font-family: Arial, sans-serif;
     src: url('../fonts/ArialBold.woff') format('woff');
     font-style: normal;
     font-weight: bold;
 }
-
 @font-face {
     font-family: Arial, sans-serif;
     src: url('../fonts/ArialItalic.woff') format('woff');
@@ -24,28 +22,48 @@
 }
 
 .cart {
-    height: 250px;
-    width: 590px;
+    width: 640px;
     border-collapse: collapse;
     margin: auto;
-    line-height: 1.5em;
-    font-size: 13px;
-    padding: 0 10px;
+    font-size: 12px;
+    vertical-align: middle;
+
+    th:nth-child(1) {
+        padding-left: 9px;
+    }
 
     th {
-        font-size: 14px;
         text-align: left;
-        vertical-align: bottom;
+        padding-top: 9px;
+        padding-bottom: 11px;
     }
+
     td {
-        vertical-align: top;
+        box-sizing: border-box;
+        max-height: 47px;
+        padding-bottom: 13px;
 
         &:nth-child(1) {
-        color: #E7242A;
+            color: #E7242A;
+            width: 152px;
+            padding-left: 9px;
         }
 
-        &:nth-child(5){
-        vertical-align: middle;
+        &:nth-child(2) {
+            width: 71px;
+            padding-left: 1px;
+        }
+
+        &:nth-child(3) {
+            width: 81px;
+        }
+
+        &:nth-child(4) {
+            width: 75px;
+        }
+
+        &:nth-child(5) {
+            width: 185px;
         }
     }
 
@@ -54,14 +72,14 @@
         box-shadow: 1px 0 6px 2px #808080;
         text-align: center;
         position: absolute;
-        right: -12px;
-        top: -12px;
-        width: 20px;
-        height: 20px;
+        right: -15px;
+        top: -14px;
+        width: 24px;
+        height: 24px;
         background: #000;
         border-radius: 100%;
         border: 2px solid #FFF;
-        font-size: 19px;
+        font-size: 22px;
         font-family: Arial, sans-serif;
 
         a {
@@ -70,41 +88,34 @@
         }
     }
 
-    &__btn {
-        padding-top: 4px;
-        vertical-align: middle;
-    }
-
     &__btn-count {
         background-color: #E7242A;
-        border-color: #E7242A;
+        border: none;
         color: #FFF;
         font-weight: bold;
         font-size: 16px;
         height: 32px;
-        width: 29px;
+        width: 32px;
     }
 
     &__btn-delete {
         background-color: #DC4E45;
-        border-color: #DC4E45;
+        border: none;
         color: #FAE6ED;
-        font-size: 11px;
-        font-weight: bold;
-        height: 26px;
-        margin-bottom: 5px;
+        font-size: 10px;
+        height: 28px;
+        width: 58px;
+        margin-bottom: 3px;
     }
 
     &__full-sum {
         font-size: 14px;
-        color: #808080
+        color: #808080;
     }
 
     &__sum-discounted {
-        align-self: flex-end;
         line-height: 0.5em;
         font-size: 16px;
-        margin-right: 20px;
 
         span {
             font-family: Arial, sans-serif;
@@ -112,14 +123,21 @@
         }
     }
 
+    .cart-btn {
+        padding-bottom: 6px;
+        padding-top: 8px;
+    }
+
     &-wrapper {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
         border: 1px solid #DDD;
-        border-radius: 10px;
+        border-radius: 5px;
         box-shadow: 0 0 8px 2px #808080;
-        width: 600px;
-        margin: 20px auto;
+        width: 670px;
+        margin: 20px 0 20px 259px;
+        padding: 16px 13px;
         position: relative;
-        padding: 0 5px;
     }
 }
 
@@ -150,22 +168,24 @@
 .container {
     display: flex;
     flex-direction: column;
-    line-height: .5em;
+    line-height: 0.5em;
     align-items: flex-end;
+    padding-right: 10px;
+    padding-top: 13px;
 }
 
 .go-to-cart {
     color: #E7242A;
     text-decoration: none;
-    display: block;
 }
 
 .goto-cart {
+    padding-top: 10px;
     font-style: italic;
     line-height: 40px;
     align-self: center;
-    font-size: 18px;
-    min-height: 50px;
+    font-size: 14px;
+    max-height: 50px;
 }
 
 .liters {
@@ -175,7 +195,8 @@
     width: 600px;
     margin: 20px auto;
 
-    td, th {
+    td,
+    th {
         border: 1px solid #000;
         padding: 10px;
     }
