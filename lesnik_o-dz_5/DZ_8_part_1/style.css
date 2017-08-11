@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin:0;
+}
+
+body {
+    font-family: "Lucida Sans", Verdana, sans-serif;
+}
+
+
+h1{
+    font-size: 2em;
+    padding: 1%;
+    padding-top: 1.8%;
+}
+
+.mainheader p {
+    padding: 1%;
+    padding-top: 1.5%;
+
+   }
+
+.gridcontainer {
+    width: 100%;
+    }
+
+.gridwrapper {
+    overflow: hidden;
+}
+
+.mainheader {
+    padding: 1%;
+    background-color: #ff9800;
+    border: 2px solid #fff;
+    height: 25%;
+    width: 100%;
+            
+}
+
+.columnheader {
+font-size: 1.8em;
+padding: 5.7%;
+
+}
+
+
+.gridcolumn {
+    width: 33.3%;
+    float: left;
+}
+
+.gridcolumn p {
+    padding-left: 6%;
+    padding-top: 1.2%;
+    font-size: 1em;
+}
+
+
+@media only screen and (max-width: 500px) {
+    
+
+    .gridcolumn {
+        width: 100%;
+        float: left;
+        margin: 0;
+    }
+ 
+    .gridbox {
+        margin-right: 0;
+        float: left;
+    }
+
+.mainheader {
+    padding: 3%;
+    height: 30%;
+    width: 100%;
+            
+}
+
+.mainheader p {
+   padding-top: 4.4%;
+
+   }
+
+
+.columnheader {
+font-size: 1.8em;
+padding: 4.8%;
+
+}
+
+.gridcolumn p {
+    padding-left: 4.8%;
+    padding-top: 0.8%;
+    font-size: 1em;
+}
+
+}
+
+
