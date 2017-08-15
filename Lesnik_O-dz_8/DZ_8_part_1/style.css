@@ -2,10 +2,10 @@
     padding: 0;
     margin: 0;
 }
+
 body {
     font-family: "Lucida Sans", Verdana, sans-serif;
 }
-
 
 h1 {
     font-size: 2em;
@@ -13,20 +13,20 @@ h1 {
     padding-top: 1.8%;
 }
 
-.mainheader p {
+.main-header p {
     padding: 1%;
     padding-top: 1.5%;
 }
 
-.gridcontainer {
+.grid-container {
     width: 100%;
 }
 
-.gridwrapper {
+.grid-wrapper {
     overflow: hidden;
 }
 
-.mainheader {
+.main-header {
     padding: 1%;
     background-color: #ff9800;
     border: 2px solid #fff;
@@ -34,67 +34,70 @@ h1 {
     width: 100%;
 }
 
-.columnheader {
+.column-header {
     font-size: 1.8em;
     padding: 5.7%;
 }
 
-
-.gridcolumn {
+.grid-column {
     width: 33.3%;
     float: left;
 }
 
-.gridcolumn p {
+.grid-column p {
     padding-left: 6%;
     padding-top: 1.2%;
     font-size: 1em;
 }
 
-.css-adaptive {
-    padding: 6%;
-    width: 60%;
-    height: 160px;
+.grid-column img {
+    height: 180px;
 }
 
+.image-adaptive {
+    display: inline-block;
+    width: 42%;
+    height: auto;
+    padding-left: 6%;
+    object-fit: cover;
+    padding-top: 5%;
+}
 
-@media only screen and (max-width: 500px) {
-
-
-    .gridcolumn {
+@media only screen and (max-width: 960px) {
+    .grid-column {
         width: 100%;
         float: left;
         margin: 0;
     }
 
-    .gridbox {
+    .grid-box {
         margin-right: 0;
         float: left;
     }
 
-    .mainheader {
+    .main-header {
         padding: 3%;
         height: 30%;
         width: 100%;
     }
 
-    .mainheader p {
+    .main-header p {
         padding-top: 4.4%;
     }
 
 
-    .columnheader {
+    .column-header {
         font-size: 1.8em;
         padding: 4.8%;
     }
 
-    .gridcolumn p {
+    .grid-column p {
         padding-left: 4.8%;
         padding-top: 0.8%;
         font-size: 1em;
     }
 
-    .css-adaptive {
+    .image-adaptive {
         display: block;
         max-width: 100%;
         height: auto;
