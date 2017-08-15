@@ -20,7 +20,7 @@ h2 {
     border: 1px solid #e9e9e9;
 }
 
-.menuitem {
+.menu-item {
     margin: 4.310344827586206896551724137931%;
     margin-left: 0;
     margin-top: 0;
@@ -46,53 +46,53 @@ h2 {
     font-size: 0.625em;
 }
 
-.gridcontainer {
+.grid-container {
     width: 100%;
 }
 
-.gridwrapper {
+.grid-wrapper {
     overflow: hidden;
 }
 
-.gridbox {
+.grid-box {
     margin-bottom: 2.0242914979757085020242914979757%;
     margin-right: 2.0242914979757085020242914979757%;
     float: left;
 }
 
-.gridheader {
+.grid-header {
     width: 100%;
 }
 
-.gridmenu {
+.grid-menu {
     width: 23.481781376518218623481781376518%;
 }
 
-.gridmain {
+.grid-main {
     width: 48.987854251012145748987854251012%;
 }
 
-.gridright {
+.grid-right {
     width: 23.481781376518218623481781376518%;
     margin-right: 0;
 }
 
-.gridfooter {
+.grid-footer {
     width: 100%;
     margin-bottom: 0;
 }
 
 @media only screen and (max-width: 500px) {
-    .gridmenu {
+    .grid-menu {
         width: 100%;
     }
 
-    .menuitem {
+    .menu-item {
         margin: 1.0121457489878542510121457489879%;
         padding: 1.0121457489878542510121457489879%;
     }
 
-    .gridmain {
+    .grid-main {
         width: 100%;
     }
 
@@ -100,7 +100,7 @@ h2 {
         padding: 1.0121457489878542510121457489879%;
     }
 
-    .gridright {
+    .grid-right {
         width: 100%;
     }
 
@@ -108,7 +108,7 @@ h2 {
         padding: 1.0121457489878542510121457489879%;
     }
 
-    .gridbox {
+    .grid-box {
         margin-right: 0;
         float: left;
     }
