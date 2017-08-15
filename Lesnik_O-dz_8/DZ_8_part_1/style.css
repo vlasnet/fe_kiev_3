@@ -1,14 +1,13 @@
 * {
     padding: 0;
-    margin:0;
+    margin: 0;
 }
-
 body {
     font-family: "Lucida Sans", Verdana, sans-serif;
 }
 
 
-h1{
+h1 {
     font-size: 2em;
     padding: 1%;
     padding-top: 1.8%;
@@ -17,12 +16,11 @@ h1{
 .mainheader p {
     padding: 1%;
     padding-top: 1.5%;
-
-   }
+}
 
 .gridcontainer {
     width: 100%;
-    }
+}
 
 .gridwrapper {
     overflow: hidden;
@@ -34,13 +32,11 @@ h1{
     border: 2px solid #fff;
     height: 25%;
     width: 100%;
-            
 }
 
 .columnheader {
-font-size: 1.8em;
-padding: 5.7%;
-
+    font-size: 1.8em;
+    padding: 5.7%;
 }
 
 
@@ -55,46 +51,52 @@ padding: 5.7%;
     font-size: 1em;
 }
 
+.css-adaptive {
+    padding: 6%;
+    width: 60%;
+    height: 160px;
+}
+
 
 @media only screen and (max-width: 500px) {
-    
+
 
     .gridcolumn {
         width: 100%;
         float: left;
         margin: 0;
     }
- 
+
     .gridbox {
         margin-right: 0;
         float: left;
     }
 
-.mainheader {
-    padding: 3%;
-    height: 30%;
-    width: 100%;
-            
+    .mainheader {
+        padding: 3%;
+        height: 30%;
+        width: 100%;
+    }
+
+    .mainheader p {
+        padding-top: 4.4%;
+    }
+
+
+    .columnheader {
+        font-size: 1.8em;
+        padding: 4.8%;
+    }
+
+    .gridcolumn p {
+        padding-left: 4.8%;
+        padding-top: 0.8%;
+        font-size: 1em;
+    }
+
+    .css-adaptive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
 }
-
-.mainheader p {
-   padding-top: 4.4%;
-
-   }
-
-
-.columnheader {
-font-size: 1.8em;
-padding: 4.8%;
-
-}
-
-.gridcolumn p {
-    padding-left: 4.8%;
-    padding-top: 0.8%;
-    font-size: 1em;
-}
-
-}
-
-

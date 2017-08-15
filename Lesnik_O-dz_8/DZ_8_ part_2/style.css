@@ -4,14 +4,13 @@ body {
 
 .main img {
     width: 100%;
-
 }
 
-h1{
+h1 {
     font-size: 1.625em;
 }
 
-h2{
+h2 {
     font-size: 1.375em;
 }
 
@@ -19,7 +18,6 @@ h2{
     padding: 1.0121457489878542510121457489879%;
     background-color: #f1f1f1;
     border: 1px solid #e9e9e9;
-           
 }
 
 .menuitem {
@@ -29,18 +27,15 @@ h2{
     padding: 4.310344827586206896551724137931%;
     border-bottom: 1px solid #e9e9e9;
     cursor: pointer;
-
 }
 
 .main {
     padding: 2.0661157024793388429752066115702%;
-
 }
 
 .right {
     padding: 4.310344827586206896551724137931%;
     background-color: #CDF0F6;
-       
 }
 
 .footer {
@@ -49,42 +44,37 @@ h2{
     background-color: #f1f1f1;
     border: 1px solid #e9e9e9;
     font-size: 0.625em;
-
 }
 
 .gridcontainer {
     width: 100%;
-    }
+}
 
 .gridwrapper {
     overflow: hidden;
-     }
+}
 
 .gridbox {
     margin-bottom: 2.0242914979757085020242914979757%;
     margin-right: 2.0242914979757085020242914979757%;
     float: left;
-  
 }
 
 .gridheader {
     width: 100%;
-   }
+}
 
 .gridmenu {
     width: 23.481781376518218623481781376518%;
-
 }
 
 .gridmain {
     width: 48.987854251012145748987854251012%;
-
 }
 
 .gridright {
     width: 23.481781376518218623481781376518%;
     margin-right: 0;
-
 }
 
 .gridfooter {
