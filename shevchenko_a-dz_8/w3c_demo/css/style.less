@@ -1,0 +1,61 @@
+.page-wrapper {
+	width: 100vw;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+
+	.page-header {
+		background-color: #ff9800;
+		padding: 25px 20px 20px;
+
+		&__title {
+			font-size: 34px;
+			padding-bottom: 20px;
+		}
+	}
+
+	.content {
+		&-list {
+			padding: 20px 15px;
+
+			&__item {
+				display: inline-block;
+				width: 98%;
+				vertical-align: top;
+				margin-right: 3%;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			.item-title {
+				font-size: 26px;
+				padding: 10px 0 ;	
+			}
+
+			.item-img {
+				float: left;
+				display: inline-block;
+				width: 49%;
+				height: 120px;
+				overflow: hidden;
+				margin-right: 1%; 
+				margin-bottom: 20px;
+
+				img {
+					display: block;
+					max-width: 100%;
+					height: auto;
+				}
+			}
+
+			.item-img:last-child {
+				margin-right: 0;
+			}
+
+			.item-description {
+				padding-bottom: 20px;
+			}
+		}
+	}
+}
