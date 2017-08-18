@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Verdana';
-    src: url("../fonts/Verdana/Verdana.woff") format("woff"),
-    url("../fonts/Verdana/Verdana.ttf") format("truetype");
+    src: url("../fonts/Verdana/Verdana.woff") format("woff"), url("../fonts/Verdana/Verdana.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
@@ -10,12 +9,13 @@
     margin: 0 10px;
     max-width: 33%;
 }
-
-img {
-    height: auto;
-    display: inline-block;
-    max-width: 24%;
-    margin: auto;
+@media only screen and (min-width: 960px) {
+    img {
+        height: auto;
+        display: inline-block;
+        max-width: 48%;
+        margin: auto;
+    }
 }
 
 header {
@@ -27,7 +27,6 @@ header {
     display: flex;
     font-family: Verdana, sans-serif;
 }
-
 @media only screen and (max-width: 960px) {
     .city {
         max-width: 100%;

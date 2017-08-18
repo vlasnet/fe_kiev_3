@@ -1,35 +1,34 @@
 @font-face {
   font-family: 'Verdana';
-  src: url("../fonts/Verdana/Verdana.woff") format("woff"),
-  url("../fonts/Verdana/Verdana.ttf") format("truetype");
+  src: url("../fonts/Verdana/Verdana.woff") format("woff"), url("../fonts/Verdana/Verdana.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
-header {
-  font-family: Verdana, sans-serif;
-  background-color: #ff9800; }
-
-img {
-  display: inline-block;
-  max-width: 48%;
-  margin: auto; }
-
 .city {
   margin: 0 10px;
   max-width: 33%; }
 
+@media only screen and (min-width: 960px) {
+  img {
+    height: auto;
+    display: inline-block;
+    max-width: 48%;
+    margin: auto; } }
+header {
+  font-family: Verdana, sans-serif;
+  background-color: #ff9800; }
+
 .main_wrapper {
   display: flex;
-  flex-direction: row;
   font-family: Verdana, sans-serif; }
 
 @media only screen and (max-width: 960px) {
-  .main_wrapper {
-    flex-direction: column; }
-
   .city {
     max-width: 100%; }
 
   img {
-    max-width: 100%; } }
+    max-width: 100%; }
+
+  .main_wrapper {
+    flex-direction: column; } }
 
 /*# sourceMappingURL=style.css.map */
