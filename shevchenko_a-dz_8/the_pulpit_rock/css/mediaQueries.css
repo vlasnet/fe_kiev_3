@@ -1,9 +1,0 @@
-@media all and (max-width: 414px) {
-	.info,
-	.content,
-	.questions {
-		width: 100%;
-		margin-bottom: 15px;
-		float: left;
-	}
-}
