@@ -1,0 +1,51 @@
+.wrapper {
+  font-family: "Lucida Sans", Verdana, sans-serif; }
+  .wrapper .header {
+    background-color: #ff9800;
+    border: 1px solid #e9e9e9; }
+    @media only screen and (max-width: 1022px) {
+      .wrapper .header {
+        height: 8%;
+        padding: .5rem;
+        display: block;
+        overflow: hidden; } }
+    @media only screen and (min-width: 1023px) {
+      .wrapper .header {
+        margin: .5rem;
+        height: 5rem;
+        width: 100%; } }
+  .wrapper .header h1 {
+    font-weight: 300; }
+  @media only screen and (max-width: 1022px) {
+    .wrapper .inner-wrapper {
+      margin: .5rem;
+      display: flex;
+      flex-direction: column;
+      width: 86%; } }
+  @media only screen and (min-width: 1023px) {
+    .wrapper .inner-wrapper {
+      display: flex;
+      flex-direction: row;
+      width: 96%; } }
+  @media only screen and (max-width: 1022px) {
+    .wrapper .container.text {
+      width: 99.9%; } }
+  .wrapper .container.text h2 {
+    font-weight: 300;
+    width: 99.9%; }
+  @media only screen and (max-width: 1022px) {
+    .wrapper .container.text p {
+      font-size: .9rem;
+      width: 99.9%; } }
+  @media only screen and (max-width: 1022px) {
+    .wrapper .container.image {
+      display: flex;
+      flex-direction: row;
+      width: 99.9%; } }
+  @media only screen and (max-width: 1022px) {
+    .wrapper .container.image img {
+      width: 47%;
+      height: 49.9%;
+      padding: .3rem; } }
+
+/*# sourceMappingURL=style,css.map */
