@@ -8,23 +8,23 @@
     margin: 50px auto;
 }
 .button-like_red{
-    background: #39ae1e;
+    background: green;
 }
 
 .button-like_red:hover {
-    background: #effb2d;
+    background-color: yellow;
 }
 .button-like_red:active{
-    background: #f21c26;
+    background: red;
 }
 .button-like_gold{
-    background: #5c1dad;
+    background: violet;
 }
 .button-like_gold:hover{
-    background: #ad8a1d;
+    background: brown;
 }
 .button-like_gold:active{
-    background: #4c2807;
+    background: gold;
 }
 .field-like{
     margin: 0 auto;
