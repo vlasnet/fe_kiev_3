@@ -1,0 +1,125 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Verdana"), url("../fonts/verdana.woff2") format("woff2"), url("../fonts/verdana.woff") format("woff"); }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("../fonts/roboto-v16-latin-500.woff2") format("woff2"), url("../fonts/roboto-v16-latin-500.woff") format("woff"); }
+.page-wrapper {
+  background: #fff;
+  height: 100%;
+  width: 100vw; }
+
+.contant-wrapper {
+  font: 400 16px "Verdana", sans-serif;
+  margin: 7px 6px; }
+  @media screen and (min-width: 960px) {
+    .contant-wrapper {
+      max-width: 800px; } }
+
+.header {
+  background: #f1f1f1;
+  border: 1px solid #e9e9e9; }
+  .header h1 {
+    font: 500 26px "Roboto Medium", sans-serif;
+    letter-spacing: 1.9px;
+    margin: 24px 10px 26px; }
+
+.main-block {
+  align-items: flex-start;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  @media screen and (max-width: 667px) {
+    .main-block {
+      flex-direction: column; } }
+
+.nav {
+  list-style: none;
+  margin-right: 10px;
+  margin-top: 8px;
+  width: 100%; }
+  @media screen and (min-width: 960px) {
+    .nav {
+      width: 180px; } }
+  .nav .nav-item {
+    border-bottom: 1px solid #e9e9e9;
+    display: block;
+    padding: 13px 0 10px 8px; }
+    .nav .nav-item__link, .nav .nav-item__link:visited {
+      color: #000;
+      display: block;
+      text-decoration: none; }
+    .nav .nav-item__link:hover {
+      text-decoration: underline; }
+
+.article {
+  margin: 42px 0 0;
+  max-width: 376px; }
+  .article__h2 {
+    font: 500 24px "Roboto Medium", sans-serif; }
+  .article__text {
+    line-height: 1.2;
+    margin: 17px 0; }
+  .article__img {
+    width: 100%; }
+
+.sidebar-short-info {
+  background: #cdf0f6;
+  box-sizing: border-box;
+  margin-top: 16px;
+  padding: 25px 10px 6px;
+  width: 100%; }
+  @media screen and (min-width: 960px) {
+    .sidebar-short-info {
+      width: 188px; } }
+  .sidebar-short-info__header {
+    font: 500 22px "Roboto Medium", sans-serif;
+    margin-bottom: 18px; }
+  .sidebar-short-info__text {
+    line-height: 1.2;
+    margin-bottom: 18px; }
+
+/*# sourceMappingURL=styles.css.map */

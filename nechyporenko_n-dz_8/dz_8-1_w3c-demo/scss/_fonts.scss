@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'SegoeUI';
+  font-style: normal;
+  font-weight: 400;
+  src: local('SegoeUI'),
+  url('../fonts/SegoeUIRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Verdana'),
+       url('../fonts/verdana.woff2') format('woff2'),
+       url('../fonts/verdana.woff') format('woff');
+}
