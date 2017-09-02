@@ -1,29 +1,26 @@
-.wrapper{
-    width: 100%;
-   
-}
-.button-like{
+
+.paragraph_rectangle{
     width: 100px;
     height: 30px;
     margin: 50px auto;
 }
-.button-like_red{
+.rec1{
     background: green;
 }
 
-.button-like_red:hover {
+.rec1:hover {
     background-color: yellow;
 }
-.button-like_red:active{
+.rec1:active{
     background: red;
 }
-.button-like_gold{
+.rec2{
     background: violet;
 }
-.button-like_gold:hover{
+.rec2:hover{
     background: brown;
 }
-.button-like_gold:active{
+.rec2:active{
     background: gold;
 }
 .field-like{
