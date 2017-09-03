@@ -1,27 +1,18 @@
-
 $large: 1024px;
 @mixin respond-to($media) {
-  @if $media == handhelds {
-    @media only screen and (max-width: $large - 1) {
-      @content;
-    }
-  } @else if $media == medium-screens {
-    @media only screen and (min-width: $large) {
-      @content;
-    }
+
+  @media only screen and (min-width: $large) {
+    @content;
   }
 }
 
 .wrapper {
   font-family: "Lucida Sans", Verdana, sans-serif;
-
   .inner-wrapper {
-    @include respond-to(handhelds) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: .5rem;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: .5rem;
     @include respond-to(medium-screens) {
       display: flex;
       flex-direction: row;
@@ -30,24 +21,20 @@ $large: 1024px;
   .header {
     background-color: #f1f1f1;
     border: 1px solid #e9e9e9;
-    @include respond-to(handhelds) {
-      height: 8%;
-      display: block;
-      overflow: hidden;
-      margin: .5rem;
-    }
+    height: 8%;
+    display: block;
+    overflow: hidden;
+    margin: .5rem;
     @include respond-to(medium-screens) {
       margin: .5rem;
       height: 5rem;
     }
   }
   .header h1 {
-    @include respond-to(handhelds) {
-      font-size: 1rem;
-      padding-left: .3rem;
-      text-align: left;
-      vertical-align: middle;
-    }
+    font-size: 1rem;
+    padding-left: .3rem;
+    text-align: left;
+    vertical-align: middle;
     @include respond-to(medium-screens) {
       font-size: 2rem;
       padding-left: .3rem;
@@ -56,9 +43,7 @@ $large: 1024px;
     }
   }
   h2 {
-    @include respond-to(handhelds) {
-      font-size: 1rem;
-    }
+    font-size: 1rem;
   }
   .menu {
     @include respond-to(medium-screens) {
@@ -70,10 +55,10 @@ $large: 1024px;
     margin: 0;
     border-bottom: 1px solid #e9e9e9;
     cursor: pointer;
-    @include respond-to(handhelds) {
-      font-size: .8rem;
-      padding: .2rem 0;
-    }
+
+    font-size: .8rem;
+    padding: .2rem 0;
+
     @include respond-to(medium-screens) {
       padding: .6rem .5rem;
       font-size: 1.2rem;
@@ -81,9 +66,8 @@ $large: 1024px;
     }
   }
   .main {
-    @include respond-to(handhelds) {
-      font-size: .7rem;
-    }
+
+    font-size: .7rem;
     @include respond-to(medium-screens) {
       width: 75%;
       margin: 1rem;
@@ -97,23 +81,19 @@ $large: 1024px;
     }
   }
   .main h1 {
-    @include respond-to(handhelds) {
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
+
+    font-size: 1rem;
+    margin-top: 1rem;
     @include respond-to(medium-screens) {
       font-size: 2.2rem;
     }
   }
-
   .questions {
     background-color: #cdf0f6;
     border: 1px solid #e9e9e9;
-    @include respond-to(handhelds) {
-      margin-top: .5rem;
-      padding: 1%;
-      font-size: .7rem;
-    }
+    margin-top: .5rem;
+    padding: 1%;
+    font-size: .7rem;
     @include respond-to(medium-screens) {
       width: 25%;
       height: 50%;
@@ -121,5 +101,7 @@ $large: 1024px;
       padding: .3rem;
     }
   }
-
 }
+
+
+
