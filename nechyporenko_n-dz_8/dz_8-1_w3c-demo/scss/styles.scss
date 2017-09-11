@@ -7,8 +7,6 @@ $contant-background-color: #fff;
 
 .page-wrapper {
   background: $page-wrapper-background;
-  height: 100%;
-  width: 100vw;
 }
 
 .contant-wrapper {
@@ -47,30 +45,32 @@ $contant-background-color: #fff;
   @media screen and (max-width: 667px) {
     flex-direction: column;
   }
+}
 
-  .about-city-block {
-    @media screen and (min-width: 960px) {
-      max-width: 254px;
-    }
+.about-city-block {
+  @media screen and (min-width: 960px) {
+    max-width: 254px;
+  }
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
 
-    .city-name {
+  .city {
+    &-name {
       font: normal 30px 'SegoeUI', sans-serif;
       margin: 14px 0 18px;
     }
 
-    .city-information {
+    &-information {
       font: normal 15px 'Verdana', sans-serif;
       letter-spacing: -.1px;
       line-height: 1.5;
       margin-bottom: 16px;
     }
 
-    .city-photos-block {
+    &-photos-block {
       width: 100%;
 
       @media screen and (min-width: 960px) {
@@ -84,16 +84,13 @@ $contant-background-color: #fff;
       }
     }
 
-    .city-photo-img {
-      @media screen and (max-width: 959px) {
-        width: 48%;
-      }
+    &-photo-img {
+      margin-bottom: 15px;
+      width: 48%;
 
       @media screen and (min-width: 960px) {
-        width: 100%;
+        max-width: 100%;
       }
-
-      margin-bottom: 15px;
     }
   }
 }
