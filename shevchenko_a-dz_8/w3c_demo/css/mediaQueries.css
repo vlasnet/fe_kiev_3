@@ -1,0 +1,22 @@
+ /*Small Devices, Mobile */
+
+ @media all and (max-width: 414px) {
+ 	.content-list__item {
+ 		width: 98%;
+ 	}
+ }
+
+ @media all and (min-width: 960px) {
+ 	.item-img {
+ 		width: 100%;
+ 		margin-bottom: 10px;
+ 		height: 200px;
+ 	}
+ }
+
+ @media all and (min-width: 1440px) {
+ 	.item-img {
+ 		height: 300px;
+ 	}
+ }
+ 

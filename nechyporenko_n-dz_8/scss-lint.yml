@@ -2,7 +2,7 @@ linters:
   PropertySortOrder:
     order: smacss
   Indentation:
-    width: 4
+    width: 2
   ColorVariable:
     enabled: true
   EmptyLineBetweenBlocks:
@@ -23,4 +23,3 @@ linters:
     enabled: false
   SelectorDepth:
     enabled: false
-    
