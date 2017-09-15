@@ -117,3 +117,6 @@ https://habrahabr.ru/company/Voximplant/blog/276695/
 
 ## 13. Несоответствие стиля кода общепринятому:
 https://learn.javascript.ru/coding-style
+
+## 14. Неуместное использование "alert" вместо "console" и "debugger":
+https://learn.javascript.ru/debugging-chrome
