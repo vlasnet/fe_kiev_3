@@ -114,3 +114,6 @@ http://htmlbook.ru/css/after - 2.0
 
 ## 12. Используйте адекватные названия коммитов:
 https://habrahabr.ru/company/Voximplant/blog/276695/
+
+## 13. Несоответствие стиля кода общепринятому:
+https://learn.javascript.ru/coding-style
