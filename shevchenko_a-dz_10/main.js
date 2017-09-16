@@ -16,11 +16,11 @@ let taskOne = {
 	btn: document.querySelector('.task-1 .btn'),
 	result: document.querySelector('.task-1 .result'),
 	action: function (){
-		taskOne.result.innerHTML = countHowOld(checkYearsFormat());
+		taskOne.result.innerHTML = countHowOld(normalizeYearsInput());
 	}
 };
 
-function checkYearsFormat() {
+function normalizeYearsInput() {
 	if (taskOne.inputOne.value.length == 4) {
 		return taskOne.inputOne.value;
 	}
@@ -270,7 +270,7 @@ let taskTwelve = document.querySelector('.task-12 .result');
 function createTable2() {
 	let result = [];
 	for (let i = 1000; i < 2001; i++) {
-		result.push(' ' + '&#' + i);
+		result.push(' ' + '&#' + i + ';');
 
 	}
 	return result;
