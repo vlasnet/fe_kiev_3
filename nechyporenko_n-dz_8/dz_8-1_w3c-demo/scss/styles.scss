@@ -1,0 +1,96 @@
+@import 'fonts';
+$page-wrapper-background: #f5f5f5;
+$box-shadow-color: rgba(0, 0, 0, .6);
+$header-background-color: #f90;
+$contant-background-color: #fff;
+
+.page-wrapper {
+  background: $page-wrapper-background;
+}
+
+.contant-wrapper {
+  @media screen and (min-width: 960px) {
+    max-width: 818px;
+  }
+
+  width: 100%;
+  margin: 2px auto;
+  box-shadow: 0 1px 3px 0 $box-shadow-color;
+}
+
+.header {
+  padding: 15px;
+  background: $header-background-color;
+
+  .header-h1 {
+    margin: 0 0 18px;
+    font: normal 36px 'SegoeUI', sans-serif;
+  }
+
+  .header-text {
+    font: normal 15px 'Verdana', sans-serif;
+    line-height: 1.5;
+  }
+}
+
+.main-content-block {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 15px;
+  background-color: $contant-background-color;
+
+  @media screen and (max-width: 667px) {
+    flex-direction: column;
+  }
+}
+
+.about-city-block {
+  @media screen and (min-width: 960px) {
+    max-width: 254px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+  .city {
+    &-name {
+      font: normal 30px 'SegoeUI', sans-serif;
+      margin: 14px 0 18px;
+      font: normal 30px 'SegoeUI', sans-serif;
+    }
+
+    &-information {
+      font: normal 15px 'Verdana', sans-serif;
+      letter-spacing: -.1px;
+      line-height: 1.5;
+    }
+
+    &-photos-block {
+      width: 100%;
+      margin: 0 0;
+
+      @media screen and (min-width: 960px) {
+        max-width: 254px;
+      }
+
+      @media screen and (max-width: 959px) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+    }
+
+    &-photo-img {
+      margin-bottom: 15px;
+      width: 48%;
+
+      @media screen and (min-width: 960px) {
+        max-width: 100%;
+      }
+    }
+  }
+}
