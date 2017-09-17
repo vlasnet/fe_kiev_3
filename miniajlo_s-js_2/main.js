@@ -1,14 +1,14 @@
-'use strict'
+'use strict';
 let task1 = {
 	input1: document.querySelector ('#yearOfBorn'),
 	btn: document.querySelector('.task-1 .btn'),
 	result: document.querySelector('.task-1 .result'),
 	action: function (){
-		task1.result.innerHTML = countYearsOld(checkFormat());
+		task1.result.innerHTML = countYearsOld(formatInput());
 	}
 };
 
-function checkFormat() {
+function fomatInput() {
 	if (task1.input1.value.length === 4) {
 		return task1.input1.value;
 	}
@@ -94,6 +94,9 @@ function whatEnterance(appNumber){
 	else if (appNumber >= 65 && appNumber < 81) {
 		return 'Ваша квартира в 3 подъезде';
 	}
+	else {
+		return 'Похоже что вы живете в другом доме))'
+	}
 }
 
 clickControl(task3.btn, task3.action);
@@ -175,9 +178,10 @@ let task9 = {
 	// }
 		task9.result.innerHTML = Math.pow(task9.input1.value,task9.input2.value);
 	}
-	// хотел так, но работает. Подскажи почему?
+
 	// еще пробовал:
 	// task9.result.innerHTML = Math.pow(task9.input1.value ** task9.input2.value);
+	
 // }
 	// (по спецификации es7)
 };
@@ -223,6 +227,6 @@ let task12 = document.querySelector('.task-12 .result');
 
 let characters = [];
 for (let i = 1000; i <= 2000; i++) {
- characters.push (' ' + '&#' + i);
+ characters.push (' &#' + i +';');
 }
 task12.innerHTML = characters;
