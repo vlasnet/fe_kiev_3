@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper" style="display: block"
+  <section class="taskOne">
+    <h1>Сколько лeт исполнилось</h1>
+    <input type="text" id="yearsOld" placeholder="Введиет год рождения">
+    <button onclick="yearsOld()">возраст</button>
+    <span id="task_1"></span>
+  </section>
+
+  <section class="taskTwo">
+    <h1>Вычесление большего числа из 2х</h1>
+    <label for="firstYears">
+    Число 1  <input type="text" id="firstYears">
+    </label>
+    <label for="lastYears">
+    Число 2  <input type="text" id="lastYears">
+    </label>
+    <button onclick="biggerNumb()">Вычеслить</button>
+    <span id="task_2"></span>
+  </section>
+
+  <section class="taskTree">
+    <h1>Определение номера подьезда</h1>
+    <input type="text" id="number" placeholder="Введите номер квартиры">
+    <button type="submit" onclick="entrance()">Определить</button>
+    <span id="task_3"></span>
+  </section>
+
+  <section class="taskFour">
+    <h1>Авторизация</h1>
+    <input type="text" id="login" placeholder="login">
+    <input type="text" id="password" placeholder="password">
+    <input type="submit" onclick="logIn()">
+    <span id="task_4"></span>
+  </section>
+
+  <section class="taskFive">
+    <h1>Вывести максимально число из 3х</h1>
+    <input type="text" placeholder="Введите число" id="first">
+    <input type="text" placeholder="Введите число" id="second">
+    <input type="text" placeholder="Введите число" id="third">
+    <input type="submit" onclick="comparison()">
+    <span id="task_5"></span>
+  </section>
+
+  <h1>ЗАДАЧИ С ЦЫКЛОМ FOR</h1>
+
+  <section class="taskOne">
+  <h1>Вывестти все четные числа из 100</h1>
+  <button onclick="half()">вывести</button>
+  <span id="task_for_1"></span>
+  </section>
+
+  <section class="taskTwo">
+    <h1>Вывестти числа от 200 до 0</h1>
+    <button onclick="twoHundred()">вывести</button>
+    <span id="task_for_2"></span>
+  </section>
+
+  <section class="taskTree">
+    <h1>Вывестти суму чисел от 1 до 100</h1>
+    <button onclick="sum()">вывести</button>
+    <span id="task_for_3"></span>
+  </section>
+
+  <section class="taskFour">
+    <h1>Вывести число в степени</h1>
+    <input type="text" id="num" placeholder="ввесдите число">
+    <input type="text" id="exponent" placeholder="введите степень">
+    <button onclick="pow()">Вывести</button>
+    <span id="task_for_4"></span>
+  </section>
+
+  <section class="taskFive">
+    <h1>Таблица умножения на ......</h1>
+    <input type="text" id="numberForTable" placeholder="ввесдите число">
+    <button onclick="table()">Вывести</button>
+    <p id="task_for_5"></p>
+  </section>
+
+  <section class="taskSix">
+    <h1>Вывести произведение чисел от 1 до 50 </h1>
+    <button onclick="multiplication()">Вывести</button>
+    <span id="task_for_6"></span>
+  </section>
+
+  <section class="taskSeven">
+    <h1>Вывести спец.символы от 1000 до 2000 </h1>
+    <button onclick="symbol()">Вывести</button>
+    <span id="task_for_7"></span>
+  </section>
+
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
