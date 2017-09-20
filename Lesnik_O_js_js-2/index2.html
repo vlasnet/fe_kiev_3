@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment2</title>
+</head>
+<body>
+    <h1>Задание 2. </h1>
+    <p>Пользователь вводит 2 числа. Найти и вывести максимальное из данных двух чисел. Учтите вариант равенства чисел. </p>
+    <form name="form" method="post">
+        <label for="number1">Число 1</label>
+        <input type="text" id="number1">
+        <label for="number2">Число 2</label>
+        <input type="text" id="number2">
+        <br>
+        <br>
+        <input type="button" value="Вычислить максимальное" onclick="findMax();">
+    </form>
+    <script>
+    function findMax() {
+
+        var a = document.getElementById('number1').value;
+        var b = document.getElementById('number2').value;
+
+
+        if (a > b) {
+            alert('Max value - Число 1 = ' + a);
+        } else if (a < b) {
+            alert('Max value - Число 2 = ' + b);
+        } else {
+            alert('Число 1 = Число 2');
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment9</title>
+</head>
+<body>
+    <h1>Задание 9. </h1>
+    <p> 9. Задайте два input. В первый вводится число, во второе его степень. С помощью цикла возведите число в степень. Напечатайте результат. </p>
+    <br>
+    <form>
+        <input type="text" id="number">Число
+        <br>
+        <input type="text" id="degree">Степень
+        <br>
+        <input type="button" value="Найти число в степени" onclick="finddegree()" ;>
+        <br>
+    </form>
+    <script>
+    function finddegree() {
+        var number = document.getElementById('number').value;
+        var degree = document.getElementById('degree').value;
+        var value = 1;
+
+        for (var i = 0; i < degree; i++) {
+            value *= number;
+        }
+        alert(value);
+    }
+    </script>
+</body>
+</html>
