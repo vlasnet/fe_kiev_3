@@ -6,36 +6,30 @@ function clickControl(control, action) {
 
 // taskOne
 
-function doRed() {
+(function doRed() {
 	let taskOne = document.querySelectorAll('.task-one p');
 	for (let i = 0; i < taskOne.length; i++) {
 		taskOne[i].style.backgroundColor = "#f00";
 	}
-}
-
-doRed();
+}());
 
 // TaskTwo
 
-function doShadow() {
+(function doShadow() {
 	let taskTwo = document.querySelectorAll('img');
 	for (var i = 0; i < taskTwo.length; i++) {
 		taskTwo[i].style.boxShadow = "5px 5px 1px #000";
 	}
-}
-
-doShadow();
+}());
 
 // TaskThree
 
-function addNumber() {
+(function addNumber() {
 	let taskThree = document.querySelectorAll('.task-three p');
 	for (var i = 0; i < taskThree.length; i++) {
 		taskThree[i].innerText = (i + 1) + ". " + taskThree[i].innerText;
 	}
-}
-
-addNumber();
+}());
 
 // TaskFour
 
@@ -206,5 +200,5 @@ let taskEleven = {
 }
 //для проверки какое число выпало =)
 console.log(taskEleven.randomNum);
-clickControl(taskEleven.btn, taskEleven.action);
 
+clickControl(taskEleven.btn, taskEleven.action);
