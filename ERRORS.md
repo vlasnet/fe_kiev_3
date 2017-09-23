@@ -123,3 +123,9 @@ https://learn.javascript.ru/debugging-chrome
 
 ## 15. Именование переменных и функций должно быть понятно людям и соответствовать общепринятым правилам:
 https://learn.javascript.ru/coding-style#именование
+
+### 15.1 Именование функций:
+https://learn.javascript.ru/function-basics#function-naming
+
+### 15.2 Именование переменных:
+https://learn.javascript.ru/variables#variable-naming
