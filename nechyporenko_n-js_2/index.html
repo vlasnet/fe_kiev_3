@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homework js-2, by Nechyporenko Nataliia, GoFE_Kiev#3</title>
+</head>
+<body>
+  <h1>Homework js-2</h1>
+  <hr>
+  <h4>Task 1</h2>
+    <label for='year-of-user-birth'>Введите Ваш год рождения:</label>
+    <input type="text" name="year-of-user-birth" id="year-of-user-birth" value="">
+    <button onclick="function_age()">мой возраст?</button>
+    <p id="user-age"></p>
+  <h4>Task 2</h2>
+    <p>Какое число больше?</p>
+    <label for='first-argument'>Введите первое число:</label>
+    <input type="text" name="first-argument" id="first-argument" value="" onKeyPress="OnlyDigits();"><br>
+    <label for='first-argument'>Введите второе число:</label>
+    <input type="text" name="second-argument" id="second-argument" value="" onKeyPress="OnlyDigits();">
+    <button onclick="function_compare()">Сравнить</button>
+    <p id="compare-result"></p>
+  <h4>Task 3</h2>
+    <p>В каком подъезде квартира?</p>
+    <label for='appartment'>Введите номер квартиры:</label>
+    <input type="text" name="appartment" id="appartment" value=""><br>
+    <button onclick="function_entrance()">Узнать подъезд</button>
+    <p id="entrance"></p>
+  <h4>Task 4</h2>
+    <p>Авторизация</p>
+    <label for='username'>Введите логин:</label>
+    <input type="text" name="username" id="username" value=""><br>
+    <label for='password'>Введите пароль:</label>
+    <input type="text" name="password" id="password" value=""><br>
+    <button onclick="function_authorization()">Вход</button>
+    <p id="is-authorized"></p>
+  <h4>Task 5</h2>
+    <p>Какое число больше? (Снова! О_о)</p>
+    <label for='a'>Введите первое число (а):</label>
+    <input type="text" name="a" id="a" value="" onKeyPress="OnlyDigits();"><br>
+    <label for='b'>Введите второе число (b):</label>
+    <input type="text" name="b" id="b" value="" onKeyPress="OnlyDigits();"><br>
+    <label for='c'>Введите второе число (c):</label>
+    <input type="text" name="c" id="c" value="" onKeyPress="OnlyDigits();"><br>
+    <button onclick="function_compare_again()">Сравнить</button>
+    <p id="compare-again-result"></p>
+<script src="script.js" charset="utf-8"></script>
+</body>
+</html>
