@@ -120,3 +120,6 @@ https://learn.javascript.ru/coding-style
 
 ## 14. Неуместное использование "alert" вместо "console" и "debugger":
 https://learn.javascript.ru/debugging-chrome
+
+## 15. Именование переменных и функций должно быть понятно людям и соответствовать общепринятым правилам:
+https://learn.javascript.ru/coding-style#именование
