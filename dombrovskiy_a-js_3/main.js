@@ -1,26 +1,24 @@
+function showArr() {
+  var arr = ['Apple', 'Orange', 'Banana', 'Nuts'];
+  var p = document.getElementById('new');
 
-
-function inHtml(){
-    var arr = ['Apple', 'Orange', 'Banana', 'Nuts'];
-    var p = document.getElementById('new');
-
-    for(var i = 0; i < arr.length; i++){
-      p.innerHTML = arr;
-    }
+  for (var i = 0; i < arr.length; i++) {
+    p.innerHTML = arr;
+  }
 }
 
-function fruits(){
+function getNewElement() {
   var arr = ['Apple', 'Orange', 'Banana', 'Nuts'];
-  var  index = document.getElementById('index').value;
+  var index = document.getElementById('index').value;
   var value = document.getElementById('value').value;
   var test = document.getElementById('new_2');
 
-   arr [index] = value;
+  arr[index] = value;
 
-   test.innerHTML = arr;
+  test.innerHTML = arr;
 }
 
-function pop(){
+function getPop() {
   var arr = ['Apple', 'Orange', 'Banana', 'Nuts'];
 
   test = document.getElementById('new_3');
@@ -28,7 +26,7 @@ function pop(){
   test.innerHTML = arr;
 }
 
-function shift(){
+function getShift() {
   var arr = ['Apple', 'Orange', 'Banana', 'Nuts'];
 
   test = document.getElementById('new_4');
@@ -36,7 +34,7 @@ function shift(){
   test.innerHTML = arr;
 }
 
-function push(){
+function getPush() {
   var arr = ['Apple', 'Orange', 'Banana', 'Nuts'];
   var items = document.getElementById('items').value;
 
@@ -45,7 +43,7 @@ function push(){
   test.innerHTML = arr;
 }
 
-function unshift(){
+function getUnshift() {
   var arr = ['Apple', 'Orange', 'Banana', 'Nuts'];
   var items = document.getElementById('val').value;
 
