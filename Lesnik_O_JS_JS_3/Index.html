@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS3</title>
+</head>
+
+<body>
+    <h1>JS: Modul_3</h1>
+    <p> <b>Задание 1.</b>Напишите функцию для вывода элементов массива в элемент
+        <!-- p id=”new”></p> -->&#60;p id=”new”&#62; &#60;/p&#62;.
+    </p>
+    <button onclick="displayArray()">Вывести массив</button>
+    <p id="new">some text</p>
+
+    <script>
+    var arr = ['Январь', 'Февраль', 'Март', 'Aпрель', 'Май'];
+
+    function displayArray() {
+        var str = arr.join('; ');
+        document.getElementById("new").innerHTML = str;
+    }
+    </script>
+    <br>
+    
+      <p><b>Задание 2.</b>Добавьте в предыдущую программу два элемента input, 
+        в которые можно ввести индекс массива и значение. По нажатию “ОК” - массив выводится.
+    </p>
+    <label for="indexOfArray">Индекс Массива</label>
+    <input type="number" id="indexOfArray">
+    <label for="valueOfArray">Значение Массива</label>
+    <input type="text" id="valueOfArray">
+    <br>
+    <button onclick="addtoArray()">Добавить элемент в массив </button>
+    <button onclick="displayTask2()">Вывести массив </button>
+    <p id="new2">some text</p>
+
+    <script>
+    var arr = ['Январь', 'Февраль', 'Март', 'Aпрель', 'Май'];
+
+    function addtoArray() {
+        var a = +document.getElementById('indexOfArray').value;
+        var b = document.getElementById('valueOfArray').value;
+        arr.splice(a, 0, b);
+    }
+
+    function displayTask2() {
+        var str2 = arr.join('; ');
+        document.getElementById("new2").innerHTML = str2;
+    }
+    </script>
+
+    <br>
+    <p> <b>Задание 3.</b> Добавьте кнопку pop реализующую метод pop() для введенного выше массива. </p>
+    <button onclick="popFromArray()">Реализовать метод pop()</button>
+     <button onclick="displayTask3()">Вывести массив </button>
+    <p id="new3">some text</p>
+    <script>
+    function popFromArray() {
+        arr.pop();
+    }
+
+    function displayTask3() {
+        var str3 = arr.join('; ');
+        document.getElementById("new3").innerHTML = str3;
+    }
+    </script>
+    <br>
+
+    <p> <b>Задание 4.</b> Добавьте кнопку shift реализующую метод shift() для введенного выше массива. </p>
+    <button onclick="shiftFromArray()">Реализовать метод shift()</button>
+     <button onclick="displayTask4()">Вывести массив </button>
+    <p id="new4">some text</p>
+    <script>
+    function shiftFromArray() {
+        arr.shift();
+     }
+
+    function displayTask4() {
+        var str3 = arr.join('; ');
+        document.getElementById("new4").innerHTML = str3;
+    }
+    </script>
+
+    <br>
+    <p> <b>Задание 5.</b> Добавьте кнопку push реализующую метод push() для введенного выше массива. Данные для записи необходимо считывать из input.</p>
+    <label for="someValueToArray">Значение для элемента массива</label>
+    <input type="text" id="someValueToArray">
+    <button onclick="pushToArray()">Реализовать метод push()</button>
+    <button onclick="displayTask5()">Вывести массив </button>
+    <p id="new5">some text</p>
+
+    <script>
+    function pushToArray() {
+        var arrvalue = document.getElementById('someValueToArray').value;
+        arr.push(arrvalue);
+    }
+
+    function displayTask5() {
+        var str5 = arr.join('; ');
+        document.getElementById("new5").innerHTML = str5;
+    }
+    </script>
+    <br>
+
+    <p> <b>Задание 6.</b> Добавьте кнопку реализующую метод unshift() для введенного выше массива. Данные для записи необходимо считывать из input. </p>
+    <label for="unshiftValueToArray">Значение для элемента массива</label>
+    <input type="text" id="unshiftValueToArray">
+    <button onclick="unshiftToArray()">Реализовать метод unshift()</button>
+    <button onclick="displayTask6()">Вывести массив </button>
+    <p id="new6">some text</p>
+    <script>
+    function unshiftToArray() {
+        var unshiftvalue = document.getElementById('unshiftValueToArray').value;
+        arr.unshift(unshiftvalue);
+    }
+
+    function displayTask6() {
+        var str6 = arr.join('; ');
+        document.getElementById("new6").innerHTML = str6;
+    }
+    </script>
+</body>
+</html>
