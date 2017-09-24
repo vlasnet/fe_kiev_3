@@ -1,22 +1,21 @@
 "use strict";
 // First Task
 function function_age() {
-  let birth_year = document.getElementById('year-of-user-birth').value;
-  if (birth_year.length==4 && birth_year<=2017) {
-    document.getElementById('user-age').innerHTML = 'Ваш возраст '+(2017-birth_year);
-  } else if (birth_year.length==2 && birth_year>1 && birth_year<17 ) {
-    document.getElementById('user-age').innerHTML = 'Ваш возраст '+(17-birth_year);
+  let birthYear = parseInt(document.getElementById('year-of-user-birth').value);
+  let year = new Date();
+  let currentYear = year.getFullYear();
+  if (birthYear>1900 && birthYear<=currentYear) {
+    document.getElementById('user-age').innerHTML = 'Ваш возраст '+(currentYear-birthYear);
+  } else if (birthYear>1 && birthYear<=(currentYear-2000)) {
+    document.getElementById('user-age').innerHTML = 'Ваш возраст '+(currentYear-2000-birthYear);
+  } else if (birthYear>(currentYear-2000) && birthYear<99) {
+    document.getElementById('user-age').innerHTML = 'Ваш возраст '+(currentYear-(birthYear+1900));
   } else {
-    document.getElementById('user-age').innerHTML = 'Введите правильный формат года 1987 или 02 (если 2002)';
+    document.getElementById('user-age').innerHTML = 'А Вы долгожитель...'+(currentYear-birthYear)+' Введите правильный формат года 1900+ или 02 (если 2002)';
   }
 }
 
 //Second Task
-function OnlyDigits()
-{
-if ((event.keyCode < 45 || event.keyCode > 57) ) event.returnValue = false;
-}
-
 function function_compare() {
  let x = document.getElementById('first-argument').value;
  let y = document.getElementById('second-argument').value;
@@ -55,6 +54,7 @@ if ((username === 'ivan' && pass === '333') || (username === 'ssss' && pass === 
   document.getElementById('is-authorized').innerHTML = 'Ошибка';
 }
 }
+
 // Fife Task
 function function_compare_again() {
  let a = document.getElementById('a').value;
@@ -76,3 +76,54 @@ function function_compare_again() {
   document.getElementById('compare-again-result').innerHTML = 'Второе и третье число равны, и они максимальны - '+b;
 }
 }
+
+//Task for cicles
+//2.1
+let numEven = [];
+  for (let i=0; i < 101; i+=2) {
+    numEven.push(' '+i);
+  }
+document.getElementById('even').innerHTML = numEven;
+
+//2.2
+let numDec = [];
+  for (let i=200; i >= 0; i--) {
+    numDec.push(' '+i);
+  }
+document.getElementById('decrease').innerHTML = numDec;
+
+//2.3
+let numSum = 0;
+  for (let i=0; i < 100; i++) {
+    numSum += i;
+  }
+document.getElementById('increase').innerHTML = numSum;
+
+//2.4
+function function_exponent_calculation() {
+let num = parseInt(document.getElementById('num').value);
+let numE = 1;
+let exp = parseInt(document.getElementById('exp').value);
+  for (let i=0; i<exp; i++) {
+    numE = numE*num;
+  }
+document.getElementById('exponent-result').innerHTML = numE;
+}
+//2.5
+let multTable = [];
+for (let i=1; i<=10; i++) {
+  multTable.push('<br>'+i+'*7='+i*7);
+}
+document.getElementById('multiplication-table').innerHTML = multTable;
+//2.6
+let numMult = 1;
+for (let i=1; i<=50; i++) {
+  numMult *= i;
+}
+document.getElementById('multiplication').innerHTML = numMult;
+//2.7
+let symbolsCode = [];
+for (let i=1000; i<=2000; i++) {
+  symbolsCode.push('&#'+i);
+}
+document.getElementById('symbols').innerHTML = symbolsCode;
