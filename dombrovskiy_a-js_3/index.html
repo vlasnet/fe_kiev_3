@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <section>
+    <h1>Вывести массив</h1>
+    <button onclick="showArr()">Вывести</button>
+    <p id="new"></p>
+  </section>
+
+  <section>
+    <h1>Добавить элемент под номеров</h1>
+    <input type="text" id="index" placeholder="введите номер">
+    <input type="text" id="value" placeholder="введите елемент">
+    <button id="submit" onclick="getNewElement()">Добавить</button>
+    <p id="new_2"></p>
+  </section>
+
+  <section>
+    <h1>Убрать последний элемент</h1>
+    <button onclick="getPop()">Убрать</button>
+    <p id="new_3"></p>
+  </section>
+
+  <section>
+    <h1>Убрать первый элемент</h1>
+    <button onclick="getShift()">убрать</button>
+    <p id="new_4"></p>
+  </section>
+
+  <section>
+    <h1>Добавить в конец элемент</h1>
+    <input type="text" id="items">
+    <button onclick="getPush()">добавить</button>
+    <p id="new_5"></p>
+  </section>
+
+  <section>
+    <h1>Добавить в начало элемент</h1>
+    <input type="text" id="val">
+    <button onclick="getUnshift()">добавить</button>
+    <p id="new_6"></p>
+  </section>
+
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
