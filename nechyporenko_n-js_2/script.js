@@ -1,6 +1,6 @@
 "use strict";
 // First Task
-function function_age() {
+function countAge() {
   let birthYear = parseInt( document.getElementById('year-of-user-birth').value );
   let year = new Date();
   let currentYear = year.getFullYear();
@@ -17,7 +17,7 @@ function function_age() {
 }
 
 //Second Task
-function function_compare() {
+function findMax() {
   let x = parseInt( document.getElementById('first-argument').value );
   let y = parseInt( document.getElementById('second-argument').value );
 
@@ -31,7 +31,7 @@ function function_compare() {
 }
 
 //Third Task
-function function_entrance() {
+function getEntrance() {
   let appartment_number = parseInt( document.getElementById('appartment').value );
 
    if (appartment_number >= 1 && appartment_number <= 20) {
@@ -46,7 +46,7 @@ function function_entrance() {
 }
 
 //Four Task
-function function_authorization() {
+function checkPermission() {
   let username = document.getElementById('username').value;
   let pass = document.getElementById('password').value;
 
@@ -58,63 +58,51 @@ function function_authorization() {
 }
 
 // Fife Task
-function function_compare_again() {
+function getMax() {
  let a = parseInt( document.getElementById('a').value );
  let b = parseInt( document.getElementById('b').value );
  let c = parseInt( document.getElementById('c').value );
 
- if (a > b && a > c) {
-   document.getElementById('compare-again-result').innerHTML = 'Первое число больше - ' + a;
-  } else if (b > a && b > c) {
-    document.getElementById('compare-again-result').innerHTML = 'Второе число больше - ' + b;
-  } else if (c > a && c > b) {
-    document.getElementById('compare-again-result').innerHTML = 'Третье число больше - ' + c;
-  } else if (a == b && a == c) {
-    document.getElementById('compare-again-result').innerHTML = 'Числа равны - ' + a;
-  } else if (a == b && a > c) {
-    document.getElementById('compare-again-result').innerHTML = 'Первое и второе число равны, и они максимальны - ' + a;
-  } else if (a == c && a > c) {
-    document.getElementById('compare-again-result').innerHTML = 'Первое и третье число равны, и они максимальны - ' + a;
-  } else if (b == c && b > a) {
-    document.getElementById('compare-again-result').innerHTML = 'Второе и третье число равны, и они максимальны - ' + b;
-  }
+ let max = Math.max(a, b, c);
+
+document.getElementById('compare-again-result').innerHTML = 'Максимальное число -' + max;
 }
 
 //Task for cicles
 //2.1
-let numEven = [];
+let evenNumbers = [];
 
 for (let i = 0; i < 101; i += 2) {
-  numEven.push(' ' + i);
+  evenNumbers.push(' ' + i);
 }
-document.getElementById('even').innerHTML = numEven;
+document.getElementById('even').innerHTML = evenNumbers;
 
 //2.2
-let numDec = [];
+let countdown = [];
 
 for (let i = 200; i >= 0; i--) {
-  numDec.push(' ' + i);
+  countdown.push(' ' + i);
 }
-document.getElementById('decrease').innerHTML = numDec;
+document.getElementById('decrease').innerHTML = countdown;
 
 //2.3
-let numSum = 0;
+let sum = 0;
 
 for (let i = 0; i < 100; i++) {
-  numSum += i;
+  sum += i;
 }
-document.getElementById('increase').innerHTML = numSum;
+document.getElementById('increase').innerHTML = sum;
 
 //2.4
-function function_exponent_calculation() {
+function getExp() {
   let num = parseInt(document.getElementById('num').value);
-  let numE = 1;
   let exp = parseInt(document.getElementById('exp').value);
+  let expResult = 1;
 
   for (let i = 0; i < exp; i++) {
-    numE = numE*num;
+    expResult *=num;
   }
-  document.getElementById('exponent-result').innerHTML = numE;
+  document.getElementById('exponent-result').innerHTML = expResult;
 }
 
 //2.5
@@ -126,16 +114,16 @@ for (let i = 1; i <= 10; i++) {
 document.getElementById('multiplication-table').innerHTML = multTable;
 
 //2.6
-let numMult = 1;
+let multiplicationResult  = 1;
 
 for (let i = 1; i <= 50; i++) {
-  numMult *= i;
+  multiplicationResult *= i;
 }
-document.getElementById('multiplication').innerHTML = numMult;
+document.getElementById('multiplication').innerHTML = multiplicationResult;
 //2.7
 let symbolsCode = [];
 
 for (let i = 1000; i <= 2000; i++) {
-  symbolsCode.push('&#' + i);
+  symbolsCode.push('&#' + i + ';');
 }
 document.getElementById('symbols').innerHTML = symbolsCode;
