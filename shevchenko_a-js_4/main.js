@@ -32,13 +32,16 @@ function clickControl(control, action) {
 }());
 
 // TaskFour
+let result = 0;
 
 let taskFour = {
 	btnOne: document.querySelector('.task-four__btn-one'),
 	btnTwo: document.querySelector('.task-four__btn-two'),
 	clickResult: document.querySelector('.task-four__result'),
 	action: function () {
-		taskFour.clickResult.innerText = (+taskFour.clickResult.innerText + 1);
+		result++;
+		taskFour.clickResult.innerText = result;
+
 	}
 }
 
@@ -52,32 +55,10 @@ let taskFive = {
 	inputTwo: document.querySelector('#pow'),
 	btn: document.querySelector('.btn_pow'),
 	action: function () {
-		let result = powNum(taskFive.inputOne.value, taskFive.inputTwo.value);
-		alert(result)
+		let result = Math.pow(taskFive.inputOne.value, taskFive.inputTwo.value);
+		alert(result);
 	}
 };
-
-function powNum(num, pow) {
-	let result = num;
-	if (pow === 0) {
-		return 1;
-	}
-
-	else if (pow < 1) {
-		return 'Введите число больше 0';
-	}
-
-	else if (pow === 1) {
-		return num;
-	}
-
-	else {
-		for (var i = 2; i <= pow ; i++) {
-			result *= num;
-		}
-		return result;
-	}
-}
 
 clickControl(taskFive.btn, taskFive.action);
 
@@ -109,7 +90,7 @@ let taskSeven = {
 			taskSeven.result.innerText = 'Welcom';
 		}
 
-		else if (taskSeven.input.value == undefined || (!taskSeven.input.value)) {
+		else if (taskSeven.input.value === undefined || (!taskSeven.input.value)) {
 			taskSeven.result.innerText = 'Enter your age';
 		}
 
@@ -171,14 +152,13 @@ clickControl(taskTen.btn, taskTen.action);
 
 let taskEleven = {
 	randomNum: Math.round(Math.random() * 10),
-	howManyAttempts: 0,
+	howManyAttempts: 1,
 	inputOne: document.querySelector('#task11'),
 	btn: document.querySelector('.task-eleven__btn'),
 	result: document.querySelector('.task-eleven__result'),
 	action: function() {
 		
 		if (taskEleven.inputOne.value == taskEleven.randomNum) {
-			taskEleven.howManyAttempts++;
 			taskEleven.result.innerText = 'Well done! You are try ' + taskEleven.howManyAttempts + ' times';
 		}
 
