@@ -38,10 +38,21 @@ let pressed = 0,
         }
     };
 
-Task 5
+// Task 5
+let task5 = {
+    input1: document.querySelector('.task-5 .number'),
+    input2: document.querySelector('.task-5 .degree'),
+    btn: document.querySelector('.task-5 .btn_pow'),
+    action: function(powed) {
+        powed = Math.pow(task5.input1.value, task5.input2.value);
+        alert(powed);
+    }
+};
+
 function clickControl(control, action) {
     control.addEventListener('click', action);
 }
 
+clickControl(task5.btn, task5.action);
 clickControl(btns.countOne, action.count);
 clickControl(btns.countTwo, action.count);
