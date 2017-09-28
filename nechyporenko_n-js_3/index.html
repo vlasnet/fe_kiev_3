@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homework js_3 by Nechyporenko Nataliia</title>
+</head>
+<body>
+  <h1>Homework js_3</h1>
+  <h4>1. Вывыд массива</h4>
+  <button type="button" name="showArr" onclick="showArr()">Вывести массив</button>
+  <p id="new"></p>
+  <h4>2. Добавление/замена элемента массива</h4>
+  <input type="number" name="index" id="index" value="" placeholder="Введите индекс элемента массива">
+  <input type="text" name="value" id="value" value="" placeholder="Введите значение элемента массива">
+  <button type="button" name="Arr" onclick="addElement()">Вывести массив</button>
+  <p id="second-task"></p>
+  <h4>3. Удаление последнего элемента массива</h4>
+  <p>Наш массив:</p>
+  <p id="third-task-result"></p>
+  <button type="button" name="pop" onclick="deleteLast()" id="pop"></button>
+  <h4>4. Удаление первого элемента массива</h4>
+  <p>Наш массив:</p>
+  <p id="four-task-result"></p>
+  <button type="button" name="shift" onclick="deleteFirst()" id="shift">Crash!</button>
+  <h4>5. Добавить элемент в конец массива</h4>
+  <input type="text" name="lastElement" id="lastElement" value="" placeholder="Введите значение элемента">
+  <p id="five-task-result"></p>
+  <button type="button" name="shift" onclick="addLast()" id="pop">Crash!</button>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+</html>
