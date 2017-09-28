@@ -34,7 +34,7 @@ let pressed = 0,
 
     action = {
         count: function() {
-            document.getElementById('counter').textContent = ++pressed
+            document.querySelector('.counter').textContent = ++pressed
         }
     };
 
@@ -49,10 +49,28 @@ let task5 = {
     }
 };
 
+// Task 6
+let task6 = {
+
+    btn: document.querySelector('.style-tag'),
+
+    action: function() {
+        let tag = document.getElementById('tagStyle').value;
+         let tagStyle = document.querySelectorAll(tag);
+        for (let i = 0; i < tagStyle.length; i++) {
+            tagStyle[i].style.textDecoration = 'underline';
+        }
+    }
+};
+
+// Task 7
+
+
 function clickControl(control, action) {
     control.addEventListener('click', action);
 }
 
 clickControl(task5.btn, task5.action);
+clickControl(task6.btn, task6.action);
 clickControl(btns.countOne, action.count);
 clickControl(btns.countTwo, action.count);
