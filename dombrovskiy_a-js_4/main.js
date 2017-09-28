@@ -1,25 +1,25 @@
-(function paragRed(){
-  var parag = document.querySelectorAll('.wrapper p');
+(function paragraphRed(){
+  var paragraph = document.querySelectorAll('.wrapper p');
 
-  for ( var i = 0; i < parag.length; i++ ) {
-    parag[i].style.color = "red";
+  for ( var i = 0; i < paragraph.length; i++ ) {
+    paragraph[i].style.color = "red";
   }
 })();
 
-(function shadow(){
-  var img = document.querySelectorAll('img');
+(function getShadow(){
+  var image = document.querySelectorAll('img');
 
-  for ( var i = 0; i < img.length; i++ ) {
-    img[i].style.boxShadow = "15px 15px";
+  for ( var i = 0; i < image.length; i++ ) {
+    image[i].style.boxShadow = "15px 15px";
   }
 })();
 
-(function paragNumber(){
-  var parag = document.querySelectorAll('p');
+(function paragraphNumber(){
+  var paragraph = document.querySelectorAll('p');
 
-  for ( var i = 0; i < parag.length; i++ ) {
+  for ( var i = 0; i < paragraph.length; i++ ) {
     var number = i + 1;
-    parag[i].innerHTML = number + ". " + parag[i].innerHTML;
+    paragraph[i].innerHTML = number + ". " + paragraph[i].innerHTML;
   }
 })();
 
@@ -36,7 +36,7 @@ function clickRight() {
 document.getElementById('left').addEventListener("click", clickLeft);
 document.getElementById('right').addEventListener("click", clickRight);
 
-function pow(num, exp) {
+function power(num, exp) {
 var val = Math.pow(num, exp);
 alert(val);
 }
@@ -46,7 +46,7 @@ submit.addEventListener('click', function() {
   var number = document.getElementById('number').value;
   var exponent = document.getElementById('exponent').value;
   if( number !== "" && exponent !== "") {
-    pow(number, exponent);
+    power(number, exponent);
   }
 });
 
@@ -66,7 +66,7 @@ submit.addEventListener('click', function () {
 
 (function () {
 
-function guess(guessNumber) {
+function guessDate(guessNumber) {
   if(+guessNumber === randomNumber && tries !== 0) {
     alert("Вы угадали");
   }else if(+guessNumber < randomNumber && tries !== 0){
@@ -85,7 +85,7 @@ var randomNumber = Math.round(Math.random() * 10);
 var submitGuess = document.getElementById('submitGuess');
 submitGuess.addEventListener('click', function () {
   var guessNumber = document.getElementById('guessNumber').value;
-  guess(guessNumber);
+  guessDate(guessNumber);
 });
 
 })();
