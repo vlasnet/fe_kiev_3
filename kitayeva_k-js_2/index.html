@@ -8,43 +8,63 @@
     <title>Document</title>
 </head>
 <body>
+<!--Task1-->
 <h2>Task1</h2>
 <h3>Please, write your year of birth:</h3>
 <input id='birthdayId' onchange='submitDateOfBirth()' type="text" name="inputId" value=""
-       placeholder="Insert your year of
- birth.">
+       placeholder="Insert your year of birth.">
+<input type="button" id="action" onclick="showResult()" value="Try it">
+<p id="showAge"></p>
+<!--Task2-->
 <h2>Task2</h2>
 <h3>Please, write numbers:</h3>
-<input id="numberX" onchange="ShowMaxOfTwoNumber()" type="text" name="numberX" value=""
+<input id="numberX" onchange="showMaxOfTwoNumber()" type="text" name="numberX" value=""
        placeholder="Insert first number">
-<input id="numberY" onchange="ShowMaxOfTwoNumber()" type="text" name="numberY" value=""
+<input id="numberY" onchange="showMaxOfTwoNumber()" type="text" name="numberY" value=""
        placeholder="Insert second number">
+<input type="button" id="click" onclick="showMaxOfTwoNumber()" value="Try it">
+<p id="showFinalNumber"></p>
+<!--Task3-->
 <h2>Task3</h2>
 <h3>Please, write the number of flat:</h3>
 <input id="flat" onchange="getEntranceNumber()" type="text" name="flat" value="" placeholder="Enter the number">
+<input type="button" id="push" onclick="getEntranceNumber()" value="Try it">
+<p id="showFinalEntrance"></p>
+<!--Task4-->
 <h2>Task4</h2>
-<input id="login" onchange="verificationUser()" type="text" name="login" value="">
-<input id="pass" onchange="verificationUser()" type="text" name="pass" value="">
+<input id="login" onchange="verificationUser()" type="text" name="login" value="" placeholder="Login">
+<input id="pass" onchange="verificationUser()" type="text" name="pass" value="" placeholder="Password">
+<input type="button" id="pull" onclick="verificationUser()" value="Try it">
+<p id="showUserLogin"></p>
+<!--Task5-->
 <h2>Task5</h2>
 Enter first number<input type="number" id="myNumber1" value="">
 Enter second number<input type="number" id="myNumber2" value="">
 Enter third number<input type="number" id="myNumber3" value="">
 <button onclick="calcMaxNumber()">Try it</button>
 <p id="maxNumber"></p>
+<!--Task6-->
 <h2>Task6</h2>
 <textarea id="txtArea" name="name" rows="2" cols="100"></textarea>
+<!--Task7-->
 <h2>Task7</h2>
 <textarea id="txtArea2" name="name" rows="8" cols="100"></textarea>
+<!--Task8-->
 <h2>Task8</h2>
 <textarea id="txtArea3" name="name" rows="4" cols="10"></textarea>
+<!--Task9-->
 <h2>Task9</h2>
-<input id="numberC" onchange="powOfNumber()" type="text" name="numberC" value="">
-<input id="exponent" onchange="powOfNumber()" type="text" name="exponent" value="">
+<input id="numberC" onchange="powOfNumber()" type="text" name="numberC" value="" placeholder="Insert number">
+<input id="exponent" onchange="powOfNumber()" type="text" name="exponent" value="" placeholder="Insert exponent">
+<input type="button" id="press" onclick="powOfNumber()" value="Try it">
 <p id="powerOf"></p>
+<!--Task10-->
 <h2>Task10</h2>
 <p id="multiply-table"><br></p>
+<!--Task11-->
 <h2>Task11</h2>
 <p id="product-of-number"><br></p>
+<!--Task12-->
 <h2>Task12</h2>
 <textarea id="symbols" cols="100" rows="20"></textarea>
 <script src="scripts/main.js"></script>

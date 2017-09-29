@@ -7,32 +7,38 @@ function submitDateOfBirth() {
     if (birthInput.value <= 17 && birthInput.value.length == 2) {
         userBirthday = '20' + birthInput.value;
         userAge = 2017 - +userBirthday;
-        console.log('user is ' + userAge + ' years old');
+        ageProperty.innerHTML('user is ' + userAge + ' years old');
     } else if (birthInput.value > 17 && birthInput.value.length == 2) {
         userBirthday = '19' + birthInput.value;
         userAge = 2017 - +userBirthday;
-        console.log('user is ' + userAge + ' years old');
+        ageProperty.innerHTML('user is ' + userAge + ' years old');
     } else if (birthInput.value < 2017 && birthInput.value.length == 4) {
         userBirthday = birthInput.value;
         userAge = 2017 - +userBirthday;
-        console.log('user is ' + userAge + ' years old');
+        ageProperty.innerHTML('user is ' + userAge + ' years old');
     }
     else {
-        console.log('false');
+        ageProperty.innerHTML('false');
     }
+}
+function showResult() {
+    let x = userAge;
+    document.getElementById("showAge").innerHTML = x;
 }
 
 //Task2
 let numberX = document.getElementById('numberX');
 let numberY = document.getElementById('numberY');
-function ShowMaxOfTwoNumber() {
+function showMaxOfTwoNumber() {
     if (numberX.value !== '' && numberY.value !== '') {
         if (+numberX.value === +numberY.value) {
-            console.log('numbers are equal')
-        } else if (+numberX.value > +numberY.value) {
-            console.log('The major number is ' + numberX.value);
-        } else {
-            console.log('The major number is ' + numberY.value);
+            document.getElementById("showFinalNumber").innerHTML = ('numbers are equal')
+        }
+        else if (+numberX.value > +numberY.value) {
+            document.getElementById("showFinalNumber").innerHTML = ('The major number is ' + numberX.value);
+        }
+        else {
+            document.getElementById("showFinalNumber").innerHTML = ('The major number is ' + numberY.value);
         }
     }
 }
@@ -42,15 +48,15 @@ let flat = document.getElementById('flat');
 
 function getEntranceNumber() {
     let flatNumber = flat.value;
-    if (flatNumber > 0 && flatNumber <= 21) {
-        console.log('Flat ' + flatNumber + ' is in first entrance');
-    } else if (flatNumber > 0 && flatNumber <= 65) {
-        console.log('Flat ' + flatNumber + ' is in second entrance');
-    } else if (flatNumber > 0 && flatNumber <= 81) {
-        console.log('Flat ' + flatNumber + ' is in third entrance');
+    if (flatNumber <= 21) {
+        document.getElementById("showFinalEntrance").innerHTML = ('Flat ' + flatNumber + ' is in first entrance');
+    } else if (flatNumber > 21 && flatNumber <= 65) {
+        document.getElementById("showFinalEntrance").innerHTML = ('Flat ' + flatNumber + ' is in second entrance');
+    } else if (flatNumber > 65 && flatNumber <= 81) {
+        document.getElementById("showFinalEntrance").innerHTML = ('Flat ' + flatNumber + ' is in third entrance');
     }
     else {
-        console.log('false');
+        document.getElementById("showFinalEntrance").innerHTML = 'false';
     }
 }
 
@@ -60,13 +66,13 @@ let passInput = document.getElementById('pass');
 
 function verificationUser() {
     if (loginInput.value === 'ivan' && passInput.value === '333') {
-        console.log('Welcome!');
+        document.getElementById("showUserLogin").innerHTML = 'Welcome!';
     } else if (loginInput.value === 'ssss' && passInput.value === '666') {
-        console.log('Welcome!');
+        document.getElementById("showUserLogin").innerHTML = 'Welcome!';
     } else if (loginInput.value === 'gibs' && passInput.value === '0000') {
-        console.log('Welcome!');
+        document.getElementById("showUserLogin").innerHTML = 'Welcome!';
     } else {
-        console.log('Error!')
+        document.getElementById("showUserLogin").innerHTML = 'Incorrect credentials';
     }
 }
 
@@ -91,6 +97,7 @@ for (let i = 0; i < 101; i++) {
 
 //Task7
 let txtArea2 = document.getElementById('txtArea2');
+let i = 0;
 for (i = 200; i >= 0; i--) {
     txtArea2.insertAdjacentHTML('beforeEnd', i + ' ');
 }
@@ -142,5 +149,6 @@ for (let i = 1; i < 51; i++) {
 for (let i = 1000; i < 2001; i++) {
     document.getElementById('symbols').insertAdjacentHTML('beforeEnd', '&amp;#' + i + '; ');
 }
+
 
 
