@@ -64,6 +64,18 @@ let task6 = {
 };
 
 // Task 7
+let task7 = {
+    btn: document.querySelector('.enter'),
+    action: function () {
+        let age = document.getElementById('user_age').value;
+        if (age > 16) {
+            alert ('Добро пожаловать!');
+        } else {
+            alert ('Вы еще молоды...');
+        }
+    }
+};
+clickControl(task7.btn, task7.action);
 
 
 function clickControl(control, action) {
