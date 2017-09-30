@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--Task1-->
+<h3>Task 1</h3>
+<p>Array open:</p>
+<input type="button" id="action" onclick="showResult()" value="Array">
+<p id="showArray"></p>
+<!--Task2-->
+<h3>Task 2</h3>
+<p>Enter value in array:</p>
+<input id="index" onchange="getValue()" type="number" name="index" value="" placeholder="Insert index number">
+<input id="value" onchange="getValue()" type="text" name="value" value="" placeholder="Insert value">
+<input type="button" id="push" onclick="getValue()" value="Output">
+<p id="showArrayOutput"></p>
+<!--Task3-->
+<h3>Task 3</h3>
+<p>Show array pop:</p>
+<input type="button" id="pop" onclick ="popArray()"  value="pop">
+<p id ="showPopArray"></p>
+<!--Task4-->
+<h3>Task4</h3>
+<p>Show array shift:</p>
+<input type="button" id="shift" onclick ="shiftArray()"  value="shift">
+<p id ="showShiftArray"></p>
+<!--Task5-->
+<h3>Task5</h3>
+<p>Insert value to be pushed:</p>
+<input type="text" id="insertText" name ="text" value ="" placeholder="Insert value">
+<input type="button" id="push1" onclick="getPushValue()" value="Push">
+<p id ="showPushArray"></p>
+<!--Task6-->
+<h3>Task6</h3>
+<p>Insert value to be unshift:</p>
+<input type="text" id="unshiftText" name="text" value="" placeholder="Insert value">
+<input type="button" id="unshift" onclick="unshiftArray()" value="unshift">
+<p id="showUnshiftArray"></p>
+<script src="scripts/main.js"></script>
+</body>
+</html>
