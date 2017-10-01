@@ -21,16 +21,12 @@ clickControl(taskOne.btn, taskOne.action);
 
 // Task 2
 
-let taskTwo = {
-	imgs:   document.querySelectorAll('.taskTwo__img'),
-	action: function() {
-		for (var i = 0; i < taskTwo.imgs.length; i++) {
-			taskTwo.imgs[i].src = 'img/key-features-' + (i + 1) + '.png';
+(function () {
+	let imgs = document.querySelectorAll('.taskTwo__img');
+	for (let i = 0; i < imgs.length; i++) {
+			imgs[i].src = 'img/key-features-' + (i + 1) + '.png';
 		}
-	}
-};
-
-taskTwo.action();
+})();
 
 // Task 3 and Task 4
 
@@ -63,15 +59,21 @@ let taskFive = {
 		}
 
 		if ((user.pass.length > 5) && (~user.email.indexOf('@')) && (!(~user.email.indexOf(' ')))) {
-			return true;
+			taskFive.result.innerText = taskFive.action();
 		}
 		else return false;
 	}
 };
 
-clickControl(taskFive.btn, function () {
-	taskFive.result.innerText = taskFive.action();		
-});
+(function specialSubmitControl() {
+	taskFiveForm.addEventListener('submit', function(event) {
+		taskFive.action();
+		if (!taskFive.action()) {
+			event.preventDefault();
+			return taskFive.result.innerText = taskFive.action();
+		}
+	}, false)
+})();
 
 // Задание 6
 
