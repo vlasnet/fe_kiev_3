@@ -19,8 +19,9 @@ addShadow();
 function setNumbers() {
     let blocks = document.querySelectorAll('.task-1 p');
     for (let a = 0; a < blocks.length; a++) {
-        blocks[a].textContent = (a + 1) + '. ' + blocks[a].textContent;
+        blocks[a].innerHTML = (a + 1) + '. ' + blocks[a].innerHTML;
     }
+
 };
 
 setNumbers();
@@ -56,7 +57,7 @@ let task6 = {
 
     action: function() {
         let tag = document.getElementById('tagStyle').value;
-         let tagStyle = document.querySelectorAll(tag);
+        let tagStyle = document.querySelectorAll(tag);
         for (let i = 0; i < tagStyle.length; i++) {
             tagStyle[i].style.textDecoration = 'underline';
         }
@@ -66,16 +67,49 @@ let task6 = {
 // Task 7
 let task7 = {
     btn: document.querySelector('.enter'),
-    action: function () {
+    action: function() {
         let age = document.getElementById('user_age').value;
         if (age > 16) {
-            alert ('Добро пожаловать!');
-        } else {
-            alert ('Вы еще молоды...');
-        }
+            alert('Добро пожаловать!');
+        } else if (age === undefined || age === "") {
+            alert('Введите ваш возраст!');
+            /* Хотел тут еще ввести проверку на число, но не разобрался как это сделать*/
+        } else if (age <= 16) {
+            alert('Вы еще молоды...');
+        };
     }
 };
-clickControl(task7.btn, task7.action);
+
+// task 9
+let myArray = [1, 2, 3, 4];
+function someArrayLength(myArr) {
+    if (myArr) {
+        return myArr.length
+    } else {
+        return 'Ошибка. Введите аргумент'
+    };
+}
+console.log('Длина массива: ' + someArrayLength(myArray));
+// task 10
+let task10 = {
+    btn: document.querySelector('.task-10 .ok'),
+    result: document.querySelector('.task-10 .result'),
+    action: function() {
+        task10.result.textContent = takeResult();
+    }
+};
+
+function takeResult() {
+    let someNum = parseInt(document.getElementById('number').value);
+    if (someNum > 10) {
+        return Math.sqrt(someNum);
+    } else if (someNum < 7) {
+        return 'Число меньше семи';
+    } else if (someNum === 8 || someNum === 9) {
+        return someNum - 1;
+    };
+};
+// task 11
 
 
 function clickControl(control, action) {
@@ -84,5 +118,7 @@ function clickControl(control, action) {
 
 clickControl(task5.btn, task5.action);
 clickControl(task6.btn, task6.action);
+clickControl(task7.btn, task7.action);
+clickControl(task10.btn, task10.action);
 clickControl(btns.countOne, action.count);
 clickControl(btns.countTwo, action.count);
