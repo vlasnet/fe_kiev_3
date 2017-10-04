@@ -7,22 +7,22 @@ function submitDateOfBirth() {
     if (birthInput.value <= 17 && birthInput.value.length == 2) {
         userBirthday = '20' + birthInput.value;
         userAge = 2017 - +userBirthday;
-        ageProperty.innerHTML('user is ' + userAge + ' years old');
+     return 'user is ' + userAge + ' years old';
     } else if (birthInput.value > 17 && birthInput.value.length == 2) {
         userBirthday = '19' + birthInput.value;
         userAge = 2017 - +userBirthday;
-        ageProperty.innerHTML('user is ' + userAge + ' years old');
+        return 'user is ' + userAge + ' years old';
     } else if (birthInput.value < 2017 && birthInput.value.length == 4) {
         userBirthday = birthInput.value;
         userAge = 2017 - +userBirthday;
-        ageProperty.innerHTML('user is ' + userAge + ' years old');
+        return 'user is ' + userAge + ' years old';
     }
     else {
-        ageProperty.innerHTML('false');
+        return 'false';
     }
 }
 function showResult() {
-    let x = userAge;
+    let x = submitDateOfBirth();
     document.getElementById("showAge").innerHTML = x;
 }
 
@@ -64,7 +64,7 @@ function getEntranceNumber() {
 let loginInput = document.getElementById('login');
 let passInput = document.getElementById('pass');
 
-function verificationUser() {
+function verifyUser() {
     if (loginInput.value === 'ivan' && passInput.value === '333') {
         document.getElementById("showUserLogin").innerHTML = 'Welcome!';
     } else if (loginInput.value === 'ssss' && passInput.value === '666') {
@@ -106,7 +106,7 @@ for (i = 200; i >= 0; i--) {
 let txtArea3 = document.getElementById('txtArea3');
 let sum = 0;
 for (i = 0; i < 101; i++) {
-    sum = sum + i;
+    sum += i;
     if (i === 100) {
         txtArea3.insertAdjacentHTML('beforeEnd', sum);
     }
