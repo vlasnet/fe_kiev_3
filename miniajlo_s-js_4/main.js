@@ -113,26 +113,36 @@ function takeResult() {
 let prNum = Math.floor((Math.random() * 10) + 1);
 console.log('Загаданое число: ' + prNum);
 let task11 = {
-    // tempOut: document.getElementById('temps'),
-    btn: document.getElementById('guess'),
-    action: function guessNumber() {
-        let num = parseInt(document.getElementById('myNum').value),
-            out = document.getElementById('out'),
-            temps = 3;
-        if (num == prNum) {
-            out.innerHTML = 'Поздравляем, вы угадали число!';
-        }
-        else if (num > prNum) {
-            out.innerHTML = 'Вы ввели число, больше чем нужно';
-            temps--;
 
+    btn: document.getElementById('guess'),
+    temps: 0,
+    action: function guessNumber() {
+        let num = document.getElementById('myNum').value,
+            out = document.getElementById('out'),
+            tempOut = document.getElementById('temps');
+        if (num === '') {
+            alert('Введите число')
         }
-        else if (num < prNum) {
+        else if (num == prNum) {
+                out.innerHTML = 'Поздравляем, вы угадали число!';
+                task11.temps++;
+                tempOut.innerHTML = 'Чтобы угадать число, вы использовали ' + task11.temps + ' попытки.';
+
+            }
+        else if (task11.temps == 2) {
+            out.innerHTML = 'Game Over! ' +
+                'Загаданое число было: ' + prNum;
+            task11.temps++;
+            tempOut.innerHTML = 'Вы использовали все попытки.';
+        } else if (num < prNum) {
             out.innerHTML = 'Вы ввели число, меньше чем нужно';
-            temps--;
-        }
-        else if (temps === 0) {
-            alert('Game Over! ' + 'Загаданое число было: ' + prNum);
+            task11.temps++;
+            tempOut.innerHTML = 'Использовано ' + task11.temps + ' попытки.';
+
+        } else if (num > prNum) {
+            out.innerHTML = 'Вы ввели число, больше чем нужно';
+            task11.temps++;
+            tempOut.innerHTML = 'Вы использовали ' + task11.temps + ' попытки.';
         };
     }
 };
