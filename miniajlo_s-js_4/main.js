@@ -110,7 +110,32 @@ function takeResult() {
     };
 };
 // task 11
+let prNum = Math.floor((Math.random() * 10) + 1);
+console.log('Загаданое число: ' + prNum);
+let task11 = {
+    // tempOut: document.getElementById('temps'),
+    btn: document.getElementById('guess'),
+    action: function guessNumber() {
+        let num = parseInt(document.getElementById('myNum').value),
+            out = document.getElementById('out'),
+            temps = 3;
+        if (num == prNum) {
+            out.innerHTML = 'Поздравляем, вы угадали число!';
+        }
+        else if (num > prNum) {
+            out.innerHTML = 'Вы ввели число, больше чем нужно';
+            temps--;
 
+        }
+        else if (num < prNum) {
+            out.innerHTML = 'Вы ввели число, меньше чем нужно';
+            temps--;
+        }
+        else if (temps === 0) {
+            alert('Game Over! ' + 'Загаданое число было: ' + prNum);
+        };
+    }
+};
 
 function clickControl(control, action) {
     control.addEventListener('click', action);
@@ -120,5 +145,6 @@ clickControl(task5.btn, task5.action);
 clickControl(task6.btn, task6.action);
 clickControl(task7.btn, task7.action);
 clickControl(task10.btn, task10.action);
+clickControl(task11.btn, task11.action);
 clickControl(btns.countOne, action.count);
 clickControl(btns.countTwo, action.count);
