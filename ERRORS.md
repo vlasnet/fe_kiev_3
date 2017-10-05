@@ -123,9 +123,12 @@ https://learn.javascript.ru/debugging-chrome
 
 ## 15. Именование переменных и функций должно быть понятно людям и соответствовать общепринятым правилам:
 https://learn.javascript.ru/coding-style#именование
+https://tproger.ru/articles/15-tips-selfdoc-js/#heading-section-9
 
 ### 15.1 Именование функций:
 https://learn.javascript.ru/function-basics#function-naming
+Как НЕ НАДО делать https://learn.javascript.ru/write-unmain-code#именование
 
 ### 15.2 Именование переменных:
 https://learn.javascript.ru/variables#variable-naming
+Как НЕ НАДО делать https://learn.javascript.ru/write-unmain-code#именование
