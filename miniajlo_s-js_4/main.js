@@ -122,23 +122,27 @@ let task11 = {
             tempOut = document.getElementById('temps');
         if (num === '') {
             alert('Введите число')
-        }
-        else if (num == prNum) {
-                out.innerHTML = 'Поздравляем, вы угадали число!';
-                task11.temps++;
-                tempOut.innerHTML = 'Чтобы угадать число, вы использовали ' + task11.temps + ' попытки.';
-
-            }
-        else if (task11.temps == 2) {
+        } else if (num == prNum && task11.temps < 1) {
+            out.innerHTML = 'Поздравляем, вы угадали число!';
+            task11.temps++;
+            tempOut.innerHTML = 'Чтобы угадать число, вы использовали ' + task11.temps + ' попытку.';
+        } else if (task11.temps == 2) {
             out.innerHTML = 'Game Over! ' +
                 'Загаданое число было: ' + prNum;
             task11.temps++;
             tempOut.innerHTML = 'Вы использовали все попытки.';
+        } else if (num < prNum && task11.temps < 1) {
+            out.innerHTML = 'Вы ввели число, больше чем нужно';
+            task11.temps++;
+            tempOut.innerHTML = 'Вы использовали ' + task11.temps + ' попытку.'
         } else if (num < prNum) {
             out.innerHTML = 'Вы ввели число, меньше чем нужно';
             task11.temps++;
-            tempOut.innerHTML = 'Использовано ' + task11.temps + ' попытки.';
-
+            tempOut.innerHTML = 'Вы использовали ' + task11.temps + ' попытки.';
+        } else if (num > prNum && task11.temps < 1) {
+            out.innerHTML = 'Вы ввели число, больше чем нужно';
+            task11.temps++;
+            tempOut.innerHTML = 'Вы использовали ' + task11.temps + ' попытку.'
         } else if (num > prNum) {
             out.innerHTML = 'Вы ввели число, больше чем нужно';
             task11.temps++;
