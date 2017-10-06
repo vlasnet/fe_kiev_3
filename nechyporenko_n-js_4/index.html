@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,15 @@
   <link rel="stylesheet" href="styles.css">
   <title>Homework Js-4 by Nechyporenko Nataliia</title>
 </head>
+
 <body>
   <div class="contant">
     <h1>Nechyporenko N, JS-4</h1>
+
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec turpis vestibulum, consectetur lorem sed, porta justo. Nullam lectus libero, maximus sit amet lacinia at, vulputate et dolor. Ut accumsan vitae justo lobortis rutrum. Fusce nisl turpis, imperdiet eu enim at, viverra malesuada ipsum. Phasellus id tristique mi. Aenean a nisl at ipsum sollicitudin sollicitudin. Nunc sed hendrerit quam. Aliquam ornare lorem at ipsum tincidunt sollicitudin. Proin molestie vestibulum erat, egestas maximus risus consectetur et. Sed quis euismod est. Aliquam imperdiet dolor cursus, vulputate arcu et, convallis elit. Nulla semper viverra mi vel bibendum. Sed scelerisque tempus dictum. Suspendisse eu condimentum nisi. Ut pharetra turpis non metus condimentum dictum. Nullam diam sapien, sodales id tristique id, viverra eu augue.</p>
+
     <p>Ut volutpat nunc nulla. Quisque in nisi ut felis venenatis posuere nec a lorem. Integer quis nisi libero. Praesent eget eleifend risus. Aliquam erat volutpat. Sed elit sem, dignissim non ex id, facilisis sollicitudin velit. Sed eu condimentum ante, non ultricies felis. Curabitur viverra libero tellus, vel facilisis felis dignissim quis. Duis ultricies dolor vitae neque ullamcorper ullamcorper. Quisque ut efficitur magna. Praesent eget auctor lectus. Curabitur enim est, ultrices vel elit quis, pulvinar venenatis justo. Pellentesque blandit sem ac orci blandit tempus.</p>
+
     <div class="img-wrapper">
       <figure>
         <img src="img/child-in-leaves.jpg" alt="Child in leaves.">
@@ -21,52 +26,69 @@
         <img src="img/leaves.jpg" alt="Autum leaves.">
       </figure>
     </div>
+
     <div class='button-wrapper'>
       <button type="button" name="button" onclick="mathClicks()">Click on me!</button>
       <button type="button" name="button" onclick="mathClicks()">Click on me!</button>
       <span id="clicks"></span>
     </div>
-    <p>Suspendisse faucibus scelerisque magna, et pellentesque justo aliquet id. Pellentesque consectetur ex in libero tristique blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla non odio imperdiet, mattis ex eu, ornare enim. Duis venenatis tellus ut massa blandit sodales. Fusce vel hendrerit lorem. Suspendisse sit amet nisl sed odio hendrerit commodo. Maecenas in fringilla dui. Aenean eget nulla arcu. Proin tincidunt orci tortor. Aenean placerat viverra purus ut accumsan. Pellentesque vel magna ut turpis iaculis egestas. Nulla non euismod neque. Vestibulum maximus est nec felis mattis rutrum. Donec ac sapien sit amet nisi efficitur viverra quis sed mauris.</p>
-<div class="tasks-wrapper">
-  <div class="task">
-    <h4>Task 5</h4>
-    <label for="number">Enter number: </label>
-    <input type="text" name="number" id='number' value=""><br>
-    <label for="exp">Enter degree:</label>
-    <input type="text" name="exp" id="exp" value=""><br>
-    <button type="button" name="button" onclick="mathExp('number', 'exp')">Elevate</button>
-  </div>
-  <div class="task">
-    <h4>Task 6</h4>
-    <label for="tagsName">Enter Html Tag:</label>
-    <input type="text" name="tagsName" id="tagsName" value=""><br>
-    <button type="button" name="button" onclick="showUnderline('tagsName')">Underline</button>
-  </div>
-  <div class="task">
-    <h4>Task 7-8</h4>
-    <label for="user-age">Enter You age:</label>
-    <input type="number" name="user-age" id="user-age" value=""><br>
-    <button type="button" name="button" onclick="checkAge('user-age')">Enter</button><br>
-    <span id="enter"></span>
-  </div>
-</div>
+
+    <p>Suspendisse faucibus scelerisque magna, et pellentesque justo aliquet id. Pellentesque consectetur ex in libero tristique blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla non odio imperdiet, mattis ex eu, ornare enim. Duis venenatis tellus ut massa blandit sodales. Fusce vel hendrerit lorem. Suspendisse sit amet nisl sed odio hendrerit commodo. Maecenas in fringilla dui. Aenean eget nulla arcu. Proin tincidunt orci tortor. Aenean placerat      viverra purus ut accumsan. Pellentesque vel magna ut turpis iaculis egestas. Nulla non euismod neque. Vestibulum maximus est nec felis mattis rutrum. Donec ac sapien sit amet nisi efficitur viverra quis sed mauris.</p>
+
+    <div class="tasks-wrapper">
+      <div class="task">
+        <h4>Task 5</h4>
+        <label for="number">Enter number: </label>
+        <input type="text" name="number" id='number' value=""><br>
+        <label for="exp">Enter degree:</label>
+        <input type="text" name="exp" id="exp" value=""><br>
+        <button type="button" name="button" onclick="mathExp('number', 'exp')">Elevate</button>
+      </div>
+      <div class="task">
+        <h4>Task 6</h4>
+        <label for="tagsName">Enter Html Tag:</label>
+        <input type="text" name="tagsName" id="tagsName" value=""><br>
+        <button type="button" name="button" onclick="showUnderline('tagsName')">Underline</button>
+      </div>
+      <div class="task">
+        <h4>Task 7-8</h4>
+        <label for="user-age">Enter You age:</label>
+        <input type="number" name="user-age" id="user-age" value=""><br>
+        <button type="button" name="button" onclick="checkAge('user-age')">Enter</button><br>
+        <span id="enter"></span>
+      </div>
+    </div>
+
     <p>Duis lorem nisl, tristique vulputate ligula sed, consequat vestibulum lacus. Donec ut sodales leo. Morbi gravida leo nisl, vitae hendrerit erat iaculis at. Nunc vitae nunc sed tellus vehicula facilisis. Nulla facilisi. Etiam ligula ex, ullamcorper non magna et, tempor gravida orci. Aenean sed tincidunt tortor. Vivamus laoreet diam mattis, consequat ligula nec, posuere ligula. Proin consectetur consectetur elit eget pellentesque. Phasellus ante nulla, vulputate eu arcu ut, suscipit consequat ligula. Nullam pellentesque non libero ut interdum.</p>
-  <div class="tasks-wrapper">
-    <div class="task">
-      <h4>Task 9</h4>
-      <p id="arr"></p>
-      <p id="length"></p>
+
+    <div class="tasks-wrapper">
+      <div class="task">
+        <h4>Task 9</h4>
+        <p id="arr"></p>
+        <p id="length"></p>
+      </div>
+      <div class="task">
+        <h4>Task 10</h4>
+        <label for="number">Enter number:</label>
+        <input type="number" name="number" id="nbr" value=""><br>
+        <button type="button" name="button" onclick="showResult('nbr')">Enter</button><br>
+        <span id="task10-result"></span>
+      </div>
+      <div class="task">
+        <h4 id='guess'>Task 11 Guess a number</h4>
+        <span> I made a number. Guess what.</span><br>
+        <span id='attempts'></span><br>
+        <label for="user-number">Enter number:</label>
+        <input type="number" name="user-number" id="user-number" value=""><br>
+        <button type="button" name="button" onclick="compareNum('user-number')">Enter</button><br>
+        <span id="task11-result"></span>
+      </div>
     </div>
-    <div class="task">
-      <h4>Task 10</h4>
-      <label for="number">Enter number:</label>
-      <input type="number" name="number" id="nbr" value=""><br>
-      <button type="button" name="button" onclick="showResult('nbr')">Enter</button><br>
-      <span id="task10-result"></span>
-    </div>
-  </div>
+
     <p>Donec id blandit erat, ut efficitur orci. Donec a vulputate leo. Curabitur vestibulum vulputate enim venenatis vestibulum. Fusce enim lacus, condimentum eu sagittis ac, posuere ut dolor. Quisque vehicula rhoncus nisl a venenatis. Nullam vulputate lectus et risus maximus sagittis. Integer sapien nunc, ultricies eu volutpat sit amet, ornare vitae mauris. Sed metus ante, volutpat id ultricies eget, elementum et metus. Vivamus vel efficitur mi, a venenatis augue. Sed turpis metus, hendrerit vitae nisi ut, pellentesque maximus nibh. Integer dignissim vel diam sit amet convallis. Proin tincidunt lacus nulla, et commodo tortor dictum id. Fusce sollicitudin augue in auctor ullamcorper. In hac habitasse platea dictumst. Duis sapien ex, vulputate et mattis id, consequat eget lacus. Donec tempor erat odio, vulputate ornare mi rutrum et.</p>
+
   </div>
+
   <script src="script.js" charset="utf-8"></script>
 </body>
 </html>
