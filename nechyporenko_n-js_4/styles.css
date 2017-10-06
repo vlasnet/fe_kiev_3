@@ -37,7 +37,7 @@ img {
   margin: 10px 25px;
 }
 
-.task-5_7-wrapper {
+.tasks-wrapper {
   display: flex;
   justify-content: space-around;
   margin: 10px 25px;
@@ -45,7 +45,7 @@ img {
 
 @media screen and (max-width: 400px) {
 
-  .task-5_7-wrapper {
+  .tasks-wrapper {
     flex-direction: column;
   }
 
