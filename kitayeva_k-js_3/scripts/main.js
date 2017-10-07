@@ -1,25 +1,25 @@
 'use strict'
 //Task1
 let array = ['Sunday', ' Monday', ' Tuesday', ' Wednesday', ' Thursday', ' Friday', ' Saturday'];
-function showResult(){
+function showResult() {
     document.getElementById('showArray').innerHTML = array;
 }
 
 //Task2
 function getValue() {
     let array = ['Sunday', ' Monday', ' Tuesday'];
-let indexValue = document.getElementById('index').value;
-let elementValue = document.getElementById('value').value;
-array.splice(indexValue,0,elementValue);
+    let indexValue = document.getElementById('index').value;
+    let elementValue = document.getElementById('value').value;
+    array.splice(indexValue, 0, elementValue);
     let string = array.join('; ');
     document.getElementById("showArrayOutput").innerHTML = string;
 }
 // Task3
 
 function popArray() {
-     array.pop();
-     let getArray = array.join('; ');
-     document.getElementById('showPopArray').innerHTML = getArray;
+    array.pop();
+    let getArray = array.join('; ');
+    document.getElementById('showPopArray').innerHTML = getArray;
 }
 // Task4
 
@@ -43,3 +43,4 @@ function unshiftArray() {
     let getUnshiftArray = array.join('; ');
     document.getElementById('showUnshiftArray').innerHTML = getUnshiftArray;
 }
+
