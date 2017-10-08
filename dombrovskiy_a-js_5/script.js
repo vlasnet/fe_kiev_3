@@ -22,11 +22,11 @@ var image = ['wonderWoman', 'flash', 'spiderMan', 'wolverine', 'deadPool'];
 var divForImg = document.getElementById('img');
 
   for (var i = 0; i < image.length; i++) {
-    var img = document.createElement('img');
-    img.src = 'img/' + image[i] + ".jpg";
-    img.setAttribute('height', '150px');
+    var pictures = document.createElement('img');
+    pictures.src = 'img/' + image[i] + ".jpg";
+    pictures.setAttribute('height', '150px');
 
-    divForImg.append(img);
+    divForImg.append(pictures);
   }
 })();
 
@@ -81,10 +81,13 @@ var divForImg = document.getElementById('img');
       var pass = input.pass.value.trim();
       var email = input.email.value.trim();
 
-      if(pass.length < 5){
+      if (pass.length < 5){
         valid = false;
       }
 
+      if (login.indexOf(" ") !== -1){
+      valid = false;
+      }
       // if(email.indexOf('@') === -1 || email.indexOf(' ') !== -1){
       //   valid = false;
       // }
