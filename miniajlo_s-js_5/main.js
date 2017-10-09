@@ -8,7 +8,23 @@ let task1 = {
         task1.result.textContent = string.length;
     }
 };
-// task 2
+// task2
+
+    let imgsSrc = document.querySelector('.images_array');
+    let myImgs = ['images/1.jpg', 'images/2.jpeg', 'images/3.jpg'];
+
+        for (let i = 0; i < myImgs.length; i++) {
+            let img = '<img src=' + myImgs[i] + ' />' + '  ';
+            imgsSrc.insertAdjacentHTML('beforeEnd', img);
+    };
+
+
+// // task3
+//
+// let url = document.querySelector('.url');
+// url.href = url.value;
+// console.log(url.hostname);
+
 
 
 
