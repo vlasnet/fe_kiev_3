@@ -61,6 +61,7 @@
     function addNumberToParagraph() {
 
         var paragraphs = document.getElementsByTagName('p');
+        
         for (var i = 0; i < paragraphs.length; i++) {
             var span = document.createElement("span");
             span.innerHTML = i + 1 + '.';
@@ -86,7 +87,7 @@
 
 
         document.body.onclick = function(e) {
-            e = e;
+
             var target = e.target;
             if (target.className == 'btn') {
                 count++;
@@ -159,7 +160,7 @@
 
         var age = +document.getElementById('age2').value;
 
-        if (age == 0 || age == null || age == undefined) {
+        if (age === 0 || age === null || age === undefined) {
             alert('Введите возраст!');
         } else if (age < 16) {
             alert('Вы еще молоды!');
@@ -172,8 +173,7 @@
     <h4> Задача 9. Создайте функцию, которая считает длину массива и возвращает ее в виде числа. Массив в функцию передается как аргумент. Если аргумент не задан – выводится сообщение об ошибке.</h4>
     <p> PS. - Решение Задания 9 смотреть в Консоли </p>
     <script>
-    var arr = [];
-
+  
     function calculateArrLength(arr) {
         var count = arr.length;
         return count;
