@@ -9,7 +9,7 @@
 	div.addEventListener('mousemove', function (e) {
 		let rect = this.getBoundingClientRect();
 		// console.log(e.clientX - rect.x, e.clientY - rect.y);
-		result.innerText = 'x: ' + (e.clientX - rect.x) + 'px' + 'y: ' + (e.clientY - rect.y) + 'px';
+		result.innerText = 'x: ' + (e.clientX - rect.x) + 'px ' + 'y: ' + (e.clientY - rect.y) + 'px';
 	})
 })();
 
@@ -18,7 +18,7 @@
 (function () {
 	let folder = document.querySelector('.task-2');
 	
-	folder.addEventListener('click', function () {
+	folder.addEventListener('dblclick', function () {
 		if (folder.dataset.toggle == 'close') {
 			folder.classList.remove('close-folder');
 			folder.classList.add('open-folder');
@@ -35,14 +35,19 @@
 
 (function () {
 	let taskThree = document.querySelector('.task-3');
-	
+	let containerForBoxes = document.createElement('div');
+
 	for (let i = 0; i < 300; i++) {
 		let newDiv = document.createElement('div');
 		
-		taskThree.appendChild(newDiv);
 		newDiv.classList.add('box');
+		containerForBoxes.appendChild(newDiv);
 	}
+
+	taskThree.appendChild(containerForBoxes);
+
 	let box = document.querySelectorAll('.box');
+
 	for (let i = 0; i < box.length; i++) {
 		box[i].addEventListener('mouseover', function() {
 			box[i].style.borderRadius = '50%';
@@ -58,8 +63,7 @@
 
 	for (let i = 0; i < imgs.length; i++) {
 		imgs[i].addEventListener('click', function() {
-			div.style.background = 'url(' + this.src + ') no-repeat';
-			div.style.backgroundSize = 'contain';
+			div.style.backgroundImage = 'url(' + this.src + ')';
 		})
 	}
 })();
@@ -67,12 +71,15 @@
 //task-5
 
 (function(){
-	let div = document.querySelector('.task-5');
-		let count = 1;
+	let div = document.querySelector('.task-5'),
+	count = 0,
+	px = 'px';
+	
 	div.addEventListener('click', function() {
+		let position = div.style;
 
-		div.style.transform = 'translateY('+ count * 100 + 'px)';
-		count++;
+		count += 100;
+		position.top = count + px;
 	})
 })();
 
@@ -82,19 +89,42 @@
 	let toggle = document.querySelector('.toggle');
 	let container = document.querySelector('.container');
 	let count = 0;
+	let px = 'px';
 	toggle.addEventListener('click', function () {
-		if (count === 0) {
-			container.style.textAlign = 'center';
-			count++;
-			console.log(count);
-		} else if (count === 1) {
-			container.style.textAlign = 'right';
-			count++;
-			console.log(count);
-		} else {
-			container.style.textAlign = 'left';
-			count = 0;
-			console.log(count);
+		switch (count) {
+			case 0: 
+				toggle.style.left = (count + 1) * 100 - 50 + px;
+				count ++;
+				console.log(count);
+			break;
+			case 1: toggle.style.left = (count + 1) * 100 - 50 + px;
+				count ++;
+				console.log(count);
+			break;
+			case 2: toggle.style.left = (count + 1) * 100 - 50 + px;
+				count ++;
+				console.log(count);
+			break;
+			case 3: toggle.style.left = (count + 1) * 100 - 50 + px;
+				count ++;
+				console.log(count);
+			break;
+			case 4: toggle.style.left = (count + 1) * 100 - 50 + px;
+				count ++;
+				console.log(count);
+			break;
+			case 5: toggle.style.left = (count + 1) * 100 - 50 + px;
+				count ++;
+				console.log(count);
+			break;
+			case 6: toggle.style.left = (count + 1) * 100 - 50 + px;
+				count ++;
+				console.log(count);
+			break;
+			case 7: toggle.style.left = 0;
+				count = 0;
+				console.log(count);
+			break;
 		}
 	})
 })();
