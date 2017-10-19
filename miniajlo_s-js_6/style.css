@@ -20,4 +20,7 @@
     width: 30px;
     height: 30px;
     background-color: #4169E1;
+    display: inline-block;
+    margin: 2px;
+    transition: 0.5s;
 }
