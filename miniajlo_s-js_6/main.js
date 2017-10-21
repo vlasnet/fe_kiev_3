@@ -39,15 +39,27 @@
         // let div = document.createElement('div');
         // div.classList.add('box');
         // divContainer.appendChild(div);
-    };
-    // function() {
+    }
         let box = document.querySelectorAll('.box');
         for (let i = 0; i < box.length; i++) {
             box[i].addEventListener('mouseover', function() {
                 box[i].style.borderRadius = '50%';
             });
-         }
-
-    // };
-
+        };
 })();
+
+// task-4
+$(function () {
+        $(".img_container img").click(function(){
+            $(".img_slide").css("backgroundImage", "url('" + $(this).attr("src") + "')");
+        })
+    })
+
+    // task-5
+    let distance = 100;
+    (function () {
+        let box = document.querySelector('.move');
+        box.addEventListener('click', function () {
+            let 
+        })
+    })();

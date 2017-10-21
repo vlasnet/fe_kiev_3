@@ -22,5 +22,17 @@
     background-color: #4169E1;
     display: inline-block;
     margin: 2px;
-    transition: 0.5s;
+    transition: 0.7s;
+}
+
+.img_slide {
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.move {
+    height: 50px;
+    width: 50px;
+    background-color: #06f;
 }
