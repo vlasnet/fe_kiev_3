@@ -17,22 +17,39 @@
 }
 
 .box {
-    width: 30px;
-    height: 30px;
     background-color: #4169E1;
     display: inline-block;
+    height: 30px;
     margin: 2px;
     transition: 0.7s;
+    width: 30px;
 }
 
 .img_slide {
     height: 250px;
-    background-size: contain;
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .move {
-    height: 50px;
-    width: 50px;
     background-color: #06f;
+    height: 50px;
+    position: relative;
+    width: 50px;
+}
+.container_trigger {
+    background-color: #0ff;
+    border: 4px solid #008080;
+    padding: 10px;
+    width: 620px;
+}
+
+.trigger {
+    background-color: #FF8C00;
+    border: 4px solid #000;
+    border-radius: 30px;
+    min-height: 200px;
+    position: relative;
+    width: 200px;
+
 }
