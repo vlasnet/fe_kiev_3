@@ -1,7 +1,7 @@
 'use strict';
 
 //task 1
-calcLengthBtn.onclick = function calcStrLength () {
+calcLengthBtn.onclick = function () {
     let strLength = inputElem.value.length;
     strLengthOut.innerHTML = 'Длина строки = ' + strLength;
 };
@@ -9,16 +9,21 @@ calcLengthBtn.onclick = function calcStrLength () {
 //task 2
 let imgArr = [];
 
-for (var i = 1; i <= 5; i++) {
-    imgArr.push('/home/lepin/work/aleksandrlepin.github.io/js-module-5/img/' + i + '.png');
+for (let i = 1; i <= 5; i++) {
+    imgArr.push('img/' + i + '.png');
 };
 
+let imgContainer = document.createElement('div');
+
 showImg.onclick = function () {
-    for (var i = 0; i < imgArr.length; i++) {
+
+    for (let i = 0; i < imgArr.length; i++) {
         let imgElem = document.createElement('img');
         imgElem.src = imgArr[i];
-        imgOutput.appendChild(imgElem);
+        imgContainer.appendChild(imgElem);
     };
+
+    imgTarget.appendChild(imgContainer);
 };
 
 //task 3
@@ -45,13 +50,10 @@ auth.checkForm.onclick = function () {
     let errors = 0;
     let output = auth.querySelector('pre');
     auth.querySelector('pre').innerHTML = '';
+
     for (let key in auth) {
         if (auth.hasOwnProperty(key)) {
-            let inputValue = auth[key].value;
-            while (inputValue.indexOf(' ') !== -1) {
-                inputValue = inputValue.replace(' ', '');
-            };
-            auth[key].value = inputValue;
+            auth[key].value = auth[key].value.trim();
         };
     };
 
@@ -65,16 +67,14 @@ auth.checkForm.onclick = function () {
         output.insertAdjacentText('beforeEnd', 'Пароль должен быть больше 4 символов.\n');
     };
 
-    let emailCheck = 0;
-    let emailCheckPos = 0;
-    while (auth.userEmail.value.indexOf('@', emailCheckPos) !== -1) {
-        emailCheck++;
-        emailCheckPos = auth.userEmail.value.indexOf('@', emailCheckPos) +1;
+    if (auth.userEmail.value.match(/@/g) === null || auth.userEmail.value.match(/@/g).length !== 1) {
+        errors++;
+        output.insertAdjacentText('beforeEnd', 'Почтовый адрес должен содержать только один символ @.\n');
     };
 
-    if (emailCheck > 1 || emailCheck < 1) {
+    if (auth.userEmail.value.match(/ /g)) {
         errors++;
-        output.insertAdjacentText('beforeEnd', 'Почтовый адрес должен содержать только один символ @\n');
+        output.insertAdjacentText('beforeEnd', 'Почтовый адрес не должен содержать пробелы.\n');
     };
 
     if (errors === 0) {
