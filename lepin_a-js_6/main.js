@@ -8,6 +8,10 @@ function selectAll(elem) {
     return document.querySelectorAll(elem);
 };
 
+function makeEl(el) {
+    return document.createElement(el);
+}
+
 // task1
 let field = selectAll('.coordinate-field');
 let fieldPos = field[0].getBoundingClientRect();
@@ -20,7 +24,7 @@ function showPos (event) {
 }
 
 // task2
-let folderDiv = document.createElement('div');
+let folderDiv = makeEl('div');
 let state = folderDiv.state = 'closed';
 folderDiv.style.cssText = `background: url("img/folder-closed.png");
                      width: 128px;
@@ -42,21 +46,51 @@ function toggleFolderState() {
 };
 
 // task3
-let greenDiv
-select('.task3').style.clear = 'both';
+let greenDivContainer = makeEl('div');
+let greenDiv = makeEl('div');
+greenDiv.style.cssText = `box-sizing: border-box;
+                          width: 30px;
+                          height: 30px;
+                          margin-right: 2px;
+                          margin-bottom: 2px;
+                          background: #6db63a;
+                          transition: all .2s ease-out;
+                          float: left;`;
 
-for (let i = 0; i < 400; i++) {
-    setTimeout(fnn, 1500);
-    function fnn () {
-    greenDiv = document.createElement('div');
-    select('.task3').appendChild(greenDiv);
-
-    greenDiv.style.cssText = `background: #6db63a;
-    width: 30px;
-    height: 30px;
-    margin-right: 2px;
-    margin-bottom: 2px;
-    float: left;`;
-    };
-
+for (let i = 0; i < 396; i++) {
+    greenDivContainer.appendChild(greenDiv.cloneNode(false));
 };
+
+select('.task3').appendChild(greenDivContainer);
+
+select('.task3>div').addEventListener('mouseover', squareToCircle);
+
+function squareToCircle(event) {
+    event.target.style.borderRadius = '15px';
+};
+
+//task4
+let bgDivContainer = makeEl('div');
+bgDivContainer.style.background = '#fff';
+
+let bgDiv = makeEl('div');
+bgDiv.style.cssText = `width: 100%; height: 250px; background-size: contain;`
+
+bgDivContainer.appendChild(bgDiv);
+
+for (let i = 0; i < 5; i++) {
+    let thumbnail = makeEl('img');
+    thumbnail.src = `img/${i + 1}.jpg`;
+    thumbnail.style.zoom = '.3';
+    bgDivContainer.appendChild(thumbnail);
+};
+
+select('.task4').appendChild(bgDivContainer);
+
+bgDivContainer.addEventListener('click', setBg);
+
+function setBg(event) {
+    if (event.target.tagName == 'IMG') {
+        select('.task4>div>div').style.backgroundImage = `url(${event.target.src})`;
+    }
+}

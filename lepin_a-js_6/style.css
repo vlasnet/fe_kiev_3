@@ -37,3 +37,11 @@ h2 {
 .coordinate-field:hover {
     background-color: #ccc;
 }
+
+.task3::after {
+    content: '';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
