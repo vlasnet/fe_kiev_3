@@ -13,10 +13,10 @@ function makeEl(el) {
 }
 
 // task1
-let field = selectAll('.coordinate-field');
-let fieldPos = field[0].getBoundingClientRect();
+let field = select('.coordinate-field');
+let fieldPos = field.getBoundingClientRect();
 let pos = selectAll('.task1 span');
-field[0].addEventListener('mousemove', showPos);
+field.addEventListener('mousemove', showPos);
 
 function showPos (event) {
     pos[0].innerHTML = Math.ceil(event.clientX - fieldPos.x);
@@ -46,22 +46,22 @@ function toggleFolderState() {
 };
 
 // task3
-let greenDivContainer = makeEl('div');
-let greenDiv = makeEl('div');
-greenDiv.style.cssText = `box-sizing: border-box;
+let grayDivContainer = makeEl('div');
+let grayDiv = makeEl('div');
+grayDiv.style.cssText = `box-sizing: border-box;
                           width: 30px;
                           height: 30px;
                           margin-right: 2px;
                           margin-bottom: 2px;
-                          background: #6db63a;
+                          background: #777;
                           transition: all .2s ease-out;
                           float: left;`;
 
 for (let i = 0; i < 396; i++) {
-    greenDivContainer.appendChild(greenDiv.cloneNode(false));
+    grayDivContainer.appendChild(grayDiv.cloneNode(false));
 };
 
-select('.task3').appendChild(greenDivContainer);
+select('.task3').appendChild(grayDivContainer);
 
 select('.task3>div').addEventListener('mouseover', squareToCircle);
 
@@ -71,7 +71,7 @@ function squareToCircle(event) {
 
 //task4
 let bgDivContainer = makeEl('div');
-bgDivContainer.style.background = '#fff';
+bgDivContainer.style.opacity = '.6';
 
 let bgDiv = makeEl('div');
 bgDiv.style.cssText = `width: 100%; height: 250px; background-size: contain;`
@@ -80,8 +80,9 @@ bgDivContainer.appendChild(bgDiv);
 
 for (let i = 0; i < 5; i++) {
     let thumbnail = makeEl('img');
-    thumbnail.src = `img/${i + 1}.jpg`;
+    thumbnail.src = `img/${i + 1}.png`;
     thumbnail.style.zoom = '.3';
+    // thumbnail.style.opacity = '.9';
     bgDivContainer.appendChild(thumbnail);
 };
 
@@ -92,5 +93,57 @@ bgDivContainer.addEventListener('click', setBg);
 function setBg(event) {
     if (event.target.tagName == 'IMG') {
         select('.task4>div>div').style.backgroundImage = `url(${event.target.src})`;
-    }
-}
+    };
+};
+
+//task5
+let square = makeEl('div');
+square.style.cssText = `width: 50px; height: 50px; background-color: #777; margin-top: 0px; transition: all .5s linear;`;
+select('.task5').appendChild(square);
+
+select('.task5>div').addEventListener('click', slideDown);
+
+function slideDown() {
+    let divPos = select('.task5>div').style.marginTop;
+    divPos = +divPos.replace(/px/, '') + 100 + 'px';
+    select('.task5>div').style.marginTop = divPos;
+};
+
+//task6
+
+let switchBox, switchBtn, switchBoxWidth, switchBtnPos, switchBtnState;
+switchBox = select('.switch-container');
+switchBtn = select('.switch-btn');
+
+select('.task6 button').addEventListener('click', setSwitchLength);
+
+setSwitchLength();
+
+function setSwitchLength() {
+    switchBoxWidth = '100px';
+    switchBtnPos = ['10px'];
+    switchBtnPos.length = select('.task6 input').value;
+    select('.switch-btn').style.left = switchBtnPos[0];
+    switchBtnState = 0;
+
+    for (let i = 1; i < switchBtnPos.length; i++) {
+        switchBoxWidth = +switchBoxWidth.replace(/px/, '') + 100 + 'px';
+        select('.switch-container').style.width = switchBoxWidth;
+        switchBtnPos[i] = +switchBtnPos[i - 1].replace(/px/, '') + 100 + 'px';
+    };
+
+    console.log('Switch button position = ' + switchBtnState);
+};
+
+select('.switch-container').addEventListener('click', moveSwitchBtn);
+
+function moveSwitchBtn() {
+    if (switchBtnState < switchBtnPos.length - 1) {
+        switchBtn.style.left = switchBtnPos[++switchBtnState];
+        console.log('Switch button position = ' + switchBtnState);
+    } else  {
+        switchBtnState = 0;
+        switchBtn.style.left = switchBtnPos[switchBtnState];
+        console.log('Switch button position = ' + switchBtnState);
+    };
+};
