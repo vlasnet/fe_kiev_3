@@ -1,0 +1,64 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.folder{
+  height: 250px;
+  width: 320px;
+  background-image: url(img/close.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.off{
+  background-image: url(img/close.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.on{
+  width: 335px;
+  background-image: url(img/open.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.squre {
+  height: 30px;
+  width: 30px;
+  margin: 0 2px;
+  background-color: red;
+  display: inline-block;
+}
+
+#block{
+  height: 250px;
+  background: red;
+}
+
+.images{
+  height: 150px;
+}
+
+#runningBlock{
+  background: red;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+}
+
+#trigger{
+  width: 250px;
+  height: 50px;
+  background: blue;
+  border-radius: 10px;
+  padding: 3px 3px;
+}
+
+#control{
+  width: 50px;
+  height: 50px;
+  background: red;
+  border-radius: 10px;
+}
