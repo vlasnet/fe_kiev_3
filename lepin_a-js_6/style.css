@@ -50,12 +50,14 @@ h2 {
     height: 100px;
     margin-bottom: 15px;
     background: #777;
+    border: solid 10px #999;
     border-radius: 100px;
+    box-sizing: border-box;
 }
 
 .switch-btn {
     position: relative;
-    top: 10px;
+    top: 0;
     width: 80px;
     height: 80px;
     background: #ccc;

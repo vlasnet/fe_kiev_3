@@ -10,18 +10,18 @@ function selectAll(elem) {
 
 function makeEl(el) {
     return document.createElement(el);
-}
+};
 
 // task1
 let field = select('.coordinate-field');
-let fieldPos = field.getBoundingClientRect();
+let fieldPos = field.getBoundingClientRect(); // этот метод имеет минус при скроле значения сбиваються. Другой вариант использовать MouseEvent.offset* но это експерементальная технология и она не рекомендуется к использованию. Больше вариантов найти не смог.
 let pos = selectAll('.task1 span');
 field.addEventListener('mousemove', showPos);
 
 function showPos (event) {
     pos[0].innerHTML = Math.ceil(event.clientX - fieldPos.x);
     pos[1].innerHTML = Math.ceil(event.clientY - fieldPos.y);
-}
+};
 
 // task2
 let folderDiv = makeEl('div');
@@ -74,15 +74,13 @@ let bgDivContainer = makeEl('div');
 bgDivContainer.style.opacity = '.6';
 
 let bgDiv = makeEl('div');
-bgDiv.style.cssText = `width: 100%; height: 250px; background-size: contain;`
+bgDiv.style.cssText = `width: 100%; height: 250px; background-size: contain;`;
 
 bgDivContainer.appendChild(bgDiv);
 
 for (let i = 0; i < 5; i++) {
     let thumbnail = makeEl('img');
     thumbnail.src = `img/${i + 1}.png`;
-    thumbnail.style.zoom = '.3';
-    // thumbnail.style.opacity = '.9';
     bgDivContainer.appendChild(thumbnail);
 };
 
@@ -110,8 +108,7 @@ function slideDown() {
 };
 
 //task6
-
-let switchBox, switchBtn, switchBoxWidth, switchBtnPos, switchBtnState;
+let switchBox, switchBtn, switchBtnMultiplier, switchBtnPos, switchBtnState;
 switchBox = select('.switch-container');
 switchBtn = select('.switch-btn');
 
@@ -120,30 +117,30 @@ select('.task6 button').addEventListener('click', setSwitchLength);
 setSwitchLength();
 
 function setSwitchLength() {
-    switchBoxWidth = '100px';
-    switchBtnPos = ['10px'];
-    switchBtnPos.length = select('.task6 input').value;
-    switchBtn.style.left = switchBtnPos[0];
-    switchBtnState = 0;
-
-    for (let i = 1; i < switchBtnPos.length; i++) {
-        switchBoxWidth = +switchBoxWidth.replace(/px/, '') + 100 + 'px';
-        switchBox.style.width = switchBoxWidth;
-        switchBtnPos[i] = +switchBtnPos[i - 1].replace(/px/, '') + 100 + 'px';
+    switchBtnMultiplier = select('.task6 input').value;
+    if (switchBtnMultiplier < 2) {
+        switchBtnMultiplier = 2;
     };
 
-    console.log('Switch button position = ' + switchBtnState);
+    switchBox.style.width = 100 * switchBtnMultiplier + 'px';
+    switchBtnPos = 0;
+    switchBtn.style.left = switchBtnPos + 'px';
+    switchBtnState = 0;
+    console.log('Switch button position = ', switchBtnState);
 };
 
 switchBox.addEventListener('click', moveSwitchBtn);
 
 function moveSwitchBtn() {
-    if (switchBtnState < switchBtnPos.length - 1) {
-        switchBtn.style.left = switchBtnPos[++switchBtnState];
-        console.log('Switch button position = ' + switchBtnState);
+    if (switchBtnState < switchBtnMultiplier - 1) {
+        switchBtnPos = switchBtnPos + 100;
+        switchBtn.style.left = switchBtnPos + 'px';
+        switchBtnState++;
+        console.log('Switch button position = ', switchBtnState);
     } else  {
+        switchBtnPos = 0;
         switchBtnState = 0;
-        switchBtn.style.left = switchBtnPos[switchBtnState];
-        console.log('Switch button position = ' + switchBtnState);
+        switchBtn.style.left = switchBtnPos + 'px';
+        console.log('Switch button position = ', switchBtnState);
     };
 };
