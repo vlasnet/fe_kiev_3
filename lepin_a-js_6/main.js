@@ -123,19 +123,19 @@ function setSwitchLength() {
     switchBoxWidth = '100px';
     switchBtnPos = ['10px'];
     switchBtnPos.length = select('.task6 input').value;
-    select('.switch-btn').style.left = switchBtnPos[0];
+    switchBtn.style.left = switchBtnPos[0];
     switchBtnState = 0;
 
     for (let i = 1; i < switchBtnPos.length; i++) {
         switchBoxWidth = +switchBoxWidth.replace(/px/, '') + 100 + 'px';
-        select('.switch-container').style.width = switchBoxWidth;
+        switchBox.style.width = switchBoxWidth;
         switchBtnPos[i] = +switchBtnPos[i - 1].replace(/px/, '') + 100 + 'px';
     };
 
     console.log('Switch button position = ' + switchBtnState);
 };
 
-select('.switch-container').addEventListener('click', moveSwitchBtn);
+switchBox.addEventListener('click', moveSwitchBtn);
 
 function moveSwitchBtn() {
     if (switchBtnState < switchBtnPos.length - 1) {
