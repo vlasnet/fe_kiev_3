@@ -1,11 +1,25 @@
 'use strict'
 
 // Task 1
+
+// Вариант 1
+// document.querySelector('#divforCLick').onmousemove = function(event) {
+//     event = event || window.event;
+//     document.querySelector('#coordX').innerHTML = event.offsetX;
+//     document.querySelector('#coordY').innerHTML = event.offsetY;
+// }
+// Вариант 2
+
 document.querySelector('#divforCLick').onmousemove = function(event) {
-    event = event || window.event;
-    document.querySelector('#coordX').innerHTML = event.offsetX;
-    document.querySelector('#coordY').innerHTML = event.offsetY;
-}
+
+var elem = document.querySelector('#divforCLick');
+var coords = elem.getBoundingClientRect();
+
+document.querySelector('#coordX').innerHTML = parseInt(event.clientX-coords.x);
+document.querySelector('#coordY').innerHTML = parseInt(event.clientY-coords.y);
+ }
+
+
 
 // Task 2
 function openFolder() {
@@ -58,20 +72,23 @@ function changeBackground(element) {
 }
 
 // Task 5
+
 let movingblock = document.getElementById('movingblock');
 let topsize = 0;
 
-movingblock.onclick = function() {
-    movingblock.style.top = (topsize + 100) + 'px';
+function moveblock() {
     topsize += 100;
+    movingblock.style.top = topsize + 'px';
 }
+
+movingblock.addEventListener("click", moveblock);
 
 // Task 6
 let innbutton = document.getElementById('innbutton');
 let leftdistance = 0;
 let position = 0;
 
-innbutton.onclick = function() {
+function changePosition() {
     leftdistance += 50;
 	if (leftdistance > 105) {
         leftdistance = 0;
@@ -84,3 +101,5 @@ innbutton.onclick = function() {
     console.log(position);
     innbutton.style.left = leftdistance + 'px';
 }
+innbutton.addEventListener("click", changePosition);
+ 
