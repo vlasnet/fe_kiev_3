@@ -1,7 +1,13 @@
 # Домашние задания (Homeworks). GoFrontend#3: Offline
 Repository for homeworks "GoFrontend#3: Offline". Mentor: Dmitriy Lisunov
 
-# Ввиду того, что вы не цените мои труды - правила становятся жёстче, и теперь на 99,99% будут соответствовать реальным боевым проектам!
+# Для новых ДЗ (по новой программе) созлданы новые ветки:
++ `new_modules/m1` - https://github.com/lisunovdv/fe_kiev_3/tree/new_modules/m1
++ `new_modules/m2` - https://github.com/lisunovdv/fe_kiev_3/tree/new_modules/m2
++ `new_modules/m3` - https://github.com/lisunovdv/fe_kiev_3/tree/new_modules/m3
++ и так далее...
+
+### Ввиду того, что вы не цените мои труды - правила становятся жёстче, и теперь на 99,99% будут соответствовать реальным боевым проектам!
 Теперь ПОД КАЖДЫМ моим комментарием вы отписываетесь, что:
 1) Комментарий видели
 2) С ним согласны / не согласны
