@@ -1,0 +1,74 @@
+#divforCLick {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 20px auto;
+    background-color: #90EE90;
+}
+img {
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 10px;
+}
+#divforPictures {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+}
+#divforChange {
+    width: 100%;
+    height: 250px;
+    border: 1px solid grey;
+}
+.closedfolder {
+    background-image: url(images/closedfolder.jpg);
+    background-size: 100% 100%;
+    width: 150px;
+    height: 150px;
+    border: 1px solid grey;
+    margin: 0 auto;
+}
+
+.openfolder {
+    background-image: url(images/openfolder.jpg);
+    background-size: 100% 100%;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+}
+#containerofDivs {
+    width: 100%;
+    min-height: 150px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+#movingblock {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    position: relative;
+    background-color: #90EE90;
+    margin: 0 auto;
+}
+#extbutton {
+    width: 150px;
+    height: 50px;
+    background-color: #2f3f4f;
+    border: 1px solid grey;
+    margin: 10px auto;
+}
+#innbutton {
+    height: 40px;
+    width: 40px;
+    background-color: #e89361;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    left: 0;
+    transition: all ease 1s;
+}
