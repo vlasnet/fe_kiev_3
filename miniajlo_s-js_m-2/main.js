@@ -52,3 +52,41 @@ let sharm = 15,
     });
 
 })();
+// Второй вариант
+
+(function () {
+    let city = {
+        Hurgada: 25,
+        Sharm: 15,
+        Taba: 6
+    }
+    let vocation = document.querySelector('.vocation_two');
+    vocation.addEventListener('click', function orderTour () {
+        let number = prompt('Введите количество отдыхающих', ''),
+            counter = 0
+        for (let key in city) {
+            console.log (city[key]);
+            if (!((number ^ 0) != number) && number > 0) {
+                if ((city[key] - number) > 0) {
+                    let conf = confirm(`Есть места на поездку в ${key}`);
+                        if (conf == true) {
+                            city[key] = city[key] - number;
+                            alert (`Хорошего Вам отдыха в ${key}`);
+                            console.log(`В ${key} осталось мест: ${city[key]}`);
+                            break;
+                        } else if (counter < 2){
+                            counter++;
+                            continue;
+                        } else {
+                            alert ('Мест нет!');
+                        }
+                } else {
+                    alert ('Мест нет!');
+                }
+            } else {
+                alert ('Вы не корректно ввели количество человек!');
+                return orderTour();
+            }
+        }
+    });
+})();
