@@ -1,73 +1,82 @@
-const alphabet = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
-let keyboard = addKeyboardLayout(alphabet);
+const en = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
+const ru = "йцукенгшщзхъфывапролджэячсмитьбю.";
+const ua = "йцукенгшщзхїфівапролджєячсмитьбю.";
 
-function addKeyboardLayout(alphabet) {
-    let keysArr = [[], [], []];
+const keyboard = {
+    layouts: {},
+    langs: [],
+    currentLang: '',
+    addKeyboardLayout: function (alpnabeth, lang) {
+        this.langs.push(lang);
+        this.layouts[lang] = {
+            topRow: [],
+            middleRow: [],
+            bottomRow: []
+        }
 
-    for (let i = 0; i < alphabet.length; i++) {
-        if (i <= 11) {
-            keysArr[0].push(alphabet.charAt(i));
-        } else if (i >= 12 && i <= 22) {
-            keysArr[1].push(alphabet.charAt(i));
-        } else if (i >= 23) {
-            keysArr[2].push(alphabet.charAt(i));
-        };
-    };
+        for (let i = 0; i < alpnabeth.length; i++) {
+            if (i <= 11) {
+                this.layouts[lang].topRow.push(alpnabeth.charAt(i));
+            } else if (i >= 12 && i <= 22) {
+                this.layouts[lang].middleRow.push(alpnabeth.charAt(i));
+            } else if (i >= 23) {
+                this.layouts[lang].bottomRow.push(alpnabeth.charAt(i));
+            }
+        }
+    }
+}
 
-    return keysArr;
-};
+keyboard.addKeyboardLayout(en, 'en');
+keyboard.addKeyboardLayout(ru, 'ru');
+keyboard.addKeyboardLayout(ua, 'ua');
+
+function chooseLang () {
+    switch (prompt('Choose a language... \n 0-en, 1-ru, 2-ua' , '')) {
+        case '0':
+            keyboard.currentLang = 'en';
+            break;
+        case '1':
+            keyboard.currentLang = 'ru';
+            break;
+            case '2':
+                keyboard.currentLang = 'ua';
+                break;
+            case null:
+                break;
+        default:
+            alert("You've choosen an unavailable language.");
+            chooseLang();
+    }
+}
+
+chooseLang();
 
 function getRandomNum(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
-};
-
-function getRandCharInRow(row) {
-    row = row - 1;
-    let max = keyboard[row].length;
-    let min = 0;
-    let randomNum = getRandomNum(min, max);
-    return keyboard[row][randomNum];
-};
+}
 
 function getRandCharInAlph() {
-    let row = getRandomNum(0, 3);
-    let max = keyboard[row].length;
-    let min = 0;
-    let randomNum = getRandomNum(min, max);
-    return keyboard[row][randomNum];
-};
+    let langObj = keyboard.layouts[keyboard.currentLang];
+    let result = [];
 
-let testFn = function(n) {
-    let i;
-    switch (n) {
+    for (let key in langObj) {
+        if (langObj.hasOwnProperty(key)) {
+            result += langObj[key].reduce((acc, next) => acc + next);
+        }
+    }
+    
+    return result.charAt(getRandomNum(0, result.length));
+}
 
-        case undefined:
-            i = 50;
-            console.groupCollapsed('test getRandCharInAlph()');
-            while (i > 0) {
-                console.log('Row 1 random character = ' + getRandCharInAlph());
-                i--;
-            }
-            console.groupEnd();
-            break;
+let testFn = function() {
+    let i = 50;
 
-        case 1:
-        case 2:
-        case 3:
-            i = 50;
-            console.groupCollapsed('test getRandCharInRow(' + n + ')');
-            while (i > 0) {
-                console.log('Row 1 random character = ' + getRandCharInRow(n));
-                i--;
-            }
-            console.groupEnd();
-            break;
-
-        default:
-    };
-};
+    console.groupCollapsed('test getRandCharInAlph()');
+    while (i > 0) {
+        console.log('Random character = ' + getRandCharInAlph());
+        i--;
+    }
+    console.groupEnd();
+}
 
 testFn();
-testFn(1);
-testFn(2);
-testFn(3);
