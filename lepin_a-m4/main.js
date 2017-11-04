@@ -45,7 +45,7 @@ let testFn = function(n) {
             i = 50;
             console.groupCollapsed('test getRandCharInAlph()');
             while (i > 0) {
-                console.log('Row 1 random character = ' + getRandCharInAlph());
+                console.log('Random character = ' + getRandCharInAlph());
                 i--;
             }
             console.groupEnd();
@@ -57,7 +57,7 @@ let testFn = function(n) {
             i = 50;
             console.groupCollapsed('test getRandCharInRow(' + n + ')');
             while (i > 0) {
-                console.log('Row 1 random character = ' + getRandCharInRow(n));
+                console.log('Row ' + n + ' random character = ' + getRandCharInRow(n));
                 i--;
             }
             console.groupEnd();
