@@ -2,27 +2,21 @@ const en = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
 const ru = "йцукенгшщзхъфывапролджэячсмитьбю.";
 const ua = "йцукенгшщзхїфівапролджєячсмитьбю.";
 
-const keyboard = {
+let keyboard = {
     layouts: {},
     langs: [],
     currentLang: '',
-    addKeyboardLayout: function (alpnabeth, lang) {
+    addKeyboardLayout: function (alphabet, lang) {
+        let findChar = (x) => alphabet.indexOf(x);
         this.langs.push(lang);
         this.layouts[lang] = {
             topRow: [],
             middleRow: [],
             bottomRow: []
         }
-
-        for (let i = 0; i < alpnabeth.length; i++) {
-            if (i <= 11) {
-                this.layouts[lang].topRow.push(alpnabeth.charAt(i));
-            } else if (i >= 12 && i <= 22) {
-                this.layouts[lang].middleRow.push(alpnabeth.charAt(i));
-            } else if (i >= 23) {
-                this.layouts[lang].bottomRow.push(alpnabeth.charAt(i));
-            }
-        }
+        this.layouts[lang].topRow[0] = alphabet.slice(0, findChar('a'));
+        this.layouts[lang].middleRow[0] = alphabet.slice(findChar('a'), findChar('z'));
+        this.layouts[lang].bottomRow[0] = alphabet.slice(findChar('z'));
     }
 }
 
@@ -64,19 +58,23 @@ function getRandCharInAlph() {
             result += langObj[key].reduce((acc, next) => acc + next);
         }
     }
-    
+
     return result.charAt(getRandomNum(0, result.length));
 }
 
 let testFn = function() {
-    let i = 50;
+    if (keyboard.currentLang === '') {
+        console.log('testFn: No language to test. Please choose a language.');
+    } else {
+        let i = 50;
 
-    console.groupCollapsed('test getRandCharInAlph()');
-    while (i > 0) {
-        console.log('Random character = ' + getRandCharInAlph());
-        i--;
+        console.groupCollapsed('test getRandCharInAlph()');
+        while (i > 0) {
+            console.log('Random character = ' + getRandCharInAlph());
+            i--;
+        }
+        console.groupEnd();
     }
-    console.groupEnd();
 }
 
 testFn();
