@@ -3,42 +3,15 @@
 const alphabet = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
 let keyboard = [[], [], []];
 let word1, word2, word3;
+let findChar = (x) => alphabet.indexOf(x);
 
-for (let i = 0; i < alphabet.length; i++) {
-    if (i <= 11) {
-        keyboard[0].push(alphabet.charAt(i));
-    } else if (i >= 12 && i <= 22) {
-        keyboard[1].push(alphabet.charAt(i));
-    } else if (i >= 23) {
-        keyboard[2].push(alphabet.charAt(i));
-    };
-};
+keyboard[0][0] = alphabet.slice(0, findChar('a'));
+keyboard[1][0] = alphabet.slice(findChar('a'), findChar('z'));
+keyboard[2][0] = alphabet.slice(findChar('z'));
 
-//может и безполезное решение но согласись креативное ;)
-function makeWord(arr) {
-    let result = '';
-
-    for (var i = 1; i < arguments.length; i++) {
-        findLetterPos(arguments[i])
-    }
-
-    function findLetterPos(letter) {
-        for (var i = 0; i < arr.length; i++) {
-            for (var j = 0; j < arr[i].length; j++) {
-                if (arr[i][j] === letter) {
-                    result += arr[i][j]; //Момент истины - обращаюсь к элементам массива по индексам)))
-                    break;
-                };
-            };
-        };
-    };
-
-    return result;
-};
-
-word1 = makeWord(keyboard, 'h', 'e', 'l', 'l', 'o');
-word2 = makeWord(keyboard, 'j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't');
-word3 = makeWord(keyboard, 't', 'r', 'a', 'i', 'n', 'e', 'r');
+word1 = keyboard[1][0][5] + keyboard[0][0][2] + keyboard[1][0][8] + keyboard[1][0][8] + keyboard[0][0][8];
+word2 = keyboard[1][0][6] + keyboard[1][0][0] + keyboard[2][0][3] + keyboard[1][0][0] + keyboard[1][0][1] + keyboard[2][0][2] + keyboard[0][0][3] + keyboard[0][0][7] + keyboard[0][0][9] + keyboard[0][0][4];
+word3 = keyboard[0][0][4] + keyboard[0][0][3] + keyboard[1][0][0] + keyboard[0][0][7] + keyboard[2][0][5] + keyboard[0][0][2] + keyboard[0][0][3];
 
 console.log(word1);
 console.log(word2);
