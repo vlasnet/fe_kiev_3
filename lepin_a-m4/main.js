@@ -5,22 +5,15 @@ function addKeyboardLayout(alphabet) {
     let keysArr = [[], [], []];
     let findChar = (x) => alphabet.indexOf(x);
 
-    for (let i = 0; i < alphabet.length; i++) {
-        if (i <= 11) {
-            keysArr[0][0] = alphabet.slice(0, findChar('a'));
-        } else if (i >= 12 && i <= 22) {
-            keysArr[1][0] = alphabet.slice(findChar('a'), findChar('z'));
-        } else if (i >= 23) {
-            keysArr[2][0] = alphabet.slice(findChar('z'));
-        };
-    };
-
+    keysArr[0][0] = alphabet.slice(0, findChar('a'));
+    keysArr[1][0] = alphabet.slice(findChar('a'), findChar('z'));
+    keysArr[2][0] = alphabet.slice(findChar('z'));
     return keysArr;
-};
+}
 
 function getRandomNum(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
-};
+}
 
 function getRandCharInRow(row) {
     row = row - 1;
@@ -28,7 +21,7 @@ function getRandCharInRow(row) {
     let min = 0;
     let randomNum = getRandomNum(min, max);
     return keyboard[row][0][randomNum];
-};
+}
 
 function getRandCharInAlph() {
     let row = getRandomNum(0, 3);
@@ -36,7 +29,7 @@ function getRandCharInAlph() {
     let min = 0;
     let randomNum = getRandomNum(min, max);
     return keyboard[row][0][randomNum];
-};
+}
 
 let testFn = function(n) {
     let i;
@@ -65,8 +58,8 @@ let testFn = function(n) {
             break;
 
         default:
-    };
-};
+    }
+}
 
 testFn();
 testFn(1);
