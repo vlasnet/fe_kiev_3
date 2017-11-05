@@ -3,14 +3,15 @@ let keyboard = addKeyboardLayout(alphabet);
 
 function addKeyboardLayout(alphabet) {
     let keysArr = [[], [], []];
+    let findChar = (x) => alphabet.indexOf(x);
 
     for (let i = 0; i < alphabet.length; i++) {
         if (i <= 11) {
-            keysArr[0].push(alphabet.charAt(i));
+            keysArr[0][0] = alphabet.slice(0, findChar('a'));
         } else if (i >= 12 && i <= 22) {
-            keysArr[1].push(alphabet.charAt(i));
+            keysArr[1][0] = alphabet.slice(findChar('a'), findChar('z'));
         } else if (i >= 23) {
-            keysArr[2].push(alphabet.charAt(i));
+            keysArr[2][0] = alphabet.slice(findChar('z'));
         };
     };
 
@@ -23,18 +24,18 @@ function getRandomNum(min, max) {
 
 function getRandCharInRow(row) {
     row = row - 1;
-    let max = keyboard[row].length;
+    let max = keyboard[row][0].length;
     let min = 0;
     let randomNum = getRandomNum(min, max);
-    return keyboard[row][randomNum];
+    return keyboard[row][0][randomNum];
 };
 
 function getRandCharInAlph() {
     let row = getRandomNum(0, 3);
-    let max = keyboard[row].length;
+    let max = keyboard[row][0].length;
     let min = 0;
     let randomNum = getRandomNum(min, max);
-    return keyboard[row][randomNum];
+    return keyboard[row][0][randomNum];
 };
 
 let testFn = function(n) {
