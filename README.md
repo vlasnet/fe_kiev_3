@@ -1,7 +1,27 @@
 # Домашние задания (Homeworks). GoFrontend#3: Offline
 Repository for homeworks "GoFrontend#3: Offline". Mentor: Dmitriy Lisunov
 
+<hr>
 
+# 1. INSTALL (in case of trouble)
+Если у Вас слетели настройки, нет нужных веток или хотите пересоздать свой новый репозиторий, то Вам нужно:
+
+## 1.1 Если Вы создаёте новый репозиторий из моего:
+1) Сделать `Fork` текущего проекта https://github.com/lisunovdv/fe_kiev_3.git
+2) После этого у Вас появится СВОЙ репозиторий типа https://github.com/ВАШЕ_ИМЯ_НА_GitHub/fe_kiev_3.git
+3) Готово
+
+## 1.1 Если Вы хотите обновить существующий:
+1) Добавляем связь с мои репозиторием: `git remote add upstream https://github.com/lisunovdv/fe_kiev_3`, где `upstream` - короткое имя (алиас) моего репозитория
+2) `git fetch upstream` - вытащить новые данные из моего репозитория
+3) `git pull upstream new_modules/m1` - вытянуть себе на компьютер ветку для ДЗ, имя ветки `new_modules/m1` для 1-го модуля, `new_modules/m2` для 2-го и т.д.
+4) Делаем Домашнее задание
+5) `git add FILE_NAME_WITH_HOMEWORK`
+6) `git commit -m "Create homework for Module 1"`
+7) И после этого важный нюанс с push: `git push -u origin new_modules/m1`
+8) После этого создаём pull-request.
+
+<hr>
 # Для новых ДЗ (по новой программе) созданы новые ветки:
 + `new_modules/m1` - https://github.com/lisunovdv/fe_kiev_3/tree/new_modules/m1
 + `new_modules/m2` - https://github.com/lisunovdv/fe_kiev_3/tree/new_modules/m2
@@ -9,7 +29,7 @@ Repository for homeworks "GoFrontend#3: Offline". Mentor: Dmitriy Lisunov
 + и так далее...
 
 <hr>
-### Ввиду того, что вы не цените мои труды - правила становятся жёстче, и теперь на 99,99% будут соответствовать реальным боевым проектам!
+### Правила становятся жёстче, и теперь на 99,99% будут соответствовать реальным боевым проектам!
 Теперь ПОД КАЖДЫМ моим комментарием вы отписываетесь, что:
 1) Комментарий видели
 2) С ним согласны / не согласны
