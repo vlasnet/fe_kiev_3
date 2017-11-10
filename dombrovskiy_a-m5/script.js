@@ -25,7 +25,7 @@ const keyboard = {
 
 
 function numberLangs() {
- switch (+prompt('Enter the Langs,(en - 0)(ru - 1)(ua - 2)?')) {
+ switch (+prompt('Enter the Langs (en - 0)(ru - 1)(ua - 2)?')) {
     case 0:
             keyboard.currentLang = 'en';
             break;
