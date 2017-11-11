@@ -1,3 +1,12 @@
+html {
+    color: #333;
+    font: 500 18px/22px sans-serif;
+}
+
+label {
+    margin-top: 15px;
+}
+
 button {
     margin-bottom: 20px;
 }
@@ -5,30 +14,29 @@ button {
 .keyboard {
     display: flex;
     flex-flow: wrap row;
-    align-content: center;
     width: 588px;
-    padding: 10px;
+    padding: 30px 50px;
     background: #f6f6f6;
-    border: solid 2px #ccc;
+    border: solid 2px #bbb;
     border-radius: 3px;
-    box-shadow: inset 0 0 10px #aaa;
-    color: #333;
+    box-shadow: inset 0 0 10px #ccc;
 }
 
 
-.keyboard button {
-    font: 500 18px/22px sans-serif;
+.keyboard__btn {
     width: 45px;
     height: 45px;
     margin: 2px;
-    background: #f6f6f6;
-    border: solid 2px #ccc;
+    background: #eee;
+    border: solid 2px #bbb;
     border-radius: 3px;
-    box-shadow: 1px 1px 5px #ccc;
+    box-shadow: 1px 1px 5px #bbb;
+    color: #333;
+    font: 500 18px/22px sans-serif;
     text-align: center;
 }
 
-.keyboard button:hover {
+.keyboard__btn--active {
     background: #fff;
-    box-shadow: inset 1px 1px 5px #ccc;
+    box-shadow: inset 1px 1px 5px #bbb;
 }
