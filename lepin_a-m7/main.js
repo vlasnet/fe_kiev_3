@@ -27,7 +27,7 @@ let keyTrainer = {
 
         for (let i = 0; i < 33; i++) {
             let keyBtn = document.createElement('button');
-            keyBtn.innerHTML = `<span>${alphabet[i]}</span>`;
+            keyBtn.innerHTML = alphabet[i];
             if (i === 12) {
                 keyBtn.style.marginLeft = '20px';
             } else if (i === 23) {
