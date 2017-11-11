@@ -1,0 +1,31 @@
+button {
+    margin-bottom: 20px;
+}
+
+.keyboard {
+    display: flex;
+    flex-flow: wrap row;
+    align-content: center;
+    width: 576px;
+    padding: 10px;
+    background: #f6f6f6;
+    border: solid 2px #ccc;
+    border-radius: 3px;
+    color: #333;
+    font: 500 18px/22px sans-serif;
+}
+
+
+.keyboard div {
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    border: solid 2px #ccc;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.keyboard div:hover {
+    background: #fff;
+}
