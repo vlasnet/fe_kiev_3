@@ -20,19 +20,20 @@ let keyTrainer = {
         this.layouts[lang].bottomRow[0] = alphabet.slice(findChar('z'));
     },
     createLayout: function () {
-        let keyContainer = document.createElement('div');
+        this.currentLang = this.currentLang || 'en';
+        let keyContainer = document.createElement('form');
         keyContainer.classList.add('keyboard');
         let alphabet = this.getFullAlph();
 
         for (let i = 0; i < 33; i++) {
-            let keyDiv = document.createElement('div');
-            keyDiv.innerHTML = `<span>${alphabet[i]}</span>`;
+            let keyBtn = document.createElement('button');
+            keyBtn.innerHTML = `<span>${alphabet[i]}</span>`;
             if (i === 12) {
-                keyDiv.style.marginLeft = '20px';
+                keyBtn.style.marginLeft = '20px';
             } else if (i === 23) {
-                keyDiv.style.marginLeft = '40px';
+                keyBtn.style.marginLeft = '40px';
             }
-            keyContainer.appendChild(keyDiv);
+            keyContainer.appendChild(keyBtn);
         }
 
         document.body.appendChild(keyContainer);
@@ -94,14 +95,14 @@ let keyTrainer = {
             case '1':
                 this.currentLang = 'ru';
                 break;
-                case '2':
-                    this.currentLang = 'ua';
-                    break;
-                case null:
-                    break;
+            case '2':
+                this.currentLang = 'ua';
+                break;
+            case null:
+                break;
             default:
                 alert("You've choosen an unavailable language.");
-                setLang();
+                this.setLang();
         }
     },
     setKeysQuantity: function () {
