@@ -28,7 +28,7 @@ let keyTrainer = {
 
         for (let key in langObj) {
             if (langObj.hasOwnProperty(key)) {
-                result += langObj[key].reduce((acc, next) => acc + next);
+                result += langObj[key];
             }
         }
 
@@ -39,7 +39,7 @@ let keyTrainer = {
         let randChar;
         let result;
         let msg;
-        
+
         if (this.keysQuantity === 0) {
             alert('You didn\'t set keys quantity.');
             return;
@@ -80,7 +80,7 @@ let keyTrainer = {
                     break;
             default:
                 alert("You've choosen an unavailable language.");
-                setLang();
+                this.setLang();
         }
     },
     setKeysQuantity: function () {
