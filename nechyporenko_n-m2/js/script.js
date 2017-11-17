@@ -7,13 +7,13 @@ let freePlaces = {
     };
 
 function checkPlaces() {
-   let persons = parseInt( prompt('Введите количество отдыхающих: ') );
-   let i = 0;
+   let persons = +( prompt('Введите количество отдыхающих: ') );
+   let i = 1;
 
-   if ( persons !== NaN && persons > 0) {
+   if ( persons !== NaN && Number.isInteger(persons) && persons > 0) {
      for (let key in freePlaces) {
        i++;
-       if ( (freePlaces[key] - persons) >= 0 ) {
+       if (freePlaces[key] >= persons) {
          if ( confirm(`Есть места на поездку в ${key}. Вы едите?`) ) {
            freePlaces[key] = freePlaces[key] - persons;
            console.log(`В ${key} осталось ${freePlaces[key]} мест.`);
