@@ -1,7 +1,7 @@
 'use strict';
 //Task1
 const topCase = 'qwertyuiop[]';
-const middleCase = 'asdfghjkl;';
+const middleCase = 'asdfghjkl;\'';
 const lowCase = 'zxcvbnm,./';
 //Task2
 const topCaseLength = topCase.length;
