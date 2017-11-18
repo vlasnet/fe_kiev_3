@@ -5,23 +5,28 @@ let freePlaceCount = {
 };
 function checkPlace() {
     let places = +(prompt('Введите количество человек: ', ''));
-    let i = 1;
-    for (let key in freePlaceCount) {
-        i++;
-        if (places <= freePlaceCount[key] && Number.isInteger(places)) {
-            if (confirm(`Есть место в ${key}, Вам подходит?`)) {
-                freePlaceCount[key] = freePlaceCount[key] - places;
-                console.log(`В ${key} осталось ${freePlaces[key]} мест`);
-                alert(`Спасибо, вы выбрали ${key}`);
-                break;
-            } else if (i >= Object.keys(places).length) {
-                alert(`К сожалению в ${key} мест нет`);
-
-            }
-            else {
-                alert('Попробуйте еще раз');
+    let i = 0;
+    if (places < 0 || isNaN(places) || !Number.isInteger(places)){
+        alert('Введите корректные данные');
+    } else {
+        for (let key in freePlaceCount) {
+            if (places <= freePlaceCount[key]){
+                if (confirm(`Есть место в ${key}, Вам подходит?`)) {
+                    freePlaceCount[key] = freePlaceCount[key] - places;
+                    console.log(freePlaceCount);
+                    alert('Спасибо!');
+                    break;
+                }
+            } else  {
+                i++;
+                if (i < Object.keys(freePlaceCount).length){
+                    continue;
+                } else {
+                    alert ('Мест нет');
+                }
             }
         }
     }
-}
+    }
+
 document.getElementById('chooseCity').addEventListener('click',checkPlace);
