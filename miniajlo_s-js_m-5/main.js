@@ -43,6 +43,8 @@ const keyboard = {
 })();
 
 
+
+
 let alphabet = '';
 let choosenLang = keyboard.layouts[keyboard.currentLang];
 
@@ -52,7 +54,8 @@ function getRandCharInAlph() {
             alphabet += choosenLang[key];
         }
         let rand = Math.floor(Math.random() * (alphabet.length - 1));
-        console.log(`Случайный символ из выбранного алфавита: ${alphabet[rand]}`);
+        console.log(`Случайный символ из алфавита ${keyboard.currentLang}: ${alphabet[rand]}`);
+        return alphabet[rand];
     } else {
         return false;
     }
