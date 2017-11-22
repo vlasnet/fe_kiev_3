@@ -25,7 +25,7 @@ const keyboard = {
 
 
 function numberLangs() {
- switch (+prompt('Enter the Langs (en - 0)(ru - 1)(ua - 2)?')) {
+ switch (+prompt('Enter the Langs,(en - 0)(ru - 1)(ua - 2)?')) {
     case 0:
             keyboard.currentLang = 'en';
             break;
@@ -50,6 +50,7 @@ function getRandomElement (obj, row) {
   let randomNumberForElement = (Math.floor(Math.random()*string.length));
   let randomElement = string.charAt(randomNumberForElement);
   console.log(randomElement);
+  return randomElement;
 }
 
 function getRandCharInAlph() {
@@ -57,13 +58,13 @@ function getRandCharInAlph() {
 
   switch (randomNumberForAlphabet) {
     case 1:
-          getRandomElement(keyboard, 'topRow');
+          return getRandomElement(keyboard, 'topRow');
           break
     case 2:
-          getRandomElement(keyboard, 'middleRow');
+          return getRandomElement(keyboard, 'middleRow');
           break
     case 3:
-          getRandomElement(keyboard, 'bottomRow');
+          return getRandomElement(keyboard, 'bottomRow');
           break
   }
 }
