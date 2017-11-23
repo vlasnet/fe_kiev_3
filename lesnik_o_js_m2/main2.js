@@ -10,7 +10,7 @@ function checkSpace() {
 
     let numberOfVisitors = prompt('Введите количество участников', 2);
 
-    if (isNaN(numberOfVisitors) || numberOfVisitors < 0) {
+    if (isNaN(numberOfVisitors) || numberOfVisitors <= 0 || numberOfVisitors % 1 !==0) {
         alert('Проверьте количество путешествующих');
     } else
         for (let prop in resorts) {
