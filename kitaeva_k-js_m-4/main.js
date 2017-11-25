@@ -12,9 +12,8 @@ function getRandCharInRow(row) {
     row = row - 1;
     console.log('Указаная строка состоит из: ' + keyboard[row]);
     let max = keyboard[row].length - 1,
-        rand = Math.floor((Math.random() * max) + 1);
-    console.log('Индекс случайного символа ' + rand);
-    console.log('Случайный символ: ' + keyboard[row][rand]);
+        rand = Math.floor((Math.random() * max) + 1);   let rand1 = Math.floor(Math.random() * row.length);
+    return keyboard[row][rand];
 }
 button.addEventListener('click', function() {
     let number = prompt('Введите номер строки от 1 до 3');
@@ -28,7 +27,7 @@ button.addEventListener('click', function() {
 //Task-3
 function getRandCharInAlph(row) {
     let randSymb = Math.floor(Math.random() * row.length);
-    console.log("Случайный символ для keyboard:", row[randSymb]);
+    return row [randSymb];
 }
 getRandCharInAlph(alphabet);
 
