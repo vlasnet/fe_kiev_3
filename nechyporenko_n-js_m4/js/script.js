@@ -1,6 +1,8 @@
 'use strict';
 
 const alphabet = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
+
+function addKeyboardLayout(alphabet) {
 let arrAlphabet = alphabet.split('');
 let keyboard = [];
 
@@ -24,3 +26,4 @@ console.log(`${word1} ${word2} ${word3}!`);
 console.log(`First word is ${word1}`);
 console.log(`Second word is ${word2}`);
 console.log(`Third word is ${word3}`);
+}
