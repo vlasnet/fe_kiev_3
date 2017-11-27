@@ -32,21 +32,11 @@ let keyboard = {
             console.log('row = ' + row);
 
             form.appendChild(newRow);
-            for (let key in row) {
-                let someRow = row[key];
-                for (let i = 0; i < someRow.length; i++) {
-                    console.log('someRow[i] = ' + someRow[i]);
-                    let btn = document.createElement('button');
-                    btn.className = 'keyboard__btn';
-                    btn.innerHTML = someRow[i];
-                    newRow.appendChild(btn);
-                }
-                // console.log ('row =' + row);
-                // console.log ('row[key][0] = ' + row[0]);
-                //
-                // // debugger;
-                // console.log(row[key]);
-
+            for (let i = 0; i < row[0].length; i++) {
+                let btn = document.createElement('button');
+                btn.className = 'keyboard__btn';
+                btn.innerHTML = row[0][i];
+                newRow.appendChild(btn);
             }
         }
     },
