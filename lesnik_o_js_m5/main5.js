@@ -1,11 +1,8 @@
 'use strict'
 
 const en = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
-
 const ru = "йцукенгшщзхъфывапролджэячсмитьбю.";
-
 const ua = "йцукенгшщзхїфівапролджєячсмитьбю.";
-
 
 const keyboard = {
     layouts: {},
@@ -14,6 +11,7 @@ const keyboard = {
 
     addKeyboardLayout: function(alphabet, lang) {
 
+        this.langs.push(lang);
         this.layouts[lang] = {
             topRow: [],
             middleRow: [],
@@ -23,10 +21,8 @@ const keyboard = {
         this.layouts[lang].topRow = Array.from(alphabet.slice(0, 12));
         this.layouts[lang].middleRow = Array.from(alphabet.slice(12, 23));
         this.layouts[lang].bottomRow = Array.from(alphabet.slice(23));
-
     },
 }
-
 
 keyboard.addKeyboardLayout(en, 'en');
 keyboard.addKeyboardLayout(ru, 'ru');
