@@ -34,7 +34,7 @@ let buttons = {
 
 
 function getRandIndex(max) {
-    let randIndex = Math.floor(Math.random() * (max + 1));
+    let randIndex = Math.floor(Math.random() * max);
     return randIndex;
 };
 
