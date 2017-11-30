@@ -26,19 +26,19 @@ const keyTrainer = {
 
         switch (language) {
             case '0':
-                keyTrainer.currentLang = 'en';
+                this.currentLang = 'en';
                 alert('Вы выбрали английский язык');
                 return en;
                 break;
 
             case '1':
-                keyTrainer.currentLang = 'ru';
+              this.currentLang = 'ru';
                 alert('Вы выбрали русский язык');
                 return ru;
                 break;
 
             case '2':
-                keyTrainer.currentLang = 'ua';
+                this.currentLang = 'ua';
                 alert('Вы выбрали украинский язык');
                 return ua;
                 break;
