@@ -4,70 +4,54 @@ let lang = {
   en: "qwertyuiop[]asdfghjkl;'zxcvbnm,./",
   ru: "йцукенгшщзхъфывапролджэячсмитьбю.",
   ua: "йцукенгшщзхїфівапролджєячсмитьбю."
-}
+};
 let langName = [];
 
 function createLayout() {
   for (let key in lang) {
-      lang[key] = {
+    lang[key] = {
       topRow: lang[key].split('').slice(0, 12),
       middleRow: lang[key].split('').slice(12, 23),
       bottomRow: lang[key].split('').slice(23)
-      };
-      langName.push(`${key}`);
+    };
+
+    langName.push(`${key}`);
   }
   return lang;
 };
 
 let keyboard = {
-    layouts: createLayout(),
-    langs: langName,
-    currentLang: ''
+  layouts: createLayout(),
+  langs: langName,
+  currentLang: ''
 };
-console.log(keyboard);
+// console.log(keyboard);
 
-function choseLanguage() {
-  // debugger;
+(function choseLanguage() {
   let userLang = prompt('Please chose your language: en - 0, ru - 1, ua - 2');
 
-  if (userLang != '' && userLang >= 0 && userLang <= 2 && Number.isInteger(+userLang)) {
-      keyboard.currentLang = keyboard.langs[userLang];
-      getRandCharInAlph(keyboard.currentLang);
-  } else if (userLang == null){
+  if (userLang == null) {
     return;
+  } else if (userLang != '' && userLang >= 0 && userLang <= 2 && Number.isInteger(+userLang)) {
+    keyboard.currentLang = keyboard.langs[userLang];
+    getRandCharInAlph();
   } else {
-      alert('This language is not available. Please, chose language: en - 0, ru - 1, ua - 2');
-      choseLanguage();
-  }
-}
+    alert('This language is not available. Please, chose language: en - 0, ru - 1, ua - 2');
+    choseLanguage();
+  };
+})();
 
-function getRandIndex(max) {
-    let randIndex = Math.floor(Math.random()*max);
-    return randIndex;
+function getRandCharInAlph() {
+  let choosenLang = keyboard.layouts[keyboard.currentLang];
+  let letters = [];
+
+  for (let key in choosenLang) {
+    letters = letters.concat(choosenLang[key]);
+  };
+
+  let randInAll = letters[Math.floor(Math.random() * letters.length)];
+
+  // console.log(choosenLang);
+  console.log(`Random character in "${keyboard.currentLang}" alphabet is "${randInAll}"`);
+  alert(`Random character in "${keyboard.currentLang}" alphabet is "${randInAll}"`);
 };
-
-function getRandCharInAlph(lg) {
-    let allKeyboardArr = Array.from(keyboard.layout.lg.topRow.concat(keyboard.layout.lg.middleRow.concat(keyboard.layout.lg.bottomRow)));
-    let randInAll = getRandIndex(allKeyboardArr.length);
-    console.log(`Random character in all Alphabet is "${allKeyboardArr[randInAll]}"`);
-    return allKeyboardArr[randInAll];
-};
-
-choseLanguage();
-//
-// function getRandCharInRow(row) {
-//     row -= 1;
-//     let charIndex = getRandIndex(keyboard[row].length);
-//
-//     console.log(`Random Char in the ${row+1} row is "${keyboard[row][charIndex]}"`);
-//     return keyboard[row][charIndex];
-// };
-//
-// document.body.addEventListener("click", function(event) {
-//     let target = event.target;
-//     for (let key in buttons) {
-//         if (target.classList.contains(key)) {
-//             buttons[key](event);
-//         };
-//     };
-// });
