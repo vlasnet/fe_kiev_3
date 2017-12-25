@@ -23,57 +23,33 @@ const playSound = note => {
 const buttons = Array.from(document.querySelectorAll("button"));
 const keys = "qwertyuiop[]asdfghjkl;'zxcvbnm,./ ".split("");
 
-const onKeydown = event => {
-    let pressedButton = event.which;
+const onKeyUp = (keyboardButton) => {
+    console.log("It done!");
+    setTimeout(() => {
+            keyboardButton.classList.remove("keyboard__btn--active");
+        }, 200);
+};
+
+const onKeydown = event => {   
+    let pressedButton = event.key;
     let pressedLetter;
     let keyboardButton;
     let sound;
     let checkbox = document.querySelector("#slideThree");
 
-    if (pressedButton >= 65 && pressedButton <= 90) {
-        pressedLetter = String.fromCharCode(pressedButton).toLowerCase();
-    } else {
-        switch (pressedButton) {
-            case 219:
-                pressedLetter = "[";
-                break;
-            case 221:
-                pressedLetter = "]";
-                break;
-            case 186:
-                pressedLetter = ";";
-                break;
-            case 222:
-                pressedLetter = "'";
-                break;
-            case 188:
-                pressedLetter = ",";
-                break;
-            case 190:
-                pressedLetter = ".";
-                break;
-            case 191:
-                pressedLetter = "/";
-                break;
-            case 32:
-                pressedLetter = " ";
-                break;
-        }
-    }
+    console.log(pressedButton.toLowerCase());
 
-    if (keys.includes(pressedLetter)) {
-        keyboardButton = buttons[keys.indexOf(pressedLetter)];
+    if (keys.includes(pressedButton.toLowerCase())) {
+        keyboardButton = buttons[keys.indexOf(pressedButton.toLowerCase())];
         sound = keyboardButton.getAttribute("data-note");
         keyboardButton.classList.add("keyboard__btn--active");
 
         if (checkbox.checked) {
             playSound(sound);
-        }
-
-        setTimeout(() => {
-            keyboardButton.classList.remove("keyboard__btn--active");
-        }, 200);
+        }        
     }
+
+    window.addEventListener("keyup", onKeyUp(keyboardButton));
 };
 
 window.addEventListener("keydown", onKeydown);
