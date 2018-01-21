@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>New Module 13 Hometask</title>
+    <meta name="description" content="Домашнее задание по модулю 13">
+    <meta name="keywords" content="Javascript, обучение, модуль 13">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+
+<body>
+    <h1>Модуль 13 - Домашнее задание</h1>
+    <p><strong>Соединить задание 1 и 2</strong></p>
+    <p>Напишите функцию <code>validate</code> которая проверяет все поля формы и возвращает результат в виде обьекта со свойствами <code>firstname</code>,
+        <code>lastname</code> и <code>tel</code>.</p>
+    <div class="regexp-diagram">
+        <p>Показать диаграммы регулярных выражений, используемых в функции <code>validate</code> :</p>
+        <button id="firstname-button">Для поля firstname</button>
+        <button id="lastname-button">Для поля lastname</button>
+        <button id="tel-button">Для поля tel</button>
+        <div class="images-wrapper">
+            <image class="hide" id="firstname-diagramm" src=".\img\NamePatternRegExp.svg" alt="firstname diagramm"></image>
+            <image class="hide" id="lastname-diagramm" src=".\img\SurnamePatternRegExp.svg" alt="lastname diagramm"></image>
+            <image class="hide" id="tel-diagramm" src=".\img\PhonePatternRegExp.svg" alt="tel diagramm"></image>
+        </div>
+    </div>
+    <p>Кроме того, формат объекта: в свойства записывается буль-флаг уведомляющий о статусе прохождения валидации для поля.</p>
+    <p>При клике на кнопку <code>submit</code> должна происходить проверка.</p>
+    <p><strong>Визуализировать результат проверки.</strong></p>
+    Написать функцию <code>showResults(results)</code>, которая принимает один аргумент <code>results</code> - объект такого формата который возвращает функция <code>validate</code>, и создает html разметку по результатам этого объекта.
+    <code>showResults</code> добавляет в список с классом <code>.results</code> (уже есть в html), li для каждого поля формы. В li записать: SUCCESS: 'имя поля' passed validation ERROR: 'имя поля' failed validation Для li с положительным результатом дать класс success, с отрицательным error.</p>
+    <div class="container">
+        <div class="row">
+            <form class="col s12 m6" acrion="#">
+                <div class="row">
+                    <div class="input-field col s9">
+                        <input placeholder="First name" id="first_name" type="text" class="validate">
+                        <label for="first_name"></label>
+                    </div>
+                    <div class="input-field col s9">
+                        <input placeholder="Last name" id="last_name" type="text" class="validate">
+                        <label for="last_name"></label>
+                    </div>
+                    <div class="input-field col s9">
+                        <input placeholder="tel +xxx xx xx xx xxx" id="tel" type="text" class="validate">
+                        <label for="tel"></label>
+                    </div>
+                    <div class="col s9">
+                        <button class="btn waves-effect waves-light" id="submit-btn" type="submit" name="action" onclick="return false">Submit</button>
+                    </div>
+                </div>
+            </form>
+            <ul class="results col s12">
+            </ul>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
