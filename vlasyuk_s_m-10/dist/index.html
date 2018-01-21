@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>New Module 10 Hometask</title>
+    <meta name="description" content="Домашнее задание по модулю 10">
+    <meta name="keywords" content="Javascript, обучение, модуль 10">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+
+<body>
+    <h1>Модуль 10 - Домашнее задание</h1>
+    <p>Создать компонент счетчика времени. Простой прямоугольник который показывает время со старта упражения и до того момента когда все клавиши были верно нажаты.</p>
+    <p>На входе есть строка символов для упражнения. Написать метод countKPS() который,по окончанию упражнения, возвращает кол-во верных клавиш в секунду которое было нажато за время выполнения упражнения.</p>
+    <p>Записать результат в localStorage, но только в том случае если он лучше чем тот что уже есть в localStorage. При повторном посещении страницы надо брать то что записано в localStorage и вешать на страницу, это будет компонент лучшего результата.</p>
+    <button class="start-exercise">Начать упражнение</button>
+    <button class="stop-exercise">Остановить упражнение</button>
+    <button class="reset-kps">Сбросить KPS</button>
+    <br>
+    <br>
+    <div class="test-wrapper">
+        <div class="kps-field">
+            <p>KPS:</p>
+            <span class="kps-value"></span>
+        </div>
+        <div class="letter-count-field">
+            <p>Количество символов упражнения:</p>
+            <span class="letter-count"></span>
+        </div>
+        <div class="test-string-field">Поле под строку символов для упражнения</div>
+        <div class="clock">
+            <p>Время выполнения задания:</p>
+            <span class="clock__time"></span>
+        </div>
+    </div>
+    <div class="keyboard"></div>
+    <script type="text/template" id="keyboard-template">
+        <div class="keyboard__row">
+            <% for (var i=0; i<12; i++) { %>
+                <button class="keyboard__btn" data-note="<%=firstRow[i]%>">
+                    <%=en[i]%>
+                </button>
+                <% } %>
+        </div>
+        <div class="keyboard__row">
+            <% for (var i=12; i<23; i++) { %>
+                <button class="keyboard__btn" data-note="<%=secondRow[i-12]%>">
+                    <%=en[i]%>
+                </button>
+                <% } %>
+        </div>
+        <div class="keyboard__row">
+            <% for (var i=23; i<33; i++) { %>
+                <button class="keyboard__btn" data-note="<%=thirdRow[i-23]%>">
+                    <%=en[i]%>
+                </button>
+                <% } %>
+        </div>
+        <div class="keyboard__row">
+            <button class="keyboard__btn keyboard__btn--space" data-note="do">space</button>
+        </div>
+        <div class="slideThree">
+            <input type="checkbox" value="None" id="slideThree" name="check" checked />
+            <label for="slideThree"></label>
+            <span>Sound</span>
+        </div>
+    </script>
+    <audio class="sonidos" src="//goo.gl/T1rxRG" data-note="do"></audio>
+    <audio class="sonidos" src="//goo.gl/KT8FN3" data-note="re"></audio>
+    <audio class="sonidos" src="//goo.gl/1SfsNS" data-note="mi"></audio>
+    <audio class="sonidos" src="//goo.gl/OsOCXe" data-note="fa"></audio>
+    <audio class="sonidos" src="//goo.gl/vukZmv" data-note="sol"></audio>
+    <audio class="sonidos" src="//goo.gl/Bjd9KT" data-note="la"></audio>
+    <audio class="sonidos" src="//goo.gl/MS9HTp" data-note="si"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
