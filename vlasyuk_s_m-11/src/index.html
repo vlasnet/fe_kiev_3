@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>New Module 11 Hometask</title>
+    <meta name="description" content="Домашнее задание по модулю 11">
+    <meta name="keywords" content="Javascript, обучение, модуль 11">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+
+<body>
+    <h1>Модуль 11 - Домашнее задание</h1>
+    <p>Написать приложение для работы с REST сервисом <code>http://fecore.net.ua/rest/</code>, реализовать следующий функционал:</p>
+    <ul>
+        <li>функция <code>getUsers</code> должна получать текущий список всех пользователей в БД</li>
+        <li>функция <code>addUser</code> должна записывать в БД юзера с полями <code>name</code> и <code>score</code>.</li>
+        <li>функция <code>removeUser</code> должна удалять из БД юзера по <code>id</code>.</li>
+        <li>функция <code>updateUser</code> должна обновлять данные пользователя по <code>id</code>.</li>
+    </ul>
+    <p>Сделать минимальный графический интерфейс в виде панели с полями и кнопками, а так же панелью для вывода результатов операций с REST сервисом.</p>
+    <div class="wrapper">
+        <div class="function-field get-users">
+            <button id="get-users">getUsers</button>
+        </div>
+        <div class="function-field add-user">
+            <div class="input-wrapper">
+                <label for="add-name">User name:</label>
+                <input type="text" class="add-user-name" name="add-name" placeholder="Name">
+                <label for="add-score">User score:</label>
+                <input type="text" class="add-user-score" name="add-score" placeholder="Score">
+            </div>
+            <button id="add-user">addUser</button>
+        </div>
+        <div class="function-field remove-user">
+            <div class="input-wrapper">
+                <label for="remove-id">User id:</label>
+                <input type="text" class="remove-user-id" name="remove-id" placeholder="ID">
+            </div>
+            <button id="remove-user">removeUser</button>
+        </div>
+        <div class="function-field update-user">
+            <div class="input-wrapper">
+                <label for="update-id">User id:</label>
+                <input type="text" class="update-user-id" name="update-id" placeholder="ID">
+                <label for="name">User name:</label>
+                <input type="text" class="update-user-name" name="name" placeholder="Name">
+                <label for="score">User score:</label>
+                <input type="text" class="update-user-score" name="score" placeholder="Score">
+            </div>
+            <button id="update-user">updateUser</button>
+        </div>
+    </div>
+    <div class="result-field">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody id="js-tbody"></tbody>
+        </table>
+    </div>
+    <script type="text/template" id="table-row">
+        <tr scope="row">
+            <td>
+                <%- id%>
+            </td>
+            <td>
+                <%- name%>
+            </td>
+            <td>
+                <%- score%>
+            </td>
+        </tr>
+    </script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>    
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

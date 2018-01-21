@@ -1,0 +1,110 @@
+body {
+	width: 90%;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 20px;
+}
+
+code {
+	font-weight: bold;
+}
+
+button {
+	background-color: #dadada;
+}
+
+.keyboard-example {
+	border: 2px solid #a5a5a5;
+	border-left: 15px solid #a5a5a5;
+}
+
+.const {
+	color: blue;
+}
+
+.lang {
+	color: #aa5500;
+}
+
+.wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.wrapper .input-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.wrapper .function-field {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	min-height: 80px;
+	width: 50%;
+	padding: 5px;
+	border: 1px solid #777;
+	-webkit-box-shadow: 0 0 10px #777;
+	box-shadow: 0 0 10px #777;
+}
+
+.wrapper label,
+.wrapper input {
+	width: 15%;
+	margin-right: 5px;
+}
+
+.wrapper button {
+	min-height: 25px;
+	width: 20%;
+	background-color: #aab;
+	text-align: center;
+}
+
+.result-field {
+	width: 100%;
+	min-height: 300px;
+	padding: 5px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #777;
+	-webkit-box-shadow: 0 0 10px #777;
+	box-shadow: 0 0 10px #777;
+	background-color: #eeeeee;
+}
+
+.table {
+	width: 90%;
+	margin: 10px auto;
+	text-align: center;
+	font-size: 15px;
+}
+
+.table th {
+	min-height: 35px;
+	border-bottom: 2px solid #777;
+}
+
+.table td {
+	min-height: 35px;
+	border-bottom: 1px solid #aaa;
+}
+
