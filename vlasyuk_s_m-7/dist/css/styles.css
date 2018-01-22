@@ -1,0 +1,37 @@
+body {
+	width: 90%;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 20px;
+}
+
+code {
+	font-weight: bold;
+}
+
+.testFunction {
+	min-height: 35px;
+	background-color: #00ff00;
+}
+
+.keyboardRow {
+	width: 70%;
+	min-height: 100px;
+	margin: 0 auto;
+	padding: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.btn {
+	width: 80px;
+	height: 80px;
+	margin: 10px;
+	font-size: 20px;
+	background-color: #03c9f4;
+}
+

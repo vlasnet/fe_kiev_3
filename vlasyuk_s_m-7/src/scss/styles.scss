@@ -1,0 +1,36 @@
+$fontSize: 20px;
+$buttonSize: 80px;
+$buttonOffset: 10px;
+
+body {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    font-size: $fontSize;
+}
+
+code {
+    font-weight: bold;       
+} 
+
+.testFunction {
+    min-height: 35px;
+    background-color: #00ff00;
+}
+
+.keyboardRow {
+    width: 70%;
+    min-height: $buttonSize + 2 * $buttonOffset;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;    
+    justify-content: center;
+}
+
+.btn {
+    width: $buttonSize;
+    height: $buttonSize;
+    margin: $buttonOffset;
+    font-size: $fontSize;
+    background-color: #03c9f4;
+}
