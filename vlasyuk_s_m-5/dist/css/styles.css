@@ -1,0 +1,29 @@
+body {
+	width: 90%;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 20px;
+}
+
+code {
+	padding: 5px;
+	color: #fff;
+	background-color: #666;
+}
+
+button {
+	background-color: #dadada;
+}
+
+.keyboard-example {
+	border: 2px solid #a5a5a5;
+	border-left: 15px solid #a5a5a5;
+}
+
+.const {
+	color: blue;
+}
+
+.lang {
+	color: #aa5500;
+}
