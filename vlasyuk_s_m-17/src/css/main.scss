@@ -1,0 +1,45 @@
+$color-dark: #1B1B1E;
+$fontSize: 20px;
+
+body {
+  width: 80%;
+  margin: 0 auto;
+  font-size: $fontSize;
+}
+
+.images-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input-field {
+  min-width: 40%;
+  min-height: 20px;
+}
+
+.btn {
+  width: 20%;
+  min-height: 30px;
+  border-radius: 15px;
+  background-color: #00f0da;
+}
+
+.error-message {
+  color: #f00;
+}
+
+label {
+  display: inline-block;
+  width: 45%;
+}
+
+.img {
+  margin: 10px 0;
+  max-height: 250px;
+  width: auto;
+}
+
+code {
+  font-weight: bold;
+}
